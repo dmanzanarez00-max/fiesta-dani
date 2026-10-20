@@ -203,7 +203,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #control{position:relative;min-height:100%}
 #control>.wc{position:fixed}
 .cwrap{position:relative;z-index:2;max-width:640px;margin:0 auto;padding:0 14px 120px}
-.top{position:sticky;top:0;z-index:4;padding:12px 0 10px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:linear-gradient(var(--cream) 75%,rgba(244,237,225,0))}
+.top{position:sticky;top:0;z-index:4;padding:12px 0 10px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--cream)}
 .top .sc{display:flex;gap:8px}
 .tb{padding:8px 14px;border-radius:999px;background:var(--glass-2);border:2px solid transparent;font-family:var(--ui);font-weight:600;font-size:14px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tb.on{border-color:var(--gold)}
@@ -370,8 +370,6 @@ body.p2p .bzbox{display:flex}
 #qrbig svg{width:100%;height:100%;display:block}
 .regcode{margin-top:8px;font-family:var(--ui);font-size:18px;color:var(--ink-2)}.regcode b{font-family:var(--display);font-size:40px;letter-spacing:.2em;color:var(--ink);margin-left:8px}
 .regnames{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;max-height:330px;overflow:hidden}
-.regnames span{display:flex;align-items:center;justify-content:center;height:62px;border-radius:99px;background:rgba(255,251,246,.9);box-shadow:inset 0 0 0 1px var(--hair);font-family:var(--display);font-size:32px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 14px}
-.regnames span.new{animation:regin .9s cubic-bezier(.3,1.6,.5,1) both;background:linear-gradient(115deg,#f8d3dc,#ecdcf6)}
 @keyframes regin{from{transform:scale(.3) rotate(-8deg);opacity:0}}
 /* tele: transición entre pantallas */
 .wipe{position:absolute;inset:0;z-index:8;pointer-events:none;opacity:0;clip-path:circle(0% at 50% 50%)}
@@ -473,8 +471,6 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 .rstep b{color:#b86b86}
 /* registro */
 .regv .htitle{font-size:96px!important}
-.regnames span{font-size:28px;height:56px;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
-.regnames span:hover{transform:scale(1.08) rotate(-2deg)}
 /* winners board */
 .nightv{justify-content:flex-start!important;padding-top:96px}
 .nightv>div{display:flex;flex-direction:column;height:100%}
@@ -505,16 +501,6 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 .tcard .nm{transition:transform .25s cubic-bezier(.3,1.6,.5,1)}.tcard .nm:hover{transform:scale(1.05) rotate(-1deg)}
 .card{transition:transform .25s cubic-bezier(.3,1.6,.5,1)}.card:hover{transform:translateY(-8px)}
 #winners button.t0{background:rgba(248,211,220,.6)}#winners button.t1{background:rgba(214,218,246,.65)}
-/* lotería: abanico de cartas */
-.gamev.lot>div{grid-template-columns:1fr!important;justify-items:center;text-align:center!important;gap:0!important}
-.gamev.lot #gimg{display:none}
-.gamev.lot #gvname{text-align:center!important;font-size:96px!important;margin-top:4px!important}
-.gamev.lot .grules{display:block;margin:0}
-.gcards{position:relative;width:1100px;height:400px;margin:56px auto 0}
-.gcards img{position:absolute;left:50%;top:30px;width:224px;margin-left:-112px;border-radius:14px;box-shadow:0 22px 34px -18px rgba(120,90,110,.6),0 0 0 1px rgba(217,173,95,.35);transform:translateX(var(--x)) translateY(var(--y)) rotate(var(--r));transform-origin:50% 120%;transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .35s;animation:deal .7s cubic-bezier(.3,1.3,.5,1) both;cursor:pointer}
-.gcards img:hover{z-index:5;transform:translateX(var(--x)) translateY(calc(var(--y) - 22px)) rotate(var(--r)) scale(1.06);box-shadow:0 30px 44px -18px rgba(120,90,110,.7),0 0 0 2px var(--gold)}
-@keyframes deal{from{opacity:0;transform:translateY(160px) rotate(0) scale(.8)}}
-.gamev.lot .gwin{margin-top:14px}
 /* ronda 4: control sencillo, tablero, ganador desde la tele */
 .tabs{grid-template-columns:repeat(3,1fr);max-width:460px}
 .nowcard{padding:16px 14px}
@@ -564,6 +550,133 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 .trtoken img{position:absolute;width:86px;left:-43px;top:-170px;filter:drop-shadow(0 10px 10px rgba(120,90,110,.35));animation:hop 1.4s ease-in-out infinite}
 @keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
 @keyframes popin{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+/* ronda 5 */
+.hbig{font-size:210px!important;line-height:.95;margin-top:8px}
+.av{display:inline-grid;place-items:center;flex:none;padding:0!important;width:40px;height:40px;border-radius:50%;overflow:hidden;background:#fffaf3;box-shadow:inset 0 0 0 1px var(--hair),0 6px 12px -8px rgba(120,90,110,.5);vertical-align:middle}
+.av img{width:86%;height:86%;object-fit:contain}
+.av.cd img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.av.sm{width:26px;height:26px}.av.big{width:84px;height:84px}.av.xl{width:150px;height:150px}
+/* registro */
+.regwrap{position:absolute;left:110px;right:90px;top:120px;display:grid;grid-template-columns:480px 1fr;gap:80px;align-items:start;z-index:2}
+.regk{font-size:15px;letter-spacing:.42em;color:var(--ink-2);margin-top:14px}
+.regtitle{font-family:var(--display);font-weight:500;font-size:112px;line-height:.92;color:#55583f;margin-top:10px}
+.reglead{font-family:var(--ui);font-size:22px;line-height:1.4;color:var(--ink-2);margin:18px 0 0}
+.reghead{margin-top:34px;padding-bottom:12px;border-bottom:1px solid var(--hair)}
+.reghead .caps{font-size:13px;letter-spacing:.3em;color:var(--ink-2)}
+.regnames{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 26px;margin-top:22px;max-height:none;overflow:visible}
+.rgn{display:flex;align-items:center;gap:14px;min-width:0;transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.rgn .av{width:52px;height:52px}
+.rgn b{font-family:var(--display);font-weight:600;font-size:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rgn.new{animation:regin .9s cubic-bezier(.3,1.6,.5,1) both}
+.rgn:hover{transform:translateX(6px)}
+/* pantalla de cada juego */
+.gleft{position:absolute;left:80px;top:118px;width:960px;bottom:50px;z-index:2}
+.gtag{font-size:14px;letter-spacing:.34em;color:var(--ink-2)}
+.gname{font-family:var(--display);font-weight:500;font-size:96px;line-height:1;color:#55583f;margin-top:8px}
+.gimg{position:absolute;right:30px;top:-20px;height:180px;width:auto;filter:drop-shadow(0 18px 24px rgba(120,90,110,.3))}
+.gamev.lot .gimg{display:none}
+.gleft .grules{max-width:none;margin-top:30px}
+.gamev.lot .grules{display:block;margin-top:14px}
+.lscat{position:relative;height:560px}
+.lc{position:absolute;width:190px;transform:rotate(var(--r))}
+.view.on .lc{animation:drop .9s cubic-bezier(.3,1.25,.5,1) both}
+.lc img{display:block;width:100%;border-radius:12px;box-shadow:0 22px 30px -16px rgba(120,90,110,.6),0 0 0 1px rgba(217,173,95,.35);cursor:pointer}
+.lc:hover img{animation:cardhop .55s cubic-bezier(.3,1.6,.5,1)}
+@keyframes drop{from{opacity:0;transform:translateY(-560px) rotate(calc(var(--r) + 50deg)) scale(1.1)}60%{opacity:1}}
+@keyframes cardhop{35%{transform:translateY(-22px)}100%{transform:none}}
+/* tablita */
+.tabl{position:absolute;right:70px;top:108px;width:430px;bottom:56px;z-index:2;padding:26px 22px 20px;border-radius:32px;background:var(--glass);backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 30px 60px -36px rgba(120,90,110,.6);display:flex;flex-direction:column;overflow:hidden}
+.tabl.tcol{position:relative;right:auto;top:auto;bottom:auto;width:auto}
+.tabl h3{margin:0 0 0 12px;font-family:var(--ui);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-2)}
+.tabl .tt{margin:4px 0 14px 12px;font-family:var(--display);font-style:italic;font-weight:500;font-size:44px;line-height:1}
+.tempty{margin:10px 12px;font-family:var(--ui);font-size:16px;color:var(--ink-2)}
+.trow{display:grid;grid-template-columns:24px 40px 1fr auto;align-items:center;gap:12px;min-height:46px;padding:0 12px;border-radius:16px;cursor:pointer;transition:background .25s,transform .3s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
+.trow+.trow{margin-top:3px}
+.view.on .trow{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.trow:hover{background:rgba(255,255,255,.75);transform:translateX(-5px)}
+.trow .k{font-family:var(--display);font-size:20px;color:var(--ink-2);text-align:center}
+.trow b{font-family:var(--ui);font-weight:600;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trow .c{display:flex;align-items:center;gap:4px;font-family:var(--display);font-weight:600;font-size:24px;white-space:nowrap}
+.trow .c svg{width:24px;height:24px}
+.trow.lead{background:linear-gradient(115deg,rgba(248,211,220,.92),rgba(236,220,246,.92));box-shadow:inset 0 0 0 1.5px var(--gold)}
+.trow.won{box-shadow:inset 0 0 0 2px var(--gold),0 0 26px rgba(226,180,90,.5)}
+.trow.pend .c,.trow.call .c{font-family:var(--ui);font-size:13px;font-weight:700;color:var(--rose-ink)}
+.trow.call{background:linear-gradient(115deg,#fde5ea,#eee7fb);animation:callp .8s ease-in-out infinite alternate!important}
+@keyframes callp{to{box-shadow:inset 0 0 0 2px var(--gold),0 0 30px rgba(226,180,90,.6)}}
+/* 100 mexicanos */
+.bq{position:absolute;top:92px;left:140px;right:140px;text-align:center;z-index:2}
+.bk{font-size:13px;letter-spacing:.32em;color:var(--ink-2)}
+.bk span+span::before{content:"·";margin:0 14px}
+.bk .hidden{display:none}
+.bq .q{font-size:64px;margin-top:10px;padding:0}
+.bpanel{position:absolute;left:120px;right:120px;top:262px;bottom:196px;z-index:2;display:flex}
+.bpanel .board{margin:0;flex:1}
+.bfoot{position:absolute;left:70px;right:70px;bottom:40px;height:124px;z-index:2;display:grid;grid-template-columns:1fr 360px 1fr;gap:30px;align-items:center}
+.bteam{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 34px;border-radius:32px;background:var(--glass);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 20px 40px -28px rgba(120,90,110,.6);transition:box-shadow .4s,transform .4s}
+.bteam.on{box-shadow:inset 0 0 0 2px var(--gold),0 0 44px rgba(226,180,90,.45);transform:translateY(-4px)}
+.bteam b{font-family:var(--display);font-weight:500;font-size:76px;line-height:1}
+.bteam.bump b{animation:bump .8s cubic-bezier(.3,1.8,.5,1)}
+.bt small{display:block;font-family:var(--display);font-weight:600;font-size:34px;line-height:1.1;color:var(--ink)}
+.bt span{display:flex;align-items:center;gap:8px;margin-top:6px;font-family:var(--ui);font-size:15px;color:var(--ink-2)}
+.bt span b{font-family:var(--ui);font-size:16px;font-weight:700;color:var(--ink)}
+.bteam.r .bt{text-align:right}.bteam.r .bt span{justify-content:flex-end}
+.bmid{text-align:center}
+.bmid .xs{height:70px;gap:22px}.bmid .xs svg{width:64px;height:64px}
+.bmid .potline{margin-top:4px}
+/* preguntas rápidas */
+.fhead{position:absolute;top:90px;left:90px;right:90px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.flead{font-family:var(--ui);font-size:20px;color:var(--ink-2);margin-top:10px}
+.fbody{position:absolute;top:300px;left:90px;right:90px;bottom:50px;z-index:2}
+.fpl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fpc{display:flex;align-items:center;gap:16px;padding:18px 22px;border-radius:26px;background:var(--glass);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 16px 30px -24px rgba(120,90,110,.55)}
+.view.on .fpc{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.fpc .av{width:58px;height:58px}
+.fpc b{font-family:var(--display);font-weight:600;font-size:32px}
+.dots{display:flex;gap:7px;margin-top:6px}.dots i{width:13px;height:13px;border-radius:50%;background:rgba(120,90,110,.15);transition:.3s}
+.dots i.on{background:linear-gradient(115deg,#f5c7d2,#ead2f0);box-shadow:inset 0 0 0 1px var(--gold)}
+.frk{display:flex;flex-direction:column;gap:10px}
+.frr{display:grid;grid-template-columns:36px 52px 190px 1fr 100px;align-items:center;gap:16px;padding:8px 22px;border-radius:24px;background:var(--glass);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 16px 30px -24px rgba(120,90,110,.55);animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.frr.first{background:linear-gradient(115deg,rgba(248,211,220,.95),rgba(236,220,246,.95));box-shadow:inset 0 0 0 2px var(--gold),0 0 34px rgba(226,180,90,.4)}
+.frr .k{font-family:var(--display);font-size:24px;text-align:center}.frr .k svg{width:30px;height:30px}
+.frr .av{width:52px;height:52px}
+.frr b{font-family:var(--display);font-weight:600;font-size:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frr .ch{display:flex;gap:8px;flex-wrap:wrap}
+.frr .ch span{padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.75);font-family:var(--ui);font-size:15px}
+.frr .ch span em{font-style:normal;font-weight:700;color:var(--rose-ink);margin-left:6px}
+.frr .ch span.z{opacity:.45}
+.frr .tot{font-family:var(--display);font-weight:500;font-size:50px;text-align:right}
+/* tablero */
+.trsp em{display:flex;align-items:center;gap:6px}
+.trsp em svg{width:18px;height:18px}
+.winav{margin-top:18px}
+.buzzov .av{margin-top:14px}
+/* control */
+.tb.r{justify-content:flex-end;text-align:right}
+.callsec{background:linear-gradient(115deg,#fde5ea,#eee7fb)!important;box-shadow:inset 0 0 0 2px var(--gold),0 16px 30px -20px rgba(120,90,110,.6)!important}
+.callt{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:600;font-size:26px;line-height:1.1}
+.callt .av{width:48px;height:48px}
+.front{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;padding:10px 12px;margin-bottom:14px;border-radius:18px;background:rgba(255,255,255,.6);font-family:var(--ui);font-size:14px;color:var(--ink-2)}
+.front b{color:var(--ink)}
+.tlist button{display:flex;align-items:center;gap:8px}.tlist button .av{display:inline-grid;width:28px;height:28px;padding:0}
+.grp .av{flex:none!important}
+#frlist .grp{cursor:pointer}#frlist .grp span{display:flex;align-items:center;gap:8px}
+/* celulares */
+.gtitle{margin-top:62px}
+.gjoin{width:100%;display:flex;flex-direction:column;gap:12px}
+.avgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;width:100%}
+.avgrid button{border:0;background:none;padding:3px;border-radius:50%;aspect-ratio:1;transition:transform .15s}
+.avgrid button:active{transform:scale(.9)}
+.avgrid .av{width:100%;height:100%}
+.avgrid button.sel .av{box-shadow:0 0 0 3px var(--gold),0 8px 16px -8px rgba(120,90,110,.6)}
+.avgrid button.taken{opacity:.22}
+.gme .av{margin-bottom:8px}
+.callbtn{width:210px;height:210px;margin:16px auto 6px;border:0;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:40px;line-height:1;color:var(--rose-ink);background:radial-gradient(120% 140% at 0% 0%,rgba(255,255,255,.7),transparent 45%),linear-gradient(115deg,#f5c7d2,#ead2f0 52%,#fadcc8);box-shadow:inset 0 0 0 2px var(--gold),0 22px 40px -20px rgba(120,90,110,.7);transition:transform .15s}
+.callbtn:active{transform:scale(.93)}.callbtn:disabled{opacity:.45}
+.gtimer{font-family:var(--display);font-size:44px;line-height:1;margin:8px 0 4px}
+.gfq{text-align:left;margin-top:12px}
+.gfq label{display:block;margin-bottom:5px;font-family:var(--ui);font-weight:700;font-size:14px}
+.gsub{font-family:var(--ui);font-size:15px;color:var(--ink-2)}
+.gcard p.gp2{font-family:var(--ui);font-size:16px;line-height:1.4;color:var(--ink-2)}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
@@ -583,6 +696,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     <feMerge><feMergeNode in="lit"/><feMergeNode in="rimc"/></feMerge>
   </filter>
   <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+  <symbol id="crown" viewBox="0 0 24 24"><path d="M3.2 8.6 7.6 12 12 5l4.4 7 4.4-3.4L19 18.5H5z" fill="url(#gold)"/><rect x="5" y="19.6" width="14" height="2.2" rx="1" fill="url(#gold)"/><circle cx="3" cy="7.6" r="1.7" fill="url(#gold)"/><circle cx="12" cy="3.4" r="1.7" fill="url(#gold)"/><circle cx="21" cy="7.6" r="1.7" fill="url(#gold)"/></symbol>
   <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7e2a6"/><stop offset=".5" stop-color="#e0ad4f"/><stop offset="1" stop-color="#c8913a"/></linearGradient>
   <radialGradient id="petal" cx=".5" cy=".85" r=".9"><stop offset="0" stop-color="#e48aa2"/><stop offset=".55" stop-color="#f0b9c6" stop-opacity=".9"/><stop offset="1" stop-color="#f8dbe2" stop-opacity=".55"/></radialGradient>
   <linearGradient id="xg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ef9fb4"/><stop offset=".55" stop-color="#c6a6e0"/><stop offset="1" stop-color="#e9c27a"/></linearGradient>
@@ -600,7 +714,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 <section id="pick">
   <div class="wc"><i></i><i></i><i></i><i></i><i></i></div>
   <div class="gflags"><img src="img/banderines.webp" alt=""></div>
-  <h1>Game night<br><em>de Dani</em></h1>
+  <h1>Game night</h1>
   <p>Abre esta página en la laptop conectada a la tele y elige <b>Pantalla</b>. En tu celular, abre la misma página y elige <b>Control</b>.</p>
   <div class="choices">
     <button class="choice" data-role="screen"><b>Pantalla</b><span>Para la laptop en la tele. Lo que ven todos.</span></button>
@@ -608,7 +722,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
   </div>
   <div class="codestep hidden" id="codestep">
     <b>Escribe el código de la tele</b>
-    <span>Son 4 letras. Salen en la pantalla de inicio de la tele.</span>
+    <span>Son 4 letras. Salen en la tele abajo a la derecha (mueve el mouse) y en Registro.</span>
     <input id="codein" maxlength="4" placeholder="ABCD" autocomplete="off" autocapitalize="characters">
     <div class="row"><button class="b" id="codeback">Regresar</button><button class="b pri" id="codego">Entrar</button></div>
   </div>
@@ -619,18 +733,20 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
   <div class="wc"></div>
   <div class="gflags"><img src="img/banderines.webp" alt=""></div>
   <div class="gwrap">
-    <img src="img/globos.webp" class="glogo" alt="">
-    <div class="gtitle">Game night<span>de Dani</span></div>
-    <div id="g-join">
-      <p class="gp">Escribe tu nombre para entrar a la fiesta.</p>
+    <div class="gtitle">Game night</div>
+    <div id="g-join" class="gjoin">
+      <p class="gp">Escribe tu nombre y elige tu avatar.</p>
       <input id="gname" maxlength="18" placeholder="Tu nombre" autocomplete="off">
-      <button class="b pri big" id="gjoin" style="width:100%;margin-top:12px">Entrar</button>
+      <div class="avgrid" id="avgrid"></div>
+      <button class="b pri big" id="gjoin" style="width:100%;margin-top:6px">Entrar</button>
     </div>
     <div id="g-in" class="hidden">
-      <div class="gme"><b id="gmy"></b><span id="gteam"></span></div>
-      <div id="g-wait" class="gcard"><img src="img/globos.webp" class="float" alt=""><p>Mira la tele 👀</p></div>
-      <div id="g-col" class="gcard hidden"><small>Hive Mind</small><p id="gcq"></p><input id="gans" maxlength="40" placeholder="Tu respuesta" autocomplete="off"><button class="b pri big" id="gsend" style="width:100%;margin-top:10px">Enviar</button><div id="gsent" class="gok hidden"></div></div>
-      
+      <div class="gme"><div id="gav"></div><b id="gmy"></b><span id="gteam"></span></div>
+      <div id="g-wait" class="gcard"><img src="img/globos.webp" class="float" alt=""><p id="gwaitp">Mira la tele 👀</p></div>
+      <div id="g-call" class="gcard hidden"><small id="gcallk"></small><button class="callbtn" id="gcall"></button><div id="gcalled" class="gok hidden"></div></div>
+      <div id="g-col" class="gcard hidden"><small>Hive Mind</small><p id="gcq"></p><div id="gcolin"><input id="gans" maxlength="40" placeholder="Tu respuesta" autocomplete="off"><button class="b pri big" id="gsend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gsent" class="gok hidden"></div></div>
+      <div id="g-100" class="gcard hidden"><small>100 Mexicanos Dijeron</small><p id="g100p"></p><div id="g100s" class="gsub"></div></div>
+      <div id="g-fast" class="gcard hidden"><small>Preguntas rápidas</small><div class="gtimer" id="gftimer"></div><div id="gfqs"></div></div>
       <div id="g-age" class="gcard hidden"><small>¿Cuántos años tienes?</small><p>¿Cuántos años tenía Dani en la foto?</p><input id="gage" type="number" inputmode="numeric" min="0" max="40" placeholder="Años"><button class="b pri big" id="gagesend" style="width:100%;margin-top:10px">Enviar</button><div id="gagesent" class="gok hidden"></div></div>
     </div>
     <span class="conn" id="conng"><i></i>Conectando…</span>
@@ -643,32 +759,31 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     <div class="view center homev" id="v-home"><div class="deco-layer" data-deco="home"></div>
       <div class="rise" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center">
         <div class="caps" style="font-size:16px;letter-spacing:.42em;color:var(--ink-2)">10 juegos</div>
-        <div class="htitle">Game night<em>de Dani</em></div>
+        <div class="htitle hbig">Game night</div>
         <div class="hgames" id="hgames"></div>
-        <div class="hbtns"><button class="hbtn pri p2ponly" data-go="reg">Entra y pon tu nombre</button><button class="hbtn" data-go="night">Winners board</button></div>
+        <div class="hbtns"><button class="hbtn pri p2ponly" data-go="reg">Entra y pon tu nombre</button><button class="hbtn" data-go="track">Ver el tablero</button></div>
       </div>
     </div>
-    <div class="view center regv" id="v-reg"><div class="deco-layer" data-deco="reg"></div>
-      <div style="position:relative;z-index:2;display:grid;grid-template-columns:520px 1fr;gap:70px;align-items:center;width:100%;padding:0 40px">
+    <div class="view regv" id="v-reg"><div class="deco-layer" data-deco="reg"></div>
+      <div class="regwrap">
         <div class="regqr"><div id="qrbig"></div><div class="caps" style="margin-top:22px">Escanea con tu celular</div><div class="regcode">Código <b id="regcode"></b></div></div>
-        <div style="text-align:left">
-          <div class="htitle" style="font-size:118px;text-align:left">¡Regístrate!</div>
-          <div class="lead" style="margin:8px 0 26px">Escanea el código, escribe tu nombre y listo.</div>
-          <div class="caps" id="regcount" style="color:var(--ink-2)"></div>
+        <div class="regright">
+          <div class="caps regk">Game night</div>
+          <div class="regtitle">¡Regístrate!</div>
+          <p class="reglead">Escanea el código, escribe tu nombre y elige tu avatar.</p>
+          <div class="reghead"><span class="caps" id="regcount"></span></div>
           <div class="regnames" id="regnames"></div>
         </div>
       </div>
     </div>
-    <div class="view center gamev" id="v-game"><div class="deco-layer" data-deco="game"></div>
-      <div style="position:relative;z-index:2;display:grid;grid-template-columns:460px 1fr;gap:70px;align-items:center;width:100%;padding:0 60px;text-align:left">
-        <img id="gimg" class="float" alt="" style="width:100%;max-height:480px;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(120,90,110,.3))">
-        <div>
-          <div class="caps" id="gtag" style="font-size:16px"></div>
-          <div class="htitle" id="gvname" style="font-size:112px;text-align:left;margin-top:10px"></div>
-          <div class="grules" id="grules"></div>
-          <button class="hbtn pri gwin" id="gwin">¿Quién ganó?</button>
-        </div>
+    <div class="view gamev" id="v-game"><div class="deco-layer" data-deco="game"></div>
+      <div class="gleft">
+        <div class="caps gtag" id="gtag"></div>
+        <div class="gname" id="gvname"></div>
+        <img id="gimg" class="gimg float" alt="">
+        <div class="grules" id="grules"></div>
       </div>
+      <aside class="tabl" id="gtab"></aside>
     </div>
     <div class="view center intro" id="v-intro"><div class="deco-layer" data-deco="intro"></div>
       <div class="rise" style="display:flex;flex-direction:column;align-items:center;position:relative;z-index:2">
@@ -693,35 +808,33 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       </div>
     </div>
     <div class="view" id="v-board"><div class="deco-layer" data-deco="board"></div>
-      <div class="bhead" style="position:relative;z-index:2">
-        <div class="score" id="st0"><small id="sn0"></small><b id="ss0">0</b></div>
-        <div class="qbox">
-          <div class="meta"><span class="tag" id="cat"></span><span class="tag gold" id="mult"></span></div>
-          <div class="q" id="q"></div>
-          <div class="potline">En juego<b id="pot">0</b></div>
-        </div>
-        <div class="score r" id="st1"><small id="sn1"></small><b id="ss1">0</b></div>
+      <div class="bq">
+        <div class="caps bk"><span>100 Mexicanos Dijeron</span><span id="cat"></span><span id="mult"></span></div>
+        <div class="q" id="q"></div>
       </div>
-      <div class="board" id="board" style="position:relative;z-index:2"></div>
-      <div class="xs" id="xs" style="position:relative;z-index:2"><svg><use href="#xm"/></svg><svg><use href="#xm"/></svg><svg><use href="#xm"/></svg></div>
+      <div class="bpanel"><div class="board" id="board"></div></div>
+      <div class="bfoot">
+        <div class="bteam" id="st0"><div class="bt"><small id="sn0"></small><span id="sf0"></span></div><b id="ss0">0</b></div>
+        <div class="bmid"><div class="xs" id="xs"><svg><use href="#xm"/></svg><svg><use href="#xm"/></svg><svg><use href="#xm"/></svg></div><div class="potline">En juego<b id="pot">0</b></div></div>
+        <div class="bteam r" id="st1"><b id="ss1">0</b><div class="bt"><small id="sn1"></small><span id="sf1"></span></div></div>
+      </div>
       <div class="fact" id="fact"><small>Dato real</small><span id="factt"></span></div>
     </div>
     <div class="view" id="v-fast"><div class="deco-layer" data-deco="fast"></div>
-      <div class="fasthead" style="position:relative;z-index:2">
-        <div><div class="h2" style="font-style:italic">Dinero rápido</div><div class="lead">Lleguen a 200 puntos entre los dos.</div></div>
-        <div class="ring" id="ring"><div class="disc"></div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="5"/><circle id="ringc" cx="50" cy="50" r="46" fill="none" stroke="#e2b45a" stroke-width="5" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="0"/></svg><b id="timer">20</b></div>
+      <div class="fhead">
+        <div><div class="caps" style="font-size:14px;letter-spacing:.3em;color:var(--ink-2)">100 Mexicanos Dijeron · la decisiva</div><div class="gname">Preguntas rápidas</div><div class="flead" id="flead"></div></div>
+        <div class="ring" id="ring"><div class="disc"></div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="5"/><circle id="ringc" cx="50" cy="50" r="46" fill="none" stroke="#e2b45a" stroke-width="5" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="0"/></svg><b id="timer">45</b></div>
       </div>
-      <div class="fgrid" style="position:relative;z-index:2"><div class="fcol" id="fc0"><h3>Jugador 1</h3></div><div class="fcol" id="fc1"><h3>Jugador 2</h3></div></div>
-      <div class="ftotal" style="position:relative;z-index:2"><span class="caps" style="font-size:18px">Total</span><b id="ftot">0</b><span>/ 200</span></div>
+      <div class="fbody" id="fbody"></div>
     </div>
     <div class="view center teamsv" id="v-teams"><div class="deco-layer" data-deco="teams"></div>
       <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center">
         <div class="h2">Equipos</div>
-        <div class="cols"><div class="tcard"><h3>Equipo 1</h3><div class="names" id="tn0"></div></div><div class="tcard"><h3>Equipo 2</h3><div class="names" id="tn1"></div></div></div>
+        <div class="cols"><div class="tcard"><h3 id="tnh0">Equipo 1</h3><div class="names" id="tn0"></div></div><div class="tcard"><h3 id="tnh1">Equipo 2</h3><div class="names" id="tn1"></div></div></div>
       </div>
     </div>
     <div class="view trackv" id="v-track"><div class="deco-layer" data-deco="track"></div>
-      <div class="trhead"><div class="caps" style="font-size:15px">Game night de Dani</div><div class="wbtitle">¿En dónde vamos?</div><div class="trsub" id="trsub"></div></div>
+      <div class="trhead"><div class="caps" style="font-size:15px;letter-spacing:.42em">Game night</div><div class="wbtitle" id="trtitle"></div><div class="trsub" id="trsub"></div></div>
       <div class="trboard" id="trboard"><svg class="trpath" viewBox="0 0 1600 900"><path id="trline" d=""/></svg><div class="trtoken" id="trtoken"><img src="img/estrella.webp" alt=""></div></div>
     </div>
     <div class="view center nightv" id="v-night"><div class="deco-layer" data-deco="night"></div>
@@ -743,12 +856,13 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       </div>
       <div class="colwrap" style="position:relative;z-index:2">
         <div class="bubbles" id="bubbles"></div>
-        <div class="rank"><h3>Puntos</h3><div id="crank"></div></div>
+        <aside class="tabl tcol" id="crank"></aside>
       </div>
     </div>
     <div class="view center win" id="v-win"><div class="deco-layer" data-deco="win"></div>
       <div class="rise" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center">
         <div class="h1">¡Felicidades!</div>
+        <div class="winav" id="winav"></div>
         <div class="caps" style="font-size:22px;color:var(--ink-2);margin-top:10px">Ganó</div>
         <div class="pill trophy"><svg><use href="#trophy"/></svg><span id="winner"></span></div>
         <div class="lead" style="margin-top:26px" id="winsub">Escoge tu regalo de la pila</div>
@@ -764,28 +878,30 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     <div class="roundcard" id="rc"><div class="wc"><i></i><i></i><i></i><i></i><i></i></div><div class="deco-layer" data-deco="round"></div>
       <div class="rn" id="rcn">Ronda 1</div><div class="caps" style="font-size:18px;color:var(--ink-2)" id="rcm"></div><div class="bar"><i></i></div>
     </div>
-    <div class="wpick" id="wpick"><div class="wpbox"><div class="wbtitle" style="font-size:64px">¿Quién ganó?</div><div class="caps" id="wpgame" style="font-size:14px;margin-top:6px"></div><div class="wpcols" id="wpcols"></div><button class="hbtn" id="wpclose">Cancelar</button></div></div>
-    <div class="tvnav" id="tvnav"><button data-go="back">← Regresar</button><button data-go="home">Inicio</button><button data-go="reg" class="p2ponly">Registro</button><button data-go="teams">Equipos</button><button data-go="track">Tablero</button><button data-go="night">Winners</button></div>
-    <div class="ctlcode" id="ctlcode">Para tu control: abre esta página en tu celular, elige <b>Control</b> y escribe <b class="cc"></b></div>
+    <div class="tvnav" id="tvnav"><button data-go="back">← Regresar</button><button data-go="home">Inicio</button><button data-go="reg" class="p2ponly">Registro</button><button data-go="teams">Equipos</button><button data-go="track">Tablero</button></div>
     <div class="wipe" id="wipe"><div class="wc"></div><img src="img/estrella.webp" alt=""></div>
     <div class="overlay" id="ov"><div class="big" id="ovx"></div></div>
     <div class="buzzov" id="bzov"><small>Buzzer</small><b id="bzname"></b><span id="bzteam"></span></div>
     <div class="qrpanel" id="qrp"><div id="qrimg"></div><div><b>Escanea para jugar</b><span>o entra a</span><span id="qrurl"></span><span class="code">Código <b id="qrcode"></b></span></div></div>
   </div>
-  <div class="hud"><span class="conn" id="conn1"><i></i></span><span class="p2ponly" style="font-size:13px">Código control: <b id="hudcode"></b></span><button id="sound">🔊 Probar sonido</button><button id="fs">Pantalla completa</button><button data-back>Cambiar vista</button></div>
+  <div class="hud"><span class="conn" id="conn1"><i></i></span><span class="p2ponly" style="font-size:13px">Código control: <b id="hudcode"></b></span><button id="sound">🔊 Probar sonido</button><button id="fs">Pantalla completa</button><button id="treset">Reiniciar</button><button data-back>Cambiar vista</button></div>
 </section>
 <!-- Control -->
 <section id="control" class="hidden"><div class="wc"><i></i><i></i><i></i><i></i><i></i></div><div class="cwrap">
   <div class="top">
     <div class="tb" id="ct0"></div>
     <div class="potc" id="cround">Juego 1 de 10</div>
-    <div class="tb" id="ct1"></div>
+    <div class="tb r" id="ct1"></div>
   </div>
 
-  <div class="quick"><button class="b" data-screen="home">Inicio</button><button class="b p2ponly" data-screen="reg">Registro</button><button class="b" data-screen="track">Tablero</button><button class="b" data-screen="night">Winners</button></div>
+  <div class="quick"><button class="b" data-screen="home">Inicio</button><button class="b p2ponly" data-screen="reg">Registro</button><button class="b" data-screen="teams">Equipos</button><button class="b" data-screen="track">Tablero</button></div>
 
   <!-- Ahora -->
   <div class="tab" id="tab-ahora">
+    <div class="sec callsec hidden" id="callsec">
+      <div class="callt" id="callt"></div>
+      <div class="row" style="margin-top:12px"><button class="b pri" id="callyes">Sí, ganó</button><button class="b" id="callno">No, siguen</button></div>
+    </div>
     <div class="sec nowcard">
       <div class="nowrow">
         <button class="arrow" id="rprev" aria-label="Juego anterior">‹</button>
@@ -797,12 +913,16 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     <div class="sec" id="winsec">
       <h2>¿Quién ganó?</h2>
       <div class="chips" id="winners"></div>
-      <div class="hintc">Toca a quien ganó. La tele lo felicita, queda en el winners board y pasa al siguiente juego.</div>
+      <div class="hintc">Toca a quien ganó. En la laptop también puedes tocar su nombre dos veces en la tablita.</div>
     </div>
   </div>
 
   <!-- Equipos -->
   <div class="tab hidden" id="tab-equipos">
+    <div class="sec">
+      <h2>Nombres de los equipos</h2>
+      <div class="row"><input id="tname0" maxlength="20" placeholder="Equipo 1" autocomplete="off"><input id="tname1" maxlength="20" placeholder="Equipo 2" autocomplete="off"></div>
+    </div>
     <div class="sec" id="teamlists"></div>
     <div class="sec">
       <h2>Invitados <span class="conn" id="conn2"><i></i></span></h2>
@@ -823,7 +943,12 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     </div>
     <div class="sec">
       <h2>En la tele</h2>
-      <div class="row"><button class="b" data-screen="track">Tablero</button><button class="b" data-screen="night">Winners board</button><button class="b" data-screen="thanks">Gracias</button></div>
+      <div class="row"><button class="b" data-screen="track">Tablero</button><button class="b" data-screen="thanks">Gracias</button></div>
+    </div>
+    <div class="sec">
+      <h2>Empezar de nuevo</h2>
+      <div class="hintc" style="margin:0 0 10px">Borra todo y la tele saca un QR y un código nuevos.</div>
+      <div class="row"><button class="b bad" id="resetall">Reiniciar todo</button></div>
     </div>
   </div>
 
@@ -835,24 +960,27 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       <div class="row"><button class="b pri" id="next">Empezar</button></div>
     </div>
     <div class="sec" id="wplay">
+      <div class="front" id="wfront"></div>
       <h2>1 · ¿Quién apretó primero?</h2>
-      <div class="row"><button class="b" id="bz0">Equipo 1</button><button class="b" id="bz1">Equipo 2</button></div>
+      <div class="row"><button class="b" id="bz0"></button><button class="b" id="bz1"></button></div>
       <h2 style="margin-top:18px">2 · Toca lo que dijeron</h2>
       <div class="ans" id="cans"></div>
       <input id="said" placeholder="o escríbelo y te marco cuál es" autocomplete="off" style="margin-top:10px">
       <div class="row" style="margin-top:10px"><button class="b bad big" id="x">✕ Tache</button></div>
+      <div class="hintc">Aquí no hay reloj. Con 3 taches, el otro equipo puede robar con una sola respuesta.</div>
       <h2 style="margin-top:18px">3 · ¿Quién se lleva los puntos?</h2>
-      <div class="row"><button class="b pri" id="aw0">Equipo 1</button><button class="b pri" id="aw1">Equipo 2</button></div>
+      <div class="row"><button class="b pri" id="aw0"></button><button class="b pri" id="aw1"></button></div>
       <div class="hintc" id="bzstat"></div>
       <div class="factc hidden" id="cfact"></div>
     </div>
     <div class="sec">
       <h2>Al terminar las 4 preguntas</h2>
-      <div class="row"><button class="b pri" id="win0">Ganó Equipo 1</button><button class="b pri" id="win1">Ganó Equipo 2</button></div>
-      <div class="hintc" id="w100lead"></div>
+      <div class="hintc" id="w100lead" style="margin:0 0 10px"></div>
+      <div class="row"><button class="b pri" id="win0"></button><button class="b pri" id="win1"></button></div>
+      <div class="hintc">El equipo que gana pasa a las preguntas rápidas y de ahí sale la persona ganadora.</div>
       <details style="margin-top:12px"><summary>Más opciones</summary>
         <select id="qsel" style="margin-top:10px"></select>
-        <div class="row" style="margin-top:8px"><button class="b" id="tm0">Turno Equipo 1</button><button class="b" id="tm1">Turno Equipo 2</button></div>
+        <div class="row" style="margin-top:8px"><button class="b" id="tm0"></button><button class="b" id="tm1"></button></div>
         <div class="row" style="margin-top:8px"><button class="b bad" id="x1">✕ Solo mostrar</button><button class="b" id="x0">Quitar taches</button></div>
         <div class="row" style="margin-top:8px"><button class="b" id="rest">Destapar las que faltan</button><button class="b" id="factb">Dato real</button></div>
         <div class="row" style="margin-top:8px"><button class="b" data-mult="1">Sencilla</button><button class="b" data-mult="2">Doble</button><button class="b" data-mult="3">Triple</button></div>
@@ -892,14 +1020,18 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     </div>
   </div>
 
-  <!-- Dinero rápido -->
-  <div class="tab hidden" id="tab-fast">
+  <!-- Preguntas rápidas -->
+  <div class="tab hidden" id="tab-fr">
     <div class="sec">
-      <div class="row"><select id="fset" style="flex:2"></select><button class="b" id="fp0">Jugador 1</button><button class="b" id="fp1">Jugador 2</button></div>
-      <div class="row" style="margin-top:8px"><button class="b pri" id="t20">Reloj 20 s</button><button class="b pri" id="t25">Reloj 25 s</button><button class="b" id="tstop">Parar</button></div>
-      <div id="fqs" style="margin-top:8px"></div>
-      <div class="row" style="margin-top:8px"><button class="b" id="fshow">Destapar todas</button><button class="b" id="fhide1">Tapar jugador 1</button><button class="b bad" id="frep">Repetida</button></div>
-      <div class="hintc">Toca lo que contestó en cada pregunta ("Otra" vale 0) y luego el ojo para destaparla en la tele.</div>
+      <h2>Preguntas rápidas</h2>
+      <div class="cq" id="frteam"></div>
+      <div class="hintc" style="margin:-4px 0 12px">Cada quien del equipo contesta las 5 preguntas en su celular. Gana quien junte más puntos.</div>
+      <div class="row"><button class="b" id="frscreen">Ponerlas en la tele</button><button class="b pri" id="frgo">Arrancar reloj 45 s</button></div>
+      <h2 style="margin-top:16px">Así van <span class="hintc" style="letter-spacing:0;text-transform:none">toca a alguien para darle el gane</span></h2>
+      <div id="frlist"></div>
+      <div class="row" style="margin-top:10px"><button class="b pri" id="frshow">Mostrar resultados en la tele</button></div>
+      <div class="row" style="margin-top:8px"><button class="b pri" id="frwin">Ganó</button></div>
+      <div class="row" style="margin-top:8px"><button class="b" id="frback">Regresar a 100 Mexicanos</button></div>
     </div>
   </div>
 
@@ -3237,6 +3369,19 @@ const GINFO = {
 };
 const goGame = g => commit(s => { if (g === "w100") { s.screen = "intro"; if (!w100Set().some(x => s.used.includes(x))) Object.assign(s, { scores: [0, 0], qid: null, open: [], strikes: 0, banked: false }); } else { s.game = g; s.screen = g === "colmena" && s.col.q >= 0 ? "colmena" : "game"; } });
 const isTeamGame = g => TEAM_GAMES.includes(g);
+// avatares: las ilustraciones de Dani
+const AVS = ["estrella", "globos", "gorro", "pastel", "copa", "cupcake", "regalo", "disco", "flor", "pez", "velas", "monos", "carta-gallo", "carta-nopal", "carta-chalupa", "carta-barril", "carta-bandera", "carta-soldado"];
+const hashN = n => [...n].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const avOf = n => (S.live.av || {})[n] || AVS[hashN(n) % 12];
+const esc = x => String(x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const avHTML = (n, cls = "") => { const a = avOf(n); return `<span class="av${a.startsWith("carta") ? " cd" : ""}${cls ? " " + cls : ""}"><img src="img/${a}.webp" alt=""></span>`; };
+const CROWN = '<svg viewBox="0 0 24 24"><use href="#crown"/></svg>';
+const CALLW = { loteria: "¡Lotería!", taco: "¡Sin cartas!" };
+const tname = t => (S.names && S.names[t]) || "Equipo " + (t + 1);
+const frontName = t => { const tm = S.teams[t] || []; return tm.length ? tm[(S.w.front[t] || 0) % tm.length] : ""; };
+// coronas de la noche: cada juego ganado es una corona para esa persona
+function crowns() { const c = {}; S.players.forEach(n => c[n] = 0); S.night.res.forEach(r => { if (r && !/^Equipo [12]$/.test(r.who)) c[r.who] = (c[r.who] || 0) + 1; }); return c; }
+const LOTPOS = [[20, 70, -13], [230, 10, 7], [440, 80, -5], [650, 24, 12], [110, 290, 9], [520, 300, -9]];
 const GICON = { loteria: "estrella", w100: "cien", taco: "gorro", colmena: "globos", final: "pastel" };
 // cada 100 Mexicanos de la noche tiene sus 4 preguntas: Mixta, Pop culture, Cultura general, Dani
 const w100Set = () => { const k = ROUNDS.slice(0, Math.min(S.night.cur, ROUNDS.length - 1) + 1).filter(g => g === "w100").length - 1; const i = Math.max(0, Math.min(3, k)); return PLAN.slice(i * 4, i * 4 + 4); };
@@ -3252,13 +3397,20 @@ const ROUNDS = ["loteria", "w100", "taco", "colmena", "loteria", "taco", "w100",
 const blank = () => ({
   players: [], teams: [[], []], night: { cur: 0, res: [] }, winText: "", winSub: "",
   col: { q: -1, end: 0, dur: 20000, groups: [], show: false, scored: false, pts: {} },
-  live: { joined: [], ans: {}, buzz: null, ages: {} }, showQR: false, buzzT: -1, game: "loteria",
+  live: { joined: [], ans: {}, buzz: null, ages: {}, av: {}, call: null, fa: {} }, showQR: false, buzzT: -1, game: "loteria",
+  w: { front: [0, 0] }, fr: { team: -1, set: "A", show: false },
   v: 0, round: 0, screen: "home", qid: null, open: [], strikes: 0, team: 0, mult: 1, banked: false, fact: false, used: [],
   names: ["Equipo 1", "Equipo 2"], scores: [0, 0], fx: { k: "", n: 0, c: 0 }, win: 0,
   fast: { set: "A", p: [[null, null, null, null, null], [null, null, null, null, null]], show: [[false, false, false, false, false], [false, false, false, false, false]], hide0: false, player: 0, end: 0 }
 });
 let S = blank();
-function fix(d) { const b = blank(); for (const k in b) if (d[k] === undefined) d[k] = b[k]; d.names = ["Equipo 1", "Equipo 2"]; return d; }
+function fix(d) {
+  const b = blank(); for (const k in b) if (d[k] === undefined) d[k] = b[k];
+  d.live = Object.assign(b.live, d.live || {});
+  if (!Array.isArray(d.names) || d.names.some(n => /Familia/.test(n))) d.names = b.names;
+  if (d.screen === "night") d.screen = "track";
+  return d;
+}
 try { const l = JSON.parse(localStorage.getItem("dani-state")); if (l && l.fast) S = fix(l); } catch (e) {}
 let guestsDirty = false;
 let role = null, docRef = null, writing = false, again = false, lastFx = null;
@@ -3286,15 +3438,24 @@ const P2P = typeof Peer !== "undefined";
 if (P2P) document.body.classList.add("p2p");
 const PEER_OPTS = (() => { const ps = new URLSearchParams(location.search).get("ps"); if (!ps) return { debug: 0 }; const [h, p] = ps.split(":"); return { host: h, port: +p, path: "/", secure: false, debug: 0 }; })();
 const pid = c => "danifiesta-" + c.toLowerCase();
-let code = null, peer = null, conns = new Set(), hostConn = null, myName = "";
-try { myName = localStorage.getItem("dani-guest-name") || ""; } catch (e) {}
+let code = null, peer = null, conns = new Set(), hostConn = null, myName = "", myAv = "";
+try { myName = localStorage.getItem("dani-guest-name") || ""; myAv = localStorage.getItem("dani-guest-av") || ""; } catch (e) {}
 function genCode() { const L = "ABCDEFGHJKMNPQRSTUVWXYZ"; return Array.from({ length: 4 }, () => L[Math.floor(Math.random() * L.length)]).join(""); }
 const stripLive = s => { const c = structuredClone(s); delete c.live; return c; };
 function netSend() {
   if (role === "screen") conns.forEach(c => { if (c.open) c.send({ t: "state", S }); });
   else if (role === "control" && hostConn && hostConn.open) hostConn.send({ t: "set", S: stripLive(S) });
 }
-function applyOp(s, op) { if (op === "clearAns") s.live.ans = {}; if (op === "clearBuzz") s.live.buzz = null; if (op === "clearAges") s.live.ages = {}; }
+function applyOp(s, op) {
+  if (op === "clearAns") s.live.ans = {}; if (op === "clearBuzz") s.live.buzz = null; if (op === "clearAges") s.live.ages = {};
+  if (op === "clearCall") s.live.call = null; if (op === "clearFa") s.live.fa = {};
+  if (op === "reset" && role === "screen") setTimeout(hardReset, 300);
+}
+function hardReset() {
+  if (!P2P) return commit(s => { const b = blank(); Object.keys(b).forEach(k => s[k] = b[k]); });
+  try { localStorage.removeItem("dani-state"); localStorage.removeItem("dani-code"); } catch (e) {}
+  location.reload();
+}
 function netOp(op) {
   if (P2P && role === "control") { if (hostConn && hostConn.open) hostConn.send({ t: "op", op }); }
   else commit(s => applyOp(s, op));
@@ -3325,6 +3486,7 @@ function hostMsg(d) {
   else if (d.t === "op") commit(s => applyOp(s, d.op));
   else if (d.t === "join" && name) commit(s => {
     if (!s.live.joined.includes(name)) s.live.joined.push(name);
+    if (AVS.includes(d.av)) s.live.av[name] = d.av;
     if (!s.players.includes(name)) {
       s.players.push(name);
       if (s.teams[0].length + s.teams[1].length) s.teams[s.teams[0].length <= s.teams[1].length ? 0 : 1].push(name);
@@ -3332,6 +3494,9 @@ function hostMsg(d) {
   }, "join");
   else if (d.t === "ans" && name && d.q === S.col.q && !S.col.show) commit(s => s.live.ans[name] = String(d.text || "").slice(0, 40));
   else if (d.t === "buzz" && name && !S.live.buzz && S.screen === "board") commit(s => { const tm = teamOf(name); s.live.buzz = { name, team: tm }; if (tm >= 0) s.team = tm; }, "buzz");
+  else if (d.t === "call" && name && !S.live.call && CALLW[S.game]) commit(s => s.live.call = { name, g: s.game, at: Date.now() }, "buzz");
+  else if (d.t === "fa" && name && S.fr.team >= 0 && teamOf(name) === S.fr.team && Array.isArray(d.a) && (!S.fast.end || Date.now() < S.fast.end + 3000))
+    commit(s => s.live.fa[name] = d.a.slice(0, 5).map(x => String(x || "").slice(0, 30)));
   else if (d.t === "age" && name) commit(s => s.live.ages[name] = Math.max(0, Math.min(99, parseInt(d.n) || 0)));
 }
 function startClient(c) {
@@ -3345,7 +3510,7 @@ function startClient(c) {
 function connectHost() {
   if (hostConn && hostConn.open) return;
   hostConn = peer.connect(pid(code), { reliable: true });
-  hostConn.on("open", () => { setConn("on", "Conectado"); if (role === "guest" && myName) hostConn.send({ t: "join", name: myName }); });
+  hostConn.on("open", () => { setConn("on", "Conectado"); if (role === "guest" && myName) hostConn.send({ t: "join", name: myName, av: myAv }); });
   hostConn.on("data", d => { if (d && d.t === "state") { S = fix(structuredClone(d.S)); render(); } });
   hostConn.on("close", () => { setConn("off", "Reconectando…"); setTimeout(connectHost, 2000); });
 }
@@ -3438,9 +3603,10 @@ function renderScreen() {
     if (+$("ss" + t).textContent !== S.scores[t]) { $("st" + t).classList.remove("bump"); void $("st" + t).offsetWidth; $("st" + t).classList.add("bump"); }
     countTo($("ss" + t), S.scores[t]);
   });
+  [0, 1].forEach(t => { const f = frontName(t), k = f + "|" + (f ? avOf(f) : ""); if ($("sf" + t).dataset.k !== k) { $("sf" + t).dataset.k = k; $("sf" + t).innerHTML = f ? `Al frente ${avHTML(f, "sm")}<b>${esc(f)}</b>` : ""; } });
   const q = Q[S.qid];
   if (q) {
-    $("cat").textContent = q.cat; $("q").textContent = q.q;
+    const wi = w100Set().indexOf(S.qid); $("cat").textContent = (wi >= 0 ? `Pregunta ${wi + 1} de 4 · ` : "") + q.cat; $("q").textContent = q.q;
     $("mult").textContent = ["", "Sencilla", "Doble ×2", "Triple ×3"][S.mult]; $("mult").classList.toggle("hidden", S.mult === 1);
     if (boardQ !== S.qid) {
       boardQ = S.qid; const n = Math.max(q.a.length, 4) + (q.a.length > 4 && q.a.length % 2 ? 1 : 0);
@@ -3460,40 +3626,36 @@ function renderScreen() {
   } else { $("q").textContent = "Elige una pregunta desde el control"; $("board").innerHTML = ""; boardQ = null; $("fact").classList.remove("on"); }
   countTo($("pot"), pot(S));
   $("xs").querySelectorAll("svg").forEach((x, i) => x.classList.toggle("on", i < S.strikes));
-  // dinero rápido
-  const set = DATA.fast.find(f => f.id === S.fast.set);
-  [0, 1].forEach(p => {
-    const col = $("fc" + p); col.querySelectorAll(".frow").forEach(r => r.remove());
-    for (let i = 0; i < 5; i++) {
-      const a = S.fast.p[p][i], shown = S.fast.show[p][i] && !(p === 0 && S.fast.hide0);
-      const r = document.createElement("div"); r.className = "frow" + (shown ? " show" : "");
-      const t = document.createElement("span"); t.textContent = shown && a ? a.t : "";
-      const pt = document.createElement("span"); pt.className = "p"; pt.textContent = shown && a ? a.pts : "";
-      r.append(t, pt); col.appendChild(r);
-    }
-  });
-  countTo($("ftot"), fastTotal(S, true));
-  $("winner").textContent = S.winText || S.names[S.win] || ""; $("winsub").textContent = S.winSub || "Escoge tu regalo de la pila";
+  renderFast();
+  $("winner").textContent = S.winText || ""; $("winsub").textContent = S.winSub || "Se lleva una corona";
+  { const k = S.winText + "|" + (S.players.includes(S.winText) ? avOf(S.winText) : ""); if ($("winav").dataset.k !== k) { $("winav").dataset.k = k; $("winav").innerHTML = S.players.includes(S.winText) ? avHTML(S.winText, "xl") : ""; } }
   // inicio de la noche
   if (!$("hgames").dataset.k) {
     $("hgames").dataset.k = 1;
     const ICON = { loteria: "estrella", w100: "cien", taco: "gorro", colmena: "globos", final: "pastel" };
     $("hgames").innerHTML = ["loteria", "w100", "taco", "colmena", "final"].map(g => `<div class="hg" data-go="${g}"><img src="img/${ICON[g]}.webp" alt=""><b>${GAMES[g].replace(" Dijeron", "<br>Dijeron").replace(" años ", " años<br>")}</b><span class="tag ${isTeamGame(g) ? "t" : "i"}">${isTeamGame(g) ? "En equipo" : "Individual"}</span></div>`).join("");
   }
-  // reglas del juego
+  // pantalla del juego: contenido a la izquierda, tablita a la derecha
   const GI = GINFO[S.game] || GINFO.loteria;
-  $("gimg").src = "img/" + GI.img + ".webp"; $("gvname").textContent = GAMES[S.game] || ""; $("v-game").classList.toggle("lot", !!GI.cards);
-  if ($("grules").dataset.k !== S.game) { $("grules").dataset.k = S.game; $("grules").innerHTML = GI.cards ? '<div class="gcards">' + GI.cards.map((c, i) => { const k = i - (GI.cards.length - 1) / 2; return `<img src="img/carta-${c}.webp" alt="" style="--x:${k * 150}px;--r:${k * 7}deg;--y:${k * k * 9}px;animation-delay:${.1 + i * .09}s">`; }).join("") + "</div>" : GI.steps.map((x, i) => `<div class="rstep" style="animation-delay:${.15 + i * .12}s"><span>${i + 1}</span><p>${x}</p></div>`).join(""); }
-  $("gtag").textContent = (isTeamGame(S.game) ? "En equipo" : "Individual") + (S.night.cur < ROUNDS.length && ROUNDS[S.night.cur] === S.game ? ` · Juego ${S.night.cur + 1}` : "");
+  $("v-game").classList.toggle("lot", !!GI.cards);
+  $("gimg").src = "img/" + GI.img + ".webp"; $("gvname").textContent = GAMES[S.game] || "";
+  if ($("grules").dataset.k !== S.game) {
+    $("grules").dataset.k = S.game;
+    $("grules").innerHTML = GI.cards
+      ? '<div class="lscat">' + GI.cards.map((c, i) => { const [x, y, r] = LOTPOS[i]; return `<div class="lc" style="left:${x}px;top:${y}px;--r:${r}deg;animation-delay:${.15 + i * .13}s"><img src="img/carta-${c}.webp" alt=""></div>`; }).join("") + "</div>"
+      : GI.steps.map((x, i) => `<div class="rstep" style="animation-delay:${.15 + i * .12}s"><span>${i + 1}</span><p>${x}</p></div>`).join("");
+  }
+  $("gtag").textContent = (isTeamGame(S.game) ? "En equipo" : "Individual") + ` · Juego ${roundFor(S.game) + 1} de ${ROUNDS.length}`;
+  renderTabl($("gtab"), S.game === "colmena" ? "col" : "night");
   document.querySelectorAll(".cc").forEach(e => e.textContent = code || "");
-  $("ctlcode").classList.toggle("on", S.screen === "home");
   // registro
   const joined = S.live.joined;
-  $("regcount").textContent = joined.length ? `Ya ${joined.length === 1 ? "está" : "están"} ${joined.length}` : "Esperando a los primeros…";
-  if ($("regnames").dataset.k !== joined.join("|")) {
-    const before = ($("regnames").dataset.k || "").split("|").filter(Boolean);
-    $("regnames").dataset.k = joined.join("|"); $("regnames").innerHTML = "";
-    joined.forEach(n => { const d = document.createElement("span"); d.textContent = n; if (!before.includes(n) && lastFx !== null) d.className = "new"; $("regnames").appendChild(d); });
+  $("regcount").textContent = joined.length ? `${joined.length} ${joined.length === 1 ? "jugador" : "jugadores"}` : "Esperando a los primeros…";
+  const rk2 = joined.join("|") + JSON.stringify(S.live.av);
+  if ($("regnames").dataset.k !== rk2) {
+    const before = ($("regnames").dataset.names || "").split("|").filter(Boolean);
+    $("regnames").dataset.k = rk2; $("regnames").dataset.names = joined.join("|"); $("regnames").innerHTML = "";
+    joined.forEach(n => { const d = document.createElement("div"); d.className = "rgn" + (!before.includes(n) && lastFx !== null ? " new" : ""); d.innerHTML = avHTML(n) + "<b></b>"; d.querySelector("b").textContent = n; $("regnames").appendChild(d); });
   }
   // QR y buzzer
   const showQR = P2P && (S.showQR || S.screen === "intro" || S.screen === "teams") && S.screen !== "reg";
@@ -3516,10 +3678,10 @@ function renderScreen() {
       $("bubbles").appendChild(d);
     });
   }
-  const rk = Object.entries(C.pts).sort((a, b) => b[1] - a[1]).slice(0, 10);
-  $("crank").innerHTML = ""; rk.forEach(([n, p]) => { const r = document.createElement("div"); r.innerHTML = "<span></span><b></b>"; r.firstChild.textContent = n; r.lastChild.textContent = p; $("crank").appendChild(r); });
+  renderTabl($("crank"), "col");
   // equipos
   [0, 1].forEach(t => {
+    $("tnh" + t).textContent = tname(t);
     const box = $("tn" + t), names = S.teams[t] || [];
     if (box.dataset.k !== names.join("|")) { box.dataset.k = names.join("|"); box.innerHTML = ""; names.forEach(n => { const d = document.createElement("div"); d.className = "nm"; d.textContent = n; box.appendChild(d); }); }
   });
@@ -3584,8 +3746,11 @@ function playFx(fx) {
   }
   if (fx.k === "win") confetti(160);
   if (fx.k === "draw") drawAnim();
-  if (fx.k === "buzz" && S.buzzT >= 0) {
-    $("bzname").textContent = "Equipo " + (S.buzzT + 1); $("bzteam").textContent = (S.teams[S.buzzT] || []).join(" · ");
+  if (fx.k === "buzz" && (S.live.call || S.buzzT >= 0)) {
+    const c = S.live.call, f = c ? c.name : frontName(S.buzzT);
+    $("bzov").querySelector("small").textContent = c ? CALLW[c.g] || "¡Listo!" : "Buzzer";
+    $("bzname").textContent = c ? c.name : tname(S.buzzT);
+    $("bzteam").innerHTML = f ? (c ? "" : "Contesta ") + avHTML(f, "big") + (c ? "" : " " + esc(f)) : "";
     $("bzov").classList.add("show"); clearTimeout(window.bzT); window.bzT = setTimeout(() => $("bzov").classList.remove("show"), 2600);
   }
   if (fx.k === "bank") confetti(60);
@@ -3631,21 +3796,60 @@ setInterval(() => {
   lastLeft = left;
 }, 100);
 
+// tablita: quién va ganando (coronas de la noche) o puntos de Hive Mind
+let tPend = null;
+function renderTabl(el, mode) {
+  const col = mode === "col", cr = crowns(), pts = col ? S.col.pts : cr;
+  const g = S.game, won = col ? null : S.night.res[roundFor(g)], call = S.live.call && S.live.call.name;
+  const list = [...S.players].sort((a, b) => (pts[b] || 0) - (pts[a] || 0) || a.localeCompare(b));
+  const top = list.length ? pts[list[0]] || 0 : 0;
+  const key = JSON.stringify([mode, list, pts, won, call, tPend, S.live.av]);
+  if (el.dataset.k === key) return; el.dataset.k = key;
+  el.innerHTML = `<h3>${col ? "Hive Mind" : "Game night"}</h3><div class="tt">${col ? "Puntos" : "Así van"}</div>` + (list.length ? "" : '<div class="tempty">Aquí salen todos cuando se registren.</div>') +
+    list.slice(0, 14).map((n, i) => {
+      const p = pts[n] || 0, isCall = !col && call === n, isPend = !col && tPend === n;
+      const right = isPend ? "¿Ganó? Toca otra vez" : isCall ? CALLW[S.live.call.g] || "¡Listo!" : col ? p : p ? CROWN + (p > 1 ? p : "") : "";
+      return `<div class="trow${p && p === top ? " lead" : ""}${won && won.who === n ? " won" : ""}${isCall ? " call" : ""}${isPend ? " pend" : ""}" data-n="${esc(n)}" style="animation-delay:${i * .04}s"><span class="k">${p ? i + 1 : "·"}</span>${avHTML(n)}<b>${esc(n)}</b><span class="c">${right}</span></div>`;
+    }).join("");
+  if (!col && role === "screen") el.querySelectorAll(".trow").forEach(r => r.onclick = () => {
+    const n = r.dataset.n;
+    if (tPend === n) { tPend = null; act.winRound(n, teamOf(n), false, roundFor(S.game)); return; }
+    tPend = n; clearTimeout(window.tpT); window.tpT = setTimeout(() => { tPend = null; render(); }, 4000); render();
+  });
+}
+// preguntas rápidas: cada quien del equipo ganador contesta en su celular
+function frScores() {
+  const t = S.fr.team, set = DATA.fast.find(f => f.id === S.fr.set) || DATA.fast[0], fa = S.live.fa || {};
+  return (S.teams[t] || []).map(n => {
+    const a = fa[n] || [], det = set.qs.map((q, i) => { const m = a[i] ? bestMatch(a[i], q.a) : -1; return [a[i] || "", m >= 0 ? q.a[m][1] : 0]; });
+    return [n, det.reduce((x, d) => x + d[1], 0), a.filter(Boolean).length, det];
+  }).sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
+}
+function renderFast() {
+  if (S.fr.team < 0) return;
+  $("flead").textContent = `Juega ${tname(S.fr.team)} · cada quien contesta en su celular`;
+  const sc = frScores(), key = JSON.stringify([sc, S.fr.show, S.live.av]);
+  if ($("fbody").dataset.k === key) return; $("fbody").dataset.k = key;
+  $("fbody").innerHTML = !S.fr.show
+    ? '<div class="fpl">' + sc.map(([n, , k], i) => `<div class="fpc" style="animation-delay:${i * .08}s">${avHTML(n)}<div><b>${esc(n)}</b><div class="dots">${[0, 1, 2, 3, 4].map(j => `<i class="${j < k ? "on" : ""}"></i>`).join("")}</div></div></div>`).join("") + "</div>"
+    : '<div class="frk">' + sc.map(([n, p, , det], i) => `<div class="frr${i === 0 && p ? " first" : ""}" style="animation-delay:${(sc.length - i) * .3}s"><span class="k">${i === 0 && p ? CROWN : i + 1}</span>${avHTML(n)}<b>${esc(n)}</b><div class="ch">${det.map(([a, pt]) => `<span class="${pt ? "" : "z"}">${esc(a || "—")}<em>${pt}</em></span>`).join("")}</div><span class="tot">${p}</span></div>`).join("") + "</div>";
+}
 const TRP = Array.from({ length: 10 }, (_, i) => i < 5 ? [230 + i * 285, 400] : [230 + (9 - i) * 285, 715]);
 function renderTrack() {
   const cur = Math.min(S.night.cur, ROUNDS.length), res = S.night.res, left = ROUNDS.length - cur;
-  $("trsub").textContent = cur >= ROUNDS.length ? "¡Ya jugamos los 10!" : `Juego ${cur + 1} de ${ROUNDS.length} · ${left === 1 ? "¡el último!" : "faltan " + left}`;
-  const key = JSON.stringify([cur, res]);
+  $("trtitle").textContent = cur >= ROUNDS.length ? "¡Llegamos a la meta!" : `Casilla ${cur + 1}`;
+  $("trsub").textContent = cur >= ROUNDS.length ? "Ya jugamos los 10" : `${GAMES[ROUNDS[cur]]} · ${left === 1 ? "¡la última!" : "faltan " + left}`;
+  const key = JSON.stringify([cur, res, S.live.av]);
   if ($("trboard").dataset.k !== key) {
     $("trboard").dataset.k = key;
     $("trboard").querySelectorAll(".trsp").forEach(e => e.remove());
     if (!$("trline").getAttribute("d")) { const P = TRP; let d = `M${P[0][0]},${P[0][1]}`; for (let i = 1; i < 10; i++) d += i === 5 ? ` C1560,${P[4][1]} 1560,${P[5][1]} ${P[5][0]},${P[5][1]}` : ` L${P[i][0]},${P[i][1]}`; $("trline").setAttribute("d", d); }
     ROUNDS.forEach((g, i) => {
       const r = res[i], d = document.createElement("div");
-      d.className = "trsp" + (i === cur ? " cur" : "") + (r ? " w w" + r.team : i < cur ? " skip" : "");
+      d.className = "trsp" + (i === cur ? " cur" : "") + (r ? " w" : i < cur ? " skip" : "");
       d.style.left = TRP[i][0] + "px"; d.style.top = TRP[i][1] + "px"; d.style.animationDelay = i * .06 + "s";
       d.innerHTML = `<div class="trc"><img src="img/${GICON[g]}.webp" alt=""><span class="trn">${i + 1}</span></div><b></b><em></em>`;
-      d.querySelector("b").textContent = GAMES[g]; d.querySelector("em").textContent = r ? "★ " + r.who : "";
+      d.querySelector("b").textContent = GAMES[g]; d.querySelector("em").innerHTML = r ? CROWN + (S.players.includes(r.who) ? avHTML(r.who, "sm") : "") + esc(r.who) : "";
       $("trboard").appendChild(d);
     });
   }
@@ -3673,13 +3877,13 @@ function sparkle(el) {
 // adornos: las ilustraciones de Dani
 const D = {
   home: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["globos", 50, 170, 230, -4], ["regalo", 1350, 210, 190, 4], ["star", 330, 210, 64], ["star", 1240, 170, 52]],
-  game: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["star", 560, 640, 70], ["star", 1480, 300, 56], ["flower", 1420, 620, 230, 8]],
-  reg: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["gorro", 1390, 620, 180, 6], ["cupcake", 40, 700, 140, -6], ["star", 1450, 260, 60]],
+  game: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["star", 1040, 140, 50], ["star", 30, 760, 56]],
+  reg: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["cupcake", 30, 720, 130, -6], ["star", 1480, 230, 50]],
   intro: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["disco", 70, -60, 150, 150], ["disco", 1390, -60, 130, 230], ["globos", 30, 230, 300, -4], ["copa", 150, 610, 190, -6], ["pastel", 1210, 470, 360, 3], ["star", 1170, 330, 90], ["star", 330, 250, 60], ["star", 1320, 300, 50]],
   howto: [["banderines", 820, -110, 800], ["disco", 70, -60, 120, 80], ["star", 1460, 170, 80], ["cupcake", 40, 640, 170, -5], ["flower", 1380, 600, 260, 8]],
   teams: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["gorro", 40, 560, 240, -8], ["monos", 1270, 470, 300, 4], ["star", 1440, 300, 70], ["star", 120, 300, 60]],
-  board: [["disco", 260, -80, 90, 40], ["disco", 1250, -80, 90, 70], ["star", 400, 30, 50], ["star", 1150, 20, 60], ["copa", -10, 700, 140, -8], ["cupcake", 1470, 720, 120, 6]],
-  fast: [["chain", 560, -50, 760], ["disco", 1060, -60, 100, 40], ["star", 900, 70, 60], ["flower", -20, 640, 230, -6], ["velas", 1330, 640, 250, 4]],
+  board: [["disco", 40, -70, 90, 40], ["disco", 1460, -70, 90, 70], ["star", 300, 40, 44], ["star", 1250, 30, 50]],
+  fast: [["banderines", 820, -110, 800], ["disco", 640, -70, 90, 40], ["star", 560, 90, 46]],
   win: [["confeti", 330, -40, 940], ["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["globos", 30, 230, 310, -4], ["regalo", 1190, 500, 350, 4], ["star", 290, 600, 90], ["star", 1300, 300, 80], ["flower", 30, 600, 280, -8]],
   thanks: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["pastel", 40, 420, 400, -3], ["velas", 1180, 440, 360, 4], ["copa", 470, 650, 170, -6], ["cupcake", 980, 680, 150, 6], ["star", 330, 280, 80], ["star", 1250, 260, 70]],
   colmena: [["disco", 1180, -70, 80, 10], ["star", 900, 40, 50], ["globos", -20, 560, 220, -4]],
@@ -3711,7 +3915,7 @@ document.addEventListener("click", e => {
   const g = e.target.closest("[data-go]"); if (!g) return;
   const v = g.dataset.go;
   if (v === "back") { const prev = hist.pop(); if (prev) { goingBack = true; commit(s => s.screen = prev); } return; }
-  if (["home", "reg", "night", "teams", "track"].includes(v)) commit(s => s.screen = v); else goGame(v);
+  if (v === "night") commit(s => s.screen = "track"); else if (["home", "reg", "teams", "track"].includes(v)) commit(s => s.screen = v); else goGame(v);
 });
 let navT; addEventListener("mousemove", () => { if (role !== "screen") return; document.querySelector(".hud").classList.add("on"); clearTimeout(navT); navT = setTimeout(() => { document.querySelector(".hud").classList.remove("on"); }, 2500); });
 // teclado en la laptop (por si el celular falla)
@@ -3734,7 +3938,7 @@ function toggleAns(i) {
   commit(s => { s.open = opening ? [...s.open, i] : s.open.filter(x => x !== i); s.screen = "board"; }, opening ? "ding" : "");
 }
 const act = {
-  pick(id) { commit(s => { s.buzzT = -1; s.round = (s.round || 0) + 1; Object.assign(s, { qid: id, open: [], strikes: 0, banked: false, fact: false, mult: Q[id].mult, screen: "board" }); if (!s.used.includes(id)) s.used.push(id); }); $("said").value = ""; },
+  pick(id) { const wi = w100Set().indexOf(id); commit(s => { s.buzzT = -1; s.round = (s.round || 0) + 1; s.w.front = wi <= 0 ? [0, 0] : [(s.w.front[0] || 0) + 1, (s.w.front[1] || 0) + 1]; Object.assign(s, { qid: id, open: [], strikes: 0, banked: false, fact: false, mult: Q[id].mult, screen: "board" }); if (!s.used.includes(id)) s.used.push(id); }); $("said").value = ""; },
   next() { const id = w100Set().find(x => !S.used.includes(x)); if (id) act.pick(id); else toast("Ya fueron las 4 preguntas: toca qué equipo ganó"); },
   strike() { commit(s => s.strikes = Math.min(3, s.strikes + 1), "strike"); },
   award(t) {
@@ -3772,12 +3976,13 @@ function buildQsel() {
 let qselUsed = "", tab = "ahora", picked = new Set(), selGroup = -1;
 function teamOf(name) { return S.teams[0].includes(name) ? 0 : S.teams[1].includes(name) ? 1 : -1; }
 function renderControl() {
-  const curG = ROUNDS[S.night.cur], sub = tab === "ahora" && ["w100", "colmena"].includes(curG) ? curG : "";
+  const curG = ROUNDS[S.night.cur], sub = tab !== "ahora" ? "" : curG === "w100" ? (S.fr.team >= 0 ? "fr" : "w100") : curG === "colmena" ? "colmena" : "";
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("hidden", x.id !== "tab-" + tab && x.id !== "tab-" + sub));
   $("winsec").classList.toggle("hidden", !!sub || !curG);
   document.querySelectorAll("[data-tab]").forEach(x => x.classList.toggle("on", x.dataset.tab === tab));
-  const pts = [0, 0]; S.night.res.forEach(r => r && pts[r.team]++);
-  [0, 1].forEach(t => { $("ct" + t).innerHTML = ""; $("ct" + t).append("Equipo " + (t + 1), Object.assign(document.createElement("b"), { textContent: pts[t] })); });
+  const cr = crowns(), lead = Object.entries(cr).sort((a, b) => b[1] - a[1])[0];
+  $("ct0").innerHTML = lead && lead[1] ? `<b>${lead[1]}</b>${esc(lead[0])}` : "<b>0</b>Nadie aún";
+  $("ct1").innerHTML = `${S.players.length === 1 ? "jugador" : "jugadores"}<b>${S.players.length}</b>`;
   const cur = S.night.cur, done = cur >= ROUNDS.length;
   $("cround").innerHTML = done ? "Noche<b>terminada</b>" : `Juego<b>${cur + 1} de ${ROUNDS.length}</b>`;
   document.querySelectorAll("[data-screen]").forEach(b => b.classList.toggle("on", S.screen === b.dataset.screen));
@@ -3815,28 +4020,32 @@ function renderControl() {
   $("qrtoggle").textContent = S.showQR ? "Quitar QR de la tele" : "Mostrar QR para entrar";
   $("bzstat").textContent = S.banked ? "Listo. Toca «Siguiente» arriba." : pot(S) ? `En juego: ${pot(S)} puntos.` : "";
   [0, 1].forEach(t => $("bz" + t).classList.toggle("on", S.buzzT === t));
+  [0, 1].forEach(t => $("bz" + t).classList.toggle("on", S.buzzT === t));
   $("cscore").disabled = C.scored || !C.groups.length;
   $("crankc").innerHTML = "";
   Object.entries(C.pts).sort((a, b) => b[1] - a[1]).forEach(([n, p]) => { const d = document.createElement("div"); d.className = "grp"; d.innerHTML = "<span></span><b></b>"; d.firstChild.textContent = n; d.lastChild.textContent = p; $("crankc").appendChild(d); });
   // equipos
   if (document.activeElement !== $("guests") && !guestsDirty) $("guests").value = S.players.join("\n");
   $("teamlists").classList.toggle("hidden", !(S.teams[0].length + S.teams[1].length));
-  $("teamlists").innerHTML = '<h2>Equipos</h2><div class="tlist">' + [0, 1].map(t => `<div class="tl${t}"><h3>Equipo ${t + 1} <small>${S.teams[t].length}</small></h3>${S.teams[t].map(n => `<button data-mv="${t}">${n.replace(/</g, "&lt;").replace(/"/g, "&quot;")}</button>`).join("")}</div>`).join("") + '</div><div class="hintc" style="margin-top:10px">Toca a alguien para pasarlo al otro equipo.</div>';
-  $("teamlists").querySelectorAll("[data-mv]").forEach(b => b.onclick = () => { const n = b.textContent, f = +b.dataset.mv; commit(s => { s.teams[f] = s.teams[f].filter(x => x !== n); s.teams[1 - f].push(n); }); toast(`${n} ahora está en Equipo ${2 - f}`); });
+  $("teamlists").innerHTML = '<h2>Equipos</h2><div class="tlist">' + [0, 1].map(t => `<div class="tl${t}"><h3>${esc(tname(t))} <small>${S.teams[t].length}</small></h3>${S.teams[t].map(n => `<button data-mv="${t}" data-n="${esc(n)}">${avHTML(n)}${esc(n)}</button>`).join("")}</div>`).join("") + '</div><div class="hintc" style="margin-top:10px">Toca a alguien para pasarlo al otro equipo.</div>';
+  $("teamlists").querySelectorAll("[data-mv]").forEach(b => b.onclick = () => { const n = b.dataset.n, f = +b.dataset.mv; commit(s => { s.teams[f] = s.teams[f].filter(x => x !== n); s.teams[1 - f].push(n); }); toast(`${n} ahora está en ${tname(1 - f)}`); });
+  [0, 1].forEach(t => { if (document.activeElement !== $("tname" + t)) $("tname" + t).value = S.names[t] === "Equipo " + (t + 1) ? "" : S.names[t]; });
   // noche
   $("nowlbl").textContent = done ? "Se acabó" : `Juego ${cur + 1} de ${ROUNDS.length}`;
   $("nowgame").textContent = done ? "¡Ya se jugaron los 10!" : GAMES[curG];
-  $("nowtype").textContent = done ? "" : isTeamGame(curG) ? "En equipo" : "Individual · su equipo suma un punto";
+  $("nowtype").textContent = done ? "" : isTeamGame(curG) ? "En equipo · al final, preguntas rápidas" : "Individual · gana una corona";
+  const call = S.live.call; $("callsec").classList.toggle("hidden", !call);
+  if (call) $("callt").innerHTML = `${avHTML(call.name)}<span>${esc(call.name)} dijo ${CALLW[call.g] || "¡Listo!"}</span>`;
   $("rprev").disabled = cur <= 0; $("rnext").disabled = done;
   $("showgame").textContent = done ? "Poner Gracias" : "Poner el juego";
   $("winners").innerHTML = "";
   if (!done) {
-    const teamG = isTeamGame(curG) || !S.players.length;
-    (teamG ? [["Equipo 1", 0, true], ["Equipo 2", 1, true]] : [...S.teams[0], ...S.teams[1], ...S.players.filter(n => teamOf(n) < 0)].map(n => [n, teamOf(n), false])).forEach(([n, t, isTeam]) => {
-      const b = document.createElement("button"); b.textContent = n; b.className = isTeam ? "team" : "t" + t;
-      b.onclick = () => { if (confirm(`¿Ganó ${n}?`)) act.winRound(n, t, isTeam); };
+    [...S.players].sort((a, b) => a.localeCompare(b)).forEach(n => {
+      const b = document.createElement("button"); b.textContent = n; b.className = "t" + teamOf(n);
+      b.onclick = () => { if (confirm(`¿Ganó ${n}?`)) act.winRound(n, teamOf(n), false); };
       $("winners").appendChild(b);
     });
+    if (!S.players.length) $("winners").innerHTML = '<span class="hintc">Todavía no hay invitados.</span>';
   }
   $("roundlist").innerHTML = "";
   ROUNDS.forEach((g, i) => {
@@ -3848,13 +4057,15 @@ function renderControl() {
   });
   $("undo").disabled = !S.night.res.some(Boolean);
   // 100 mexicanos
-  $("wscore").textContent = `E1 ${S.scores[0]} · E2 ${S.scores[1]}`;
+  $("wscore").textContent = `${tname(0)} ${S.scores[0]} · ${tname(1)} ${S.scores[1]}`;
+  [0, 1].forEach(t => { const f = frontName(t); $("bz" + t).textContent = f ? `${f} · ${tname(t)}` : tname(t); $("aw" + t).textContent = tname(t); $("win" + t).textContent = "Ganó " + tname(t); $("tm" + t).textContent = "Turno " + tname(t); });
+  $("wfront").innerHTML = frontName(0) && frontName(1) ? `Al frente: ${avHTML(frontName(0), "sm")}<b>${esc(frontName(0))}</b> vs ${avHTML(frontName(1), "sm")}<b>${esc(frontName(1))}</b>` : "Primero sortea los equipos.";
   const WS = w100Set(), wi = WS.indexOf(S.qid), nx = WS.find(x => !S.used.includes(x));
   $("wstep").textContent = wi >= 0 ? `Pregunta ${wi + 1} de 4 · ${Q[S.qid].cat}` + (S.mult > 1 ? ` · ×${S.mult}` : "") : "100 Mexicanos Dijeron";
   $("next").textContent = nx ? `${wi >= 0 ? "Siguiente: pregunta" : "Empezar pregunta"} ${WS.indexOf(nx) + 1} · ${Q[nx].cat}` : "Ya fueron las 4 preguntas";
   $("next").disabled = !nx; $("next").classList.toggle("pri", !S.qid || S.banked || !nx);
   $("wplay").classList.toggle("hidden", !S.qid);
-  $("w100lead").textContent = S.scores[0] === S.scores[1] ? (S.scores[0] ? "Van empatados." : "") : `Va ganando Equipo ${S.scores[0] > S.scores[1] ? 1 : 2} con ${Math.max(...S.scores)} puntos.`;
+  $("w100lead").textContent = S.scores[0] === S.scores[1] ? (S.scores[0] ? "Van empatados." : "") : `Va ganando ${tname(S.scores[0] > S.scores[1] ? 0 : 1)} con ${Math.max(...S.scores)} puntos.`;
   [0, 1].forEach(t => {
     $("tm" + t).classList.toggle("on", S.team === t);
     $("aw" + t).disabled = S.banked || !pot(S);
@@ -3877,64 +4088,110 @@ function renderControl() {
   if (q && q.fact) { $("cfact").innerHTML = "Dato real: <b></b>"; $("cfact").querySelector("b").textContent = q.fact; }
   $("factb").classList.toggle("on", S.fact); $("factb").disabled = !(q && q.fact);
   $("x").textContent = `✕ Tache (${S.strikes} de 3)`;
-  // dinero rápido
-  if ($("fset").value !== S.fast.set) $("fset").value = S.fast.set;
-  [0, 1].forEach(p => $("fp" + p).classList.toggle("on", S.fast.player === p));
-  $("fhide1").textContent = S.fast.hide0 ? "Mostrar jugador 1" : "Tapar jugador 1";
-  const set = DATA.fast.find(f => f.id === S.fast.set), P = S.fast.player;
-  $("fqs").innerHTML = "";
-  set.qs.forEach((fq, i) => {
-    const d = document.createElement("div"); d.className = "fq";
-    const cur = S.fast.p[P][i];
-    d.innerHTML = `<div class="lbl"></div><div class="opts"></div>`;
-    d.querySelector(".lbl").textContent = `${i + 1}. ${fq.q}`;
-    const opts = d.querySelector(".opts");
-    [...fq.a, ["Otra", 0]].forEach(([a, pts]) => {
-      const b = document.createElement("button"); b.textContent = `${a} ${pts}`;
-      if (cur && cur.t === a) b.className = "sel";
-      b.onclick = () => commit(s => { s.fast.p[P][i] = { t: a, pts }; });
-      opts.appendChild(b);
-    });
-    const eye = document.createElement("button"); eye.textContent = S.fast.show[P][i] ? "Tapar" : "👁 Destapar";
-    eye.disabled = !cur; eye.onclick = () => commit(s => s.fast.show[P][i] = !s.fast.show[P][i], S.fast.show[P][i] ? "" : "ding");
-    opts.appendChild(eye); $("fqs").appendChild(d);
-  });
+  // preguntas rápidas
+  if (S.fr.team >= 0) {
+    const t = S.fr.team, running = S.fast.end && Date.now() < S.fast.end;
+    $("frteam").textContent = `Juega ${tname(t)}: ${(S.teams[t] || []).join(", ")}`;
+    $("frgo").textContent = running ? "El reloj está corriendo" : S.fast.end ? "Volver a arrancar 45 s" : "Arrancar reloj 45 s";
+    const sc = frScores();
+    $("frlist").innerHTML = sc.map(([n, p, k]) => `<div class="grp" data-n="${esc(n)}"><span>${avHTML(n, "sm")}${esc(n)} · ${k} de 5</span><b>${p}</b></div>`).join("");
+    $("frlist").querySelectorAll("[data-n]").forEach(r => r.onclick = () => { const n = r.dataset.n; if (confirm(`¿Ganó ${n}?`)) act.winRound(n, teamOf(n), false, roundFor("w100")); });
+    $("frwin").textContent = sc.length && sc[0][1] ? `Ganó ${sc[0][0]} con ${sc[0][1]} puntos` : "Ganó…"; $("frwin").disabled = !(sc.length && sc[0][1]);
+    $("frshow").textContent = S.fr.show ? "Tapar resultados" : "Mostrar resultados en la tele";
+  }
+}
+let pickAv = myAv, myFa = ["", "", "", "", ""], faT;
+function renderAvGrid() {
+  const me = $("gname").value.trim(), taken = Object.entries(S.live.av || {}).filter(([n]) => n !== me).map(([, a]) => a);
+  const k = taken.join() + "|" + pickAv; if ($("avgrid").dataset.k === k) return; $("avgrid").dataset.k = k;
+  $("avgrid").innerHTML = AVS.map(a => `<button data-av="${a}" class="${a === pickAv ? "sel" : ""}${taken.includes(a) && taken.length < AVS.length ? " taken" : ""}"><span class="av${a.startsWith("carta") ? " cd" : ""}"><img src="img/${a}.webp" alt=""></span></button>`).join("");
+  $("avgrid").querySelectorAll("[data-av]").forEach(b => b.onclick = () => { if (b.classList.contains("taken")) return toast("Ese avatar ya lo eligió alguien"); pickAv = b.dataset.av; renderAvGrid(); });
 }
 function renderGuest() {
-  $("g-join").classList.toggle("hidden", !!myName); $("g-in").classList.toggle("hidden", !myName);
-  if (!myName) return;
+  const joined = !!myName;
+  $("g-join").classList.toggle("hidden", joined); $("g-in").classList.toggle("hidden", !joined);
+  if (!joined) return renderAvGrid();
   $("gmy").textContent = myName;
+  const ak = avOf(myName); if ($("gav").dataset.k !== ak) { $("gav").dataset.k = ak; $("gav").innerHTML = avHTML(myName, "big"); }
   const tm = teamOf(myName);
-  $("gteam").textContent = tm >= 0 ? "Equipo " + (tm + 1) : "Esperando el sorteo de equipos";
-  const col = S.screen === "colmena" && S.col.q >= 0 && !S.col.show, age = S.screen === "age";
-  $("g-col").classList.toggle("hidden", !col); $("g-age").classList.toggle("hidden", !age);
-  $("g-wait").classList.toggle("hidden", col || age);
-  if (col) {
-    $("gcq").textContent = COLMENA[S.col.q];
-    if ($("g-col").dataset.q !== String(S.col.q)) { $("g-col").dataset.q = S.col.q; $("gans").value = ""; }
-    const mine = S.live.ans[myName];
-    $("gsent").classList.toggle("hidden", !mine); $("gsent").textContent = mine ? `Enviaste: ${mine} ✓ (puedes cambiarla)` : "";
+  $("gteam").textContent = tm >= 0 ? tname(tm) : "Esperando el sorteo de equipos";
+  const sc = S.screen, g = S.game;
+  const mode = sc === "fast" && S.fr.team >= 0 ? "fast" : ["intro", "board"].includes(sc) ? "100" : sc === "colmena" || (sc === "game" && g === "colmena") ? "col" : sc === "game" && CALLW[g] ? "call" : sc === "game" && g === "final" ? "age" : "wait";
+  ["wait", "call", "col", "100", "fast", "age"].forEach(k => $("g-" + k).classList.toggle("hidden", k !== mode));
+  if (mode === "wait") $("gwaitp").textContent = ["home", "reg", "teams", "track"].includes(sc) ? "¡Ya estás dentro! Espera a que empiece el juego." : "Mira la tele 👀";
+  if (mode === "call") {
+    const c = S.live.call;
+    $("gcallk").textContent = GAMES[g]; $("gcall").textContent = CALLW[g]; $("gcall").disabled = !!c;
+    $("gcalled").classList.toggle("hidden", !c);
+    $("gcalled").textContent = c ? (c.name === myName ? "¡Le avisamos a Dani! ✓" : `${c.name} dijo ${CALLW[g]}`) : "";
   }
-  if (age) { const a = S.live.ages[myName]; $("gagesent").classList.toggle("hidden", a == null); $("gagesent").textContent = a != null ? `Enviaste: ${a} años ✓` : ""; }
+  if (mode === "col") {
+    const C = S.col, open = C.q >= 0 && !C.show;
+    $("gcq").textContent = C.q < 0 ? "Prepárate: la pregunta sale en la tele." : COLMENA[C.q];
+    $("gcolin").classList.toggle("hidden", !open);
+    if (open && $("g-col").dataset.q !== String(C.q)) { $("g-col").dataset.q = C.q; $("gans").value = ""; }
+    const mine = S.live.ans[myName];
+    $("gsent").classList.toggle("hidden", !(open ? mine : C.q >= 0));
+    $("gsent").textContent = open ? (mine ? `Enviaste: ${mine} ✓ (puedes cambiarla)` : "") : `Llevas ${C.pts[myName] || 0} puntos`;
+  }
+  if (mode === "100") {
+    const f = tm >= 0 ? frontName(tm) : "";
+    $("g100p").textContent = tm < 0 ? "Mira la tele 👀" : f === myName ? "¡Te toca pasar al frente!" : `Al frente de tu equipo: ${f}`;
+    $("g100s").textContent = tm < 0 ? "" : f === myName ? "Ponte en el buzzer y aprieta primero." : `${tname(tm)} lleva ${S.scores[tm]} puntos`;
+  }
+  if (mode === "fast") {
+    const mine = teamOf(myName) === S.fr.team, set = DATA.fast.find(x => x.id === S.fr.set) || DATA.fast[0];
+    const k = [mine, S.fr.set, S.fast.end].join("|");
+    if ($("gfqs").dataset.k !== k) {
+      $("gfqs").dataset.k = k;
+      if (!mine) $("gfqs").innerHTML = `<p class="gp2">Juega ${esc(tname(S.fr.team))}. Mira la tele 👀</p>`;
+      else if (!S.fast.end) $("gfqs").innerHTML = '<p class="gp2">Prepárate. Cuando Dani arranque el reloj salen tus 5 preguntas.</p>';
+      else {
+        $("gfqs").innerHTML = set.qs.map((q, i) => `<div class="gfq"><label>${i + 1}. ${esc(q.q)}</label><input data-i="${i}" maxlength="30" autocomplete="off" value="${esc(myFa[i] || "")}"></div>`).join("");
+        $("gfqs").querySelectorAll("input").forEach(inp => inp.oninput = () => {
+          myFa[+inp.dataset.i] = inp.value; clearTimeout(faT);
+          faT = setTimeout(() => { if (hostConn && hostConn.open) hostConn.send({ t: "fa", name: myName, a: myFa }); }, 250);
+        });
+      }
+    }
+  }
+  if (mode === "age") { const a = S.live.ages[myName]; $("gagesent").classList.toggle("hidden", a == null); $("gagesent").textContent = a != null ? `Enviaste: ${a} años ✓` : ""; }
 }
 function render() { if (role === "screen") renderScreen(); if (role === "control") renderControl(); if (role === "guest") renderGuest(); }
 $("gjoin").onclick = () => {
-  const n = $("gname").value.trim().slice(0, 18); if (!n) return;
-  myName = n; try { localStorage.setItem("dani-guest-name", n); } catch (e) {}
-  if (hostConn && hostConn.open) hostConn.send({ t: "join", name: n });
+  const n = $("gname").value.trim().slice(0, 18); if (!n) return toast("Escribe tu nombre");
+  if (!pickAv) return toast("Elige tu avatar");
+  myName = n; myAv = pickAv; try { localStorage.setItem("dani-guest-name", n); localStorage.setItem("dani-guest-av", myAv); } catch (e) {}
+  if (hostConn && hostConn.open) hostConn.send({ t: "join", name: n, av: myAv });
   render();
 };
+$("gname").oninput = () => { if (role === "guest") renderAvGrid(); };
+$("gcall").onclick = () => { if (!hostConn || !hostConn.open) return; hostConn.send({ t: "call", name: myName }); navigator.vibrate?.(60); };
+setInterval(() => {
+  if (role !== "guest" || $("g-fast").classList.contains("hidden")) return;
+  if (!S.fast.end) return $("gftimer").textContent = "";
+  const left = Math.max(0, Math.ceil((S.fast.end - Date.now()) / 1000));
+  $("gftimer").textContent = left ? left + " s" : "¡Tiempo!";
+  if (!left) document.querySelectorAll("#gfqs input").forEach(i => { if (!i.disabled) { i.disabled = true; if (hostConn && hostConn.open) hostConn.send({ t: "fa", name: myName, a: myFa }); } });
+}, 250);
 $("gsend").onclick = () => { const v = $("gans").value.trim(); if (!v || !hostConn || !hostConn.open) return; hostConn.send({ t: "ans", name: myName, text: v, q: S.col.q }); navigator.vibrate?.(30); };
 $("gagesend").onclick = () => { const v = $("gage").value; if (v === "" || !hostConn || !hostConn.open) return; hostConn.send({ t: "age", name: myName, n: +v }); };
 let tt; function toast(m) { if (role === "screen") return; const t = $("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 2200); }
 
 act.winRound = (who, team, isTeam, idx) => {
-  if (team < 0) return toast("Esa persona no está en ningún equipo");
   if (idx == null) idx = S.night.cur;
   commit(s => {
     s.night.res[idx] = { who, team }; if (idx >= s.night.cur) s.night.cur = idx + 1;
-    s.winText = who; s.winSub = isTeam ? "Su equipo suma un punto" : `Escoge tu regalo · Punto para Equipo ${team + 1}`; s.screen = "win";
+    s.winText = who; s.winSub = "Se lleva una corona"; s.screen = "win";
+    if (ROUNDS[idx] === "w100") { s.fr.team = -1; s.fast.end = 0; }
   }, "win");
+  netOp("clearCall");
+};
+act.startFast = t => {
+  const k = Math.max(0, ROUNDS.slice(0, Math.min(S.night.cur, ROUNDS.length - 1) + 1).filter(g => g === "w100").length - 1);
+  const set = (DATA.fast[k] || DATA.fast[0]).id;
+  commit(s => { s.fr = { team: t, set, show: false }; s.fast.end = 0; s.fast.dur = 45000; s.screen = "fast"; }, "whoosh");
+  netOp("clearFa");
 };
 act.draw = () => {
   let names = $("guests").value.split("\n").map(x => x.trim()).filter(Boolean);
@@ -3948,12 +4205,26 @@ act.draw = () => {
 document.querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { tab = b.dataset.tab; renderControl(); scrollTo(0, 0); });
 $("draw").onclick = () => { act.draw(); guestsDirty = false; };
 $("guests").oninput = () => guestsDirty = true;
-$("undo").onclick = () => { if (confirm("¿Deshacer el último ganador?")) commit(s => { let i = s.night.res.length - 1; while (i >= 0 && !s.night.res[i]) i--; if (i >= 0) { s.night.res[i] = null; s.night.cur = i; } s.screen = "night"; }); };
+$("undo").onclick = () => { if (confirm("¿Deshacer el último ganador?")) commit(s => { let i = s.night.res.length - 1; while (i >= 0 && !s.night.res[i]) i--; if (i >= 0) { s.night.res[i] = null; s.night.cur = i; } s.screen = "track"; }); };
+$("resetall").onclick = () => {
+  if (!confirm("¿Borrar todo y empezar de nuevo? La tele va a sacar un QR y un código nuevos.")) return;
+  if (!P2P) return hardReset();
+  netOp("reset"); try { localStorage.removeItem("dani-state"); localStorage.removeItem("dani-ctrl-code"); } catch (e) {}
+  setTimeout(() => location.href = location.pathname, 700);
+};
+$("treset").onclick = () => { if (confirm("¿Borrar todo y empezar de nuevo? Se genera un QR y un código nuevos.")) hardReset(); };
+$("callyes").onclick = () => { const c = S.live.call; if (c) act.winRound(c.name, teamOf(c.name), false, roundFor(c.g)); };
+$("callno").onclick = () => netOp("clearCall");
+[0, 1].forEach(t => $("tname" + t).onchange = () => { const v = $("tname" + t).value.trim().slice(0, 20); commit(s => s.names[t] = v || "Equipo " + (t + 1)); });
+$("frscreen").onclick = () => commit(s => s.screen = "fast");
+$("frgo").onclick = () => commit(s => { s.fast.end = Date.now() + 45000; s.fast.dur = 45000; s.screen = "fast"; });
+$("frshow").onclick = () => commit(s => { s.fr.show = !s.fr.show; s.screen = "fast"; }, S.fr.show ? "" : "bank");
+$("frwin").onclick = () => { const top = frScores()[0]; if (top && top[1]) act.winRound(top[0], teamOf(top[0]), false, roundFor("w100")); };
+$("frback").onclick = () => commit(s => { s.fr.team = -1; s.fast.end = 0; s.screen = "board"; });
 $("showgame").onclick = () => { const g = ROUNDS[S.night.cur]; if (g) goGame(g); else commit(s => s.screen = "thanks"); };
 const moveRound = d => commit(s => { s.night.cur = Math.max(0, Math.min(ROUNDS.length, s.night.cur + d)); s.screen = "track"; });
 $("rprev").onclick = () => moveRound(-1);
 $("rnext").onclick = () => moveRound(1);
-$("fset").innerHTML = DATA.fast.map(f => `<option value="${f.id}">Set ${f.id}</option>`).join("");
 $("qsel").onchange = e => { if (e.target.value) act.pick(e.target.value); };
 $("next").onclick = act.next;
 $("said").oninput = renderControl;
@@ -3963,8 +4234,7 @@ $("x0").onclick = () => commit(s => s.strikes = 0);
 [0, 1].forEach(t => {
   $("tm" + t).onclick = () => commit(s => s.team = t);
   $("aw" + t).onclick = () => act.award(t);
-  $("win" + t).onclick = () => act.winRound("Equipo " + (t + 1), t, true, roundFor("w100"));
-  $("fp" + t).onclick = () => commit(s => s.fast.player = t);
+  $("win" + t).onclick = () => { if (confirm(`¿Ganó ${tname(t)}? Pasan a las preguntas rápidas.`)) act.startFast(t); };
 });
 $("rest").onclick = () => { const q = Q[S.qid]; if (!q) return; if (!S.banked && pot(S)) return toast("Primero da los puntos a un equipo"); commit(s => { s.banked = true; s.open = q.a.map((_, i) => i); }); };
 $("factb").onclick = () => commit(s => s.fact = !s.fact);
@@ -3972,13 +4242,6 @@ document.querySelectorAll("[data-mult]").forEach(b => b.onclick = () => commit(s
 document.querySelectorAll("[data-screen]").forEach(b => b.onclick = () => commit(s => s.screen = b.dataset.screen));
 document.querySelectorAll("[data-adj]").forEach(b => b.onclick = () => { const [t, d] = b.dataset.adj.split(",").map(Number); commit(s => s.scores[t] = Math.max(0, s.scores[t] + d)); });
 $("newgame").onclick = () => { if (confirm("¿Regresar a 0 los puntos de este juego?")) commit(s => { s.scores = [0, 0]; s.qid = null; s.open = []; s.strikes = 0; s.banked = false; s.fast = blank().fast; }); };
-$("fset").onchange = e => commit(s => { s.fast = blank().fast; s.fast.set = e.target.value; });
-$("t20").onclick = () => commit(s => { s.fast.end = Date.now() + 20000; s.fast.dur = 20000; s.screen = "fast"; });
-$("t25").onclick = () => commit(s => { s.fast.end = Date.now() + 25000; s.fast.dur = 25000; s.screen = "fast"; });
-$("tstop").onclick = () => commit(s => s.fast.end = 0);
-$("fshow").onclick = () => commit(s => { const P = s.fast.player; s.fast.show[P] = s.fast.p[P].map(a => !!a); }, "ding");
-$("fhide1").onclick = () => commit(s => s.fast.hide0 = !s.fast.hide0);
-$("frep").onclick = () => commit(() => {}, "dup");
 $("cgroup").onclick = () => {
   const ans = S.live.ans; if (!Object.keys(ans).length) return toast("Todavía no llegan respuestas");
   commit(s => {
@@ -4018,15 +4281,6 @@ $("cwin").onclick = () => {
   if (!top) return toast("Todavía nadie tiene puntos");
   act.winRound(top[0], teamOf(top[0]), false, roundFor("colmena"));
 };
-$("gwin").onclick = () => {
-  const g = S.game, idx = roundFor(g);
-  $("wpgame").textContent = `${GAMES[g]} · Juego ${idx + 1} de ${ROUNDS.length}`;
-  const cols = [0, 1].map(t => [`Equipo ${t + 1}`, S.teams[t]]); const loose = S.players.filter(n => teamOf(n) < 0); if (loose.length) cols.push(["Sin equipo", loose]);
-  $("wpcols").innerHTML = ""; cols.forEach(([h, ns], ci) => { const c = document.createElement("div"); c.className = "wpc t" + ci; c.innerHTML = "<h3></h3>"; c.firstChild.textContent = h; ns.forEach(n => { const b = document.createElement("button"); b.textContent = n; b.onclick = () => { $("wpick").classList.remove("on"); act.winRound(n, teamOf(n), false, idx); }; c.appendChild(b); }); $("wpcols").appendChild(c); });
-  if (!S.players.length) $("wpcols").innerHTML = '<div class="wempty">Primero regístrense o escribe los invitados en el control.</div>';
-  $("wpick").classList.add("on");
-};
-$("wpclose").onclick = () => $("wpick").classList.remove("on");
 $("w100go").onclick = () => act.next();
 $("fs").onclick = () => { audio(); document.documentElement.requestFullscreen?.(); };
 $("sound").onclick = () => SND.hello();
