@@ -677,6 +677,62 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 .gfq label{display:block;margin-bottom:5px;font-family:var(--ui);font-weight:700;font-size:14px}
 .gsub{font-family:var(--ui);font-size:15px;color:var(--ink-2)}
 .gcard p.gp2{font-family:var(--ui);font-size:16px;line-height:1.4;color:var(--ink-2)}
+/* nueva noche: edad, 100 Mexicanos con duración, rápidas de los dos equipos */
+.hgames{grid-template-columns:repeat(3,250px)!important}
+.trsp small{display:block;margin-top:2px;font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--ink-2)}
+.aleft{position:absolute;left:90px;top:96px;width:560px;bottom:50px;z-index:2;display:flex;flex-direction:column;align-items:center}
+.aphoto{width:500px;height:625px;padding:16px 16px 18px;background:#fffdf9;border-radius:10px;transform:rotate(-2.5deg);box-shadow:0 30px 50px -28px rgba(120,90,110,.7),0 0 0 1px rgba(217,173,95,.3)}
+.aphoto img{width:100%;height:100%;object-fit:cover;border-radius:4px;display:block}
+.aphoto.in{animation:photoin .9s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes photoin{from{opacity:0;transform:rotate(-12deg) translateY(60px) scale(.9)}to{opacity:1;transform:rotate(-2.5deg)}}
+.anote{margin-top:22px;font-family:var(--ui);font-size:20px;color:var(--ink-2)}
+.agev.res .aphoto,.agev.res .anote{display:none}
+.astrip{display:none}
+.agev.res .astrip{display:grid;grid-template-columns:repeat(3,160px);gap:22px 20px;margin-top:40px}
+.apol{padding:8px 8px 10px;background:#fffdf9;border-radius:8px;box-shadow:0 18px 30px -20px rgba(120,90,110,.7);text-align:center;animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.apol:nth-child(odd){transform:rotate(-3deg)}.apol:nth-child(even){transform:rotate(2.5deg)}
+.apol img{width:100%;height:180px;object-fit:cover;border-radius:3px;display:block}
+.apol span{display:block;margin-top:8px;font-family:var(--display);font-weight:600;font-size:24px}
+.aright{position:absolute;left:720px;right:90px;top:96px;bottom:50px;z-index:2;display:flex;flex-direction:column}
+.ahead{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.atag{font-size:14px;letter-spacing:.3em;color:var(--ink-2)}
+.agev.shown .ring,.agev.res .ring{visibility:hidden}
+.areal{font-family:var(--display);font-size:46px;margin:6px 0 14px;min-height:10px}
+.areal b{font-size:96px;font-weight:500;color:var(--rose-ink);margin:0 6px}
+.alist{display:flex;flex-direction:column;gap:9px;overflow:hidden}
+.agot{font-family:var(--display);font-size:40px;margin-top:40px}.agot b{font-size:80px;font-weight:500;margin-right:10px}
+.aavs{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.aavs .av{width:70px;height:70px;animation:popin .5s cubic-bezier(.3,1.5,.5,1) both}
+.arow{display:grid;grid-template-columns:36px 50px 1fr 130px 70px;align-items:center;gap:14px;padding:7px 22px;border-radius:22px;background:var(--glass);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 14px 26px -22px rgba(120,90,110,.55);animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.arow.top{background:linear-gradient(115deg,rgba(248,211,220,.95),rgba(236,220,246,.95));box-shadow:inset 0 0 0 2px var(--gold),0 0 30px rgba(226,180,90,.35)}
+.arow .k{font-family:var(--display);font-size:24px;text-align:center}.arow .k svg{width:28px;height:28px}
+.arow .av{width:50px;height:50px}
+.arow b{font-family:var(--display);font-weight:600;font-size:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.arow .g{font-family:var(--ui);font-size:20px;color:var(--ink-2);text-align:right}
+.arow .p{font-family:var(--display);font-weight:500;font-size:40px;text-align:right}
+.fbody{top:270px}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.fcol h4{margin:0 0 14px;font-family:var(--display);font-weight:600;font-size:34px;display:flex;align-items:baseline;gap:14px}
+.fcol h4 small{font-family:var(--ui);font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.fcol .fpl{grid-template-columns:1fr 1fr;gap:12px}
+.fcol .fpc{padding:12px 16px;gap:12px}.fcol .fpc .av{width:46px;height:46px}.fcol .fpc b{font-size:26px}
+.fcol .frk{gap:8px}
+.fcol .frr{grid-template-columns:28px 40px 110px 1fr 62px;gap:10px;padding:6px 14px;border-radius:20px}
+.fcol .frr .av{width:40px;height:40px}.fcol .frr b{font-size:22px}.fcol .frr .tot{font-size:34px}
+.fcol .frr .ch{gap:5px}.fcol .frr .ch span{padding:3px 8px;font-size:12px}.fcol .frr .k svg{width:24px;height:24px}
+.durs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.durs button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:14px 8px}
+.durs button b{font-family:var(--display);font-size:26px;font-weight:600}.durs button span{font-size:13px;color:var(--ink-2)}
+.durline{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.durline .b{flex:none;width:auto;padding:10px 16px}
+.frh{margin:12px 0 2px;font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.aprevimg{display:block;width:120px;height:150px;object-fit:cover;border-radius:10px;margin:0 auto 12px;box-shadow:0 10px 20px -12px rgba(120,90,110,.6)}
+.aprevimg.hidden{display:none}
+#arealin{flex:1}
+.agev .gname{font-size:70px}
+.alist.two{display:grid;grid-auto-flow:column;grid-template-columns:1fr 1fr;gap:9px 14px}
+.alist.two .arow{grid-template-columns:26px 40px 1fr 74px 46px;gap:10px;padding:6px 14px;border-radius:18px}
+.alist.two .arow .av{width:40px;height:40px}.alist.two .arow b{font-size:24px}.alist.two .arow .g{font-size:16px}.alist.two .arow .p{font-size:30px}.alist.two .arow .k svg{width:22px;height:22px}.alist.two .arow .k{font-size:20px}
+#arank .grp span{display:flex;align-items:center;gap:8px}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
@@ -747,7 +803,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       <div id="g-col" class="gcard hidden"><small>Hive Mind</small><p id="gcq"></p><div id="gcolin"><input id="gans" maxlength="40" placeholder="Tu respuesta" autocomplete="off"><button class="b pri big" id="gsend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gsent" class="gok hidden"></div></div>
       <div id="g-100" class="gcard hidden"><small>100 Mexicanos Dijeron</small><p id="g100p"></p><div id="g100s" class="gsub"></div></div>
       <div id="g-fast" class="gcard hidden"><small>Preguntas rápidas</small><div class="gtimer" id="gftimer"></div><div id="gfqs"></div></div>
-      <div id="g-age" class="gcard hidden"><small>¿Cuántos años tienes?</small><p>¿Cuántos años tenía Dani en la foto?</p><input id="gage" type="number" inputmode="numeric" min="0" max="40" placeholder="Años"><button class="b pri big" id="gagesend" style="width:100%;margin-top:10px">Enviar</button><div id="gagesent" class="gok hidden"></div></div>
+      <div id="g-age" class="gcard hidden"><small id="gagek">¿Cuántos años tienes?</small><div class="gtimer" id="gatimer"></div><p id="gagep"></p><div id="gagein" class="hidden"><input id="gage" type="number" inputmode="numeric" min="0" max="40" placeholder="Años" autocomplete="off"><button class="b pri big" id="gagesend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gagesent" class="gok hidden"></div></div>
     </div>
     <span class="conn" id="conng"><i></i>Conectando…</span>
   </div>
@@ -758,7 +814,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     <div class="wc"><i></i><i></i><i></i><i></i><i></i></div>
     <div class="view center homev" id="v-home"><div class="deco-layer" data-deco="home"></div>
       <div class="rise" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center">
-        <div class="caps" style="font-size:16px;letter-spacing:.42em;color:var(--ink-2)">10 juegos</div>
+        <div class="caps" style="font-size:16px;letter-spacing:.42em;color:var(--ink-2)">3 juegos · 10 coronas</div>
         <div class="htitle hbig">Game night</div>
         <div class="hgames" id="hgames"></div>
         <div class="hbtns"><button class="hbtn pri p2ponly" data-go="reg">Entra y pon tu nombre</button><button class="hbtn" data-go="track">Ver el tablero</button></div>
@@ -803,7 +859,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
           <div class="card"><img class="float" src="img/gorro.webp" style="height:130px;width:auto"><b>Equipos</b><span>Dos equipos sorteados al azar.</span></div>
           <div class="card"><img class="float" src="img/disco.webp" style="height:130px;width:auto"><b>Buzzer</b><span>Quien apriete primero contesta. Tres taches y el otro equipo puede robar.</span></div>
           <div class="card"><img class="twinkle" src="img/estrella.webp" style="height:130px;width:auto"><b>Suma puntos</b><span>Entre más popular la respuesta, más puntos.</span></div>
-          <div class="card"><img class="float" src="img/regalo.webp" style="height:130px;width:auto"><b>¡Gana!</b><span>Quien gana cada ronda escoge un regalo de la pila.</span></div>
+          <div class="card"><img class="float" src="img/regalo.webp" style="height:130px;width:auto"><b>¡Gana!</b><span>Quien gana se lleva una corona.</span></div>
         </div>
       </div>
     </div>
@@ -859,13 +915,28 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
         <aside class="tabl tcol" id="crank"></aside>
       </div>
     </div>
+    <div class="view agev" id="v-age"><div class="deco-layer" data-deco="age"></div>
+      <div class="aleft">
+        <div class="aphoto" id="aphoto"><img id="aimg" alt=""></div>
+        <div class="anote" id="anote"></div>
+        <div class="astrip" id="astrip"></div>
+      </div>
+      <div class="aright">
+        <div class="ahead">
+          <div><div class="caps atag"><span>¿Cuántos años tienes?</span> · <span id="atag"></span></div><div class="gname">¿Cuántos años tenía?</div><div class="flead" id="alead"></div></div>
+          <div class="ring" id="aring"><div class="disc"></div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="5"/><circle id="aringc" cx="50" cy="50" r="46" fill="none" stroke="#e2b45a" stroke-width="5" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="0"/></svg><b id="atimer">10</b></div>
+        </div>
+        <div class="areal" id="areal"></div>
+        <div class="alist" id="alist"></div>
+      </div>
+    </div>
     <div class="view center win" id="v-win"><div class="deco-layer" data-deco="win"></div>
       <div class="rise" style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center">
         <div class="h1">¡Felicidades!</div>
         <div class="winav" id="winav"></div>
         <div class="caps" style="font-size:22px;color:var(--ink-2);margin-top:10px">Ganó</div>
         <div class="pill trophy"><svg><use href="#trophy"/></svg><span id="winner"></span></div>
-        <div class="lead" style="margin-top:26px" id="winsub">Escoge tu regalo de la pila</div>
+        <div class="lead" style="margin-top:26px" id="winsub">Se lleva una corona</div>
       </div>
     </div>
     <div class="view center thanks" id="v-thanks"><div class="deco-layer" data-deco="thanks"></div>
@@ -936,9 +1007,9 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
   <!-- Noche -->
   <div class="tab hidden" id="tab-noche">
     <div class="sec">
-      <h2>Los 10 juegos</h2>
+      <h2>Las 10 coronas</h2>
       <div id="roundlist"></div>
-      <div class="hintc">Toca un juego para ir a él.</div>
+      <div class="hintc">Toca una corona para ir a ella.</div>
       <div class="row" style="margin-top:10px"><button class="b" id="undo">Deshacer el último ganador</button></div>
     </div>
     <div class="sec">
@@ -954,10 +1025,16 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 
   <!-- 100 Mexicanos -->
   <div class="tab hidden" id="tab-w100">
-    <div class="sec">
+    <div class="sec" id="wdur">
+      <h2>¿Cuánto dura?</h2>
+      <div class="hintc" style="margin:-4px 0 12px">Escoge antes de la primera pregunta. Las 2 de Dani van al final y valen doble y triple.</div>
+      <div class="durs"><button class="b" data-dur="6"><b>20 min</b><span>6 preguntas</span></button><button class="b" data-dur="10"><b>30 min</b><span>10 preguntas</span></button><button class="b" data-dur="12"><b>40 min</b><span>12 preguntas</span></button><button class="b" data-dur="16"><b>50 min</b><span>16 preguntas</span></button></div>
+    </div>
+    <div class="sec" id="wmain">
       <h2><span id="wstep">Pregunta</span><span id="wscore" style="letter-spacing:0;text-transform:none"></span></h2>
       <div class="cq" id="cq"></div>
       <div class="row"><button class="b pri" id="next">Empezar</button></div>
+      <div class="durline"><span class="hintc" id="wdurinfo"></span><button class="b" id="wmore">Agregar más · +4</button></div>
     </div>
     <div class="sec" id="wplay">
       <div class="front" id="wfront"></div>
@@ -974,10 +1051,10 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       <div class="factc hidden" id="cfact"></div>
     </div>
     <div class="sec">
-      <h2>Al terminar las 4 preguntas</h2>
+      <h2>Al terminar todas las preguntas</h2>
       <div class="hintc" id="w100lead" style="margin:0 0 10px"></div>
       <div class="row"><button class="b pri" id="win0"></button><button class="b pri" id="win1"></button></div>
-      <div class="hintc">El equipo que gana pasa a las preguntas rápidas y de ahí sale la persona ganadora.</div>
+      <div class="hintc">Luego los dos equipos juegan las preguntas rápidas en su celular: 3 coronas para los mejores del equipo ganador y 2 para los del otro.</div>
       <details style="margin-top:12px"><summary>Más opciones</summary>
         <select id="qsel" style="margin-top:10px"></select>
         <div class="row" style="margin-top:8px"><button class="b" id="tm0"></button><button class="b" id="tm1"></button></div>
@@ -1020,17 +1097,40 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
     </div>
   </div>
 
+  <!-- ¿Cuántos años tienes? -->
+  <div class="tab hidden" id="tab-age">
+    <div class="sec">
+      <h2 id="astep">¿Cuántos años tienes?</h2>
+      <img id="aprevimg" class="aprevimg hidden" alt="">
+      <div class="row"><button class="b pri" id="anext">Poner la foto 1</button></div>
+      <div class="row" style="margin-top:8px"><button class="b pri" id="ago">Arrancar reloj 10 s</button></div>
+      <div class="hintc" id="agot"></div>
+      <div id="areals">
+        <h2 style="margin-top:16px">Edad real</h2>
+        <div class="row"><input id="arealin" type="number" inputmode="numeric" placeholder="Años" autocomplete="off"><button class="b pri" id="ashow">Revelar</button></div>
+      </div>
+      <div class="row" style="margin-top:8px"><button class="b" id="aback">‹ Foto anterior</button></div>
+    </div>
+    <div class="sec">
+      <h2>Así van</h2>
+      <div id="arank"></div>
+      <div class="row" style="margin-top:10px"><button class="b pri" id="awin">Dar coronas</button></div>
+      <div class="hintc">Exacto 3 puntos, a 1 año 2, a 2 años 1. Si empatan, gana quien contestó más rápido.</div>
+    </div>
+  </div>
+
   <!-- Preguntas rápidas -->
   <div class="tab hidden" id="tab-fr">
     <div class="sec">
       <h2>Preguntas rápidas</h2>
       <div class="cq" id="frteam"></div>
-      <div class="hintc" style="margin:-4px 0 12px">Cada quien del equipo contesta las 5 preguntas en su celular. Gana quien junte más puntos.</div>
+      <div class="hintc" style="margin:-4px 0 12px">Todos contestan las 5 preguntas en su celular. Si empatan, gana quien terminó más rápido.</div>
       <div class="row"><button class="b" id="frscreen">Ponerlas en la tele</button><button class="b pri" id="frgo">Arrancar reloj 45 s</button></div>
-      <h2 style="margin-top:16px">Así van <span class="hintc" style="letter-spacing:0;text-transform:none">toca a alguien para darle el gane</span></h2>
+      <h2 style="margin-top:16px">Así van</h2>
       <div id="frlist"></div>
       <div class="row" style="margin-top:10px"><button class="b pri" id="frshow">Mostrar resultados en la tele</button></div>
-      <div class="row" style="margin-top:8px"><button class="b pri" id="frwin">Ganó</button></div>
+      <div class="row" style="margin-top:8px"><button class="b pri" id="frwin">Dar coronas</button></div>
+      <div class="hintc">Primero muestra los resultados en la tele.</div>
       <div class="row" style="margin-top:8px"><button class="b" id="frback">Regresar a 100 Mexicanos</button></div>
     </div>
   </div>
@@ -1040,7 +1140,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
 <nav class="tabs">
   <button data-tab="ahora"><img src="img/estrella.webp" alt=""><span>Ahora</span></button>
   <button data-tab="equipos"><img src="img/gorro.webp" alt=""><span>Equipos</span></button>
-  <button data-tab="noche"><img src="img/copa.webp" alt=""><span>Los 10 juegos</span></button>
+  <button data-tab="noche"><img src="img/copa.webp" alt=""><span>La noche</span></button>
 </nav>
 </section>
 <div class="toast" id="toast"></div>
@@ -3355,17 +3455,28 @@ var qrcode = function() {
 <script>
 const DATA = {"qs": [{"id": "mix1", "cat": "Mixta", "mult": 1, "q": "Algo que pierdes todo el tiempo", "a": [["Llaves", 34], ["Celular", 24], ["Cartera", 14], ["Lentes", 12], ["AirPods", 10], ["Cargador", 6]], "fact": null}, {"id": "mix2", "cat": "Mixta", "mult": 1, "q": "Algo que comes después de una fiesta", "a": [["Tacos", 42], ["Hamburguesa", 18], ["Chilaquiles", 14], ["Pizza", 12], ["Hot dog", 8], ["Maruchan", 6]], "fact": null}, {"id": "mix3", "cat": "Mixta", "mult": 1, "q": "Algo que haces apenas despiertas", "a": [["Ver el celular", 36], ["Ir al baño", 20], ["Lavarte los dientes", 16], ["Apagar la alarma", 12], ["Tomar café", 10], ["Bañarte", 6]], "fact": null}, {"id": "mix4", "cat": "Mixta", "mult": 1, "q": "Plan de domingo", "a": [["Comida familiar", 32], ["Brunch", 22], ["Dormir", 16], ["Ver películas", 12], ["Hacer ejercicio", 10], ["Ir al súper", 8]], "fact": null}, {"id": "mix5", "cat": "Mixta", "mult": 1, "q": "Excusa para cancelar un plan", "a": [["Me siento mal", 36], ["Tengo trabajo", 24], ["Estoy cansada", 16], ["No tengo dinero", 12], ["Tengo un compromiso familiar", 8], ["Se me olvidó", 4]], "fact": null}, {"id": "mix6", "cat": "Mixta", "mult": 1, "q": "Algo que no puede faltar en una fiesta", "a": [["Música", 34], ["Alcohol", 28], ["Comida", 16], ["Amigos", 10], ["Hielos", 8], ["Pastel", 4]], "fact": null}, {"id": "mix7", "cat": "Mixta", "mult": 1, "q": "Red flag en alguien con quien sales", "a": [["Celoso", 30], ["Que hable de su ex", 24], ["Mentiroso", 18], ["Grosero con el mesero", 14], ["Que no conteste", 8], ["Tacaño", 6]], "fact": null}, {"id": "mix8", "cat": "Mixta", "mult": 1, "q": "Algo que pides por Uber Eats o Rappi", "a": [["Pizza", 32], ["Sushi", 22], ["Hamburguesa", 18], ["Tacos", 14], ["Comida china", 8], ["Café", 6]], "fact": null}, {"id": "mix9", "cat": "Mixta", "mult": 1, "q": "Algo que te da pena que te pase en público", "a": [["Caerte", 40], ["Que se te rompa el pantalón", 18], ["Que te rechacen la tarjeta", 14], ["Mandarle un mensaje a la persona equivocada", 10], ["Que te ruja la panza", 10], ["Equivocarte de nombre", 8]], "fact": null}, {"id": "mix10", "cat": "Mixta", "mult": 1, "q": "Algo que pasa en el grupo de WhatsApp de la familia", "a": [["Cadenas", 32], ["Buenos días de Piolín", 24], ["Fake news", 18], ["Peleas", 12], ["Fotos de los nietos", 8], ["Stickers", 6]], "fact": null}, {"id": "mix11", "cat": "Mixta", "mult": 1, "q": "Algo que te preguntan las tías en las reuniones", "a": [["¿Y el novio?", 38], ["¿Cuándo te casas?", 24], ["¿En qué estás trabajando?", 14], ["¿Ya acabaste la carrera?", 12], ["¿Cuándo los hijos?", 8], ["¿Subiste de peso?", 4]], "fact": null}, {"id": "mix12", "cat": "Mixta", "mult": 1, "q": "Algo que haces en la oficina", "a": [["Trabajar", 28], ["Tomar café", 24], ["Chismear", 18], ["Ver el reloj", 14], ["Ver el celular", 10], ["Comer", 6]], "fact": null}, {"id": "mix13", "cat": "Mixta", "mult": 1, "q": "Ejercicio que haces (o dices que haces)", "a": [["Gym", 32], ["Correr", 24], ["Pádel", 14], ["Yoga", 12], ["Pilates", 10], ["Caminar", 8]], "fact": null}, {"id": "mix14", "cat": "Mixta", "mult": 1, "q": "Algo que haces en Navidad", "a": [["Cenar", 30], ["Abrir regalos", 24], ["Posadas", 16], ["Cenas con amigos", 14], ["Intercambio", 10], ["Ver a la familia", 6]], "fact": null}, {"id": "mix15", "cat": "Mixta", "mult": 1, "q": "Lugar de vacaciones en México", "a": [["Puerto Vallarta", 20], ["Acapulco", 16], ["Puerto Escondido", 16], ["Los Cabos", 12], ["Valle de Bravo", 10], ["Cuernavaca", 10], ["Tulum", 8], ["Mérida", 8]], "fact": null}, {"id": "mix16", "cat": "Mixta", "mult": 1, "q": "Algo que pasa en una boda", "a": [["Bailar", 34], ["Llorar", 20], ["La víbora de la mar", 18], ["Aventar el ramo", 12], ["Tomar", 10], ["Comer", 6]], "fact": null}, {"id": "mix17", "cat": "Mixta", "mult": 1, "q": "Algo que haces cuando estás crudo", "a": [["Dormir", 34], ["Comer chilaquiles", 24], ["Tomar suero", 18], ["Tomar Electrolit", 12], ["Prometer no volver a tomar", 8], ["Tomar agua", 4]], "fact": null}, {"id": "mix18", "cat": "Mixta", "mult": 1, "q": "Algo que guardas en el refri", "a": [["Leche", 32], ["Huevos", 22], ["Agua", 18], ["Sobras", 14], ["Fruta", 8], ["Cerveza", 6]], "fact": null}, {"id": "mix19", "cat": "Mixta", "mult": 1, "q": "Algo que un chilango considera \"provincia\"", "a": [["Todo lo que no es la CDMX", 30], ["Querétaro", 22], ["Puebla", 16], ["Toluca", 14], ["Cuernavaca", 10], ["Satélite", 8]], "fact": null}, {"id": "mix20", "cat": "Mixta", "mult": 1, "q": "Algo que compras en el OXXO", "a": [["Refresco", 28], ["Papitas", 22], ["Agua", 18], ["Hielos", 14], ["Electrolit", 10], ["Cigarros", 8]], "fact": null}, {"id": "mix21", "cat": "Mixta", "mult": 1, "q": "Algo que haces antes de salir de fiesta", "a": [["Arreglarte", 32], ["Precopear", 26], ["Escoger el outfit", 16], ["Pedir el Uber", 12], ["Cenar algo", 8], ["Avisarle a tu mamá", 6]], "fact": null}, {"id": "mix22", "cat": "Mixta", "mult": 1, "q": "Algo de turista que haces aunque seas chilango", "a": [["Comer tacos en la calle", 28], ["Ir a Teotihuacán", 20], ["Ir a la lucha libre", 16], ["Subirte a una trajinera", 14], ["Ir al Museo de Frida", 12], ["Subir a la Torre Latino", 10]], "fact": null}, {"id": "mix23", "cat": "Mixta", "mult": 1, "q": "Colonia para salir en la CDMX", "a": [["Roma", 32], ["Condesa", 28], ["Polanco", 20], ["Centro", 10], ["Coyoacán", 6], ["Lomas", 4]], "fact": null}, {"id": "mix24", "cat": "Mixta", "mult": 1, "q": "Excusa para llegar tarde", "a": [["Había tráfico", 42], ["Ya voy en camino", 24], ["Me quedé dormida", 14], ["Me estaba arreglando", 12], ["No encontraba lugar", 8]], "fact": null}, {"id": "pop25", "cat": "Pop culture", "mult": 1, "q": "Canción de Bad Bunny", "a": [["DtMF", 30], ["Tití me preguntó", 22], ["Baile Inolvidable", 16], ["Me porto bonito", 14], ["Monaco", 10], ["NUEVAYoL", 8]], "fact": null}, {"id": "pop26", "cat": "Pop culture", "mult": 1, "q": "Dónde viste los partidos de México en el Mundial", "a": [["En casa", 24], ["En un bar", 20], ["En el Estadio Azteca", 18], ["En el palco de alguien", 14], ["En el Fan Fest", 12], ["En Guadalajara o Monterrey", 12]], "fact": null}, {"id": "pop27", "cat": "Pop culture", "mult": 1, "q": "Película de 2026 que viste", "a": [["Spider-Man: Brand New Day", 26], ["The Devil Wears Prada 2", 22], ["The Odyssey", 18], ["Toy Story 5", 12], ["Michael", 12], ["The Super Mario Galaxy Movie", 10]], "fact": null}, {"id": "pop28", "cat": "Pop culture", "mult": 1, "q": "Algo de 2016 que volvió con el trend \"2016 es el nuevo 2026\"", "a": [["Filtros de Snapchat", 30], ["Pokémon Go", 22], ["Mannequin challenge", 16], ["Chokers", 12], ["Los labiales de Kylie", 12], ["Fotos con filtro rosa", 8]], "fact": null}, {"id": "pop29", "cat": "Pop culture", "mult": 1, "q": "Algo que pasó en el Mundial en México", "a": [["La inauguración en el Azteca", 26], ["México eliminado por Inglaterra", 22], ["La fiesta en el Ángel", 16], ["El Fan Fest", 14], ["Boletos carísimos", 12], ["Tráfico", 10]], "fact": null}, {"id": "pop30", "cat": "Pop culture", "mult": 1, "q": "Selección a la que le ibas además de México", "a": [["Francia", 26], ["España", 22], ["Portugal", 18], ["Inglaterra", 12], ["Noruega", 12], ["Brasil", 10]], "fact": null}, {"id": "pop31", "cat": "Pop culture", "mult": 1, "q": "Un reality show", "a": [["La Casa de los Famosos", 42], ["Love Is Blind", 18], ["The Kardashians", 14], ["La Granja VIP", 14], ["Survivor", 12]], "fact": null}, {"id": "pop32", "cat": "Pop culture", "mult": 1, "q": "Algo que pasó en la final del Mundial", "a": [["Ganó España", 34], ["Perdió Messi", 24], ["Se fue a tiempo extra", 16], ["Hubo show de medio tiempo", 14], ["El gol de Ferran Torres", 12]], "fact": null}, {"id": "pop33", "cat": "Pop culture", "mult": 1, "q": "Canción de banda que cantas a gritos en una boda", "a": [["El Sinaloense", 26], ["Hermosa experiencia", 20], ["El ruido de tus zapatos", 18], ["Siempre te voy a querer", 14], ["La Chona", 12], ["El Tóxico", 10]], "fact": null}, {"id": "pop34", "cat": "Pop culture", "mult": 1, "q": "Piloto de Fórmula 1", "a": [["Checo Pérez", 40], ["Verstappen", 20], ["Hamilton", 18], ["Alonso", 10], ["Leclerc", 6], ["Norris", 6]], "fact": null}, {"id": "pop35", "cat": "Pop culture", "mult": 1, "q": "Cantante de corridos tumbados", "a": [["Peso Pluma", 38], ["Natanael Cano", 22], ["Junior H", 16], ["Fuerza Regida", 14], ["Grupo Frontera", 10]], "fact": null}, {"id": "pop36", "cat": "Pop culture", "mult": 1, "q": "Festival o concierto en la CDMX", "a": [["Corona Capital", 36], ["Vive Latino", 24], ["Ceremonia", 14], ["EDC", 12], ["Flow Fest", 8], ["Tecate Pa'l Norte", 6]], "fact": null}, {"id": "pop37", "cat": "Pop culture", "mult": 1, "q": "Jugador estrella del Mundial 2026", "a": [["Messi", 26], ["Mbappé", 22], ["Cristiano", 18], ["Haaland", 14], ["Bellingham", 12], ["Lamine Yamal", 8]], "fact": null}, {"id": "cg38", "cat": "Cultura general", "mult": 2, "q": "El océano más grande del mundo", "a": [["Atlántico", 40], ["Pacífico", 35], ["Índico", 15], ["Ártico", 10]], "fact": "el Pacífico"}, {"id": "cg39", "cat": "Cultura general", "mult": 2, "q": "La capital de Australia", "a": [["Sídney", 50], ["Canberra", 25], ["Melbourne", 20], ["Perth", 5]], "fact": "Canberra"}, {"id": "cg40", "cat": "Cultura general", "mult": 2, "q": "El planeta más caliente", "a": [["Mercurio", 45], ["Venus", 30], ["Marte", 15], ["El Sol", 10]], "fact": "Venus"}, {"id": "cg41", "cat": "Cultura general", "mult": 2, "q": "Algo que se ve desde el espacio", "a": [["La Muralla China", 50], ["Las luces de las ciudades", 25], ["Las pirámides", 15], ["El Amazonas", 10]], "fact": "la Muralla no se ve a simple vista"}, {"id": "cg42", "cat": "Cultura general", "mult": 2, "q": "Animal con muy mala memoria", "a": [["Pez", 60], ["Hámster", 15], ["Mosca", 15], ["Gallina", 10]], "fact": "los peces recuerdan cosas por meses"}, {"id": "cg43", "cat": "Cultura general", "mult": 2, "q": "De qué color es la sangre en las venas", "a": [["Azul", 45], ["Roja", 40], ["Morada", 15]], "fact": "siempre es roja"}, {"id": "cg44", "cat": "Cultura general", "mult": 2, "q": "Qué pasa si te tragas un chicle", "a": [["Se queda 7 años", 55], ["Se pega en el estómago", 25], ["Nada", 20]], "fact": "sale en unos días"}, {"id": "cg45", "cat": "Cultura general", "mult": 2, "q": "La capital de Canadá", "a": [["Toronto", 45], ["Ottawa", 30], ["Vancouver", 15], ["Montreal", 10]], "fact": "Ottawa"}, {"id": "cg46", "cat": "Cultura general", "mult": 2, "q": "La montaña más alta de México", "a": [["Popocatépetl", 45], ["Pico de Orizaba", 35], ["Iztaccíhuatl", 15], ["Nevado de Toluca", 5]], "fact": "Pico de Orizaba"}, {"id": "cg47", "cat": "Cultura general", "mult": 2, "q": "Cuánto del cerebro usamos", "a": [["10%", 60], ["Todo", 25], ["La mitad", 15]], "fact": "lo usamos todo"}, {"id": "cg48", "cat": "Cultura general", "mult": 2, "q": "El animal más rápido", "a": [["Guepardo", 55], ["Halcón", 20], ["León", 15], ["Caballo", 10]], "fact": "el halcón peregrino"}, {"id": "cg49", "cat": "Cultura general", "mult": 2, "q": "Qué enoja al toro", "a": [["El color rojo", 70], ["El movimiento", 20], ["El ruido", 10]], "fact": "el movimiento"}, {"id": "cg50", "cat": "Cultura general", "mult": 2, "q": "De qué color es la caja negra de un avión", "a": [["Negra", 70], ["Naranja", 20], ["Roja", 10]], "fact": "naranja"}, {"id": "cg51", "cat": "Cultura general", "mult": 2, "q": "Qué guardan los camellos en la joroba", "a": [["Agua", 75], ["Comida", 15], ["Nada", 10]], "fact": "grasa"}, {"id": "cg52", "cat": "Cultura general", "mult": 2, "q": "El desierto más grande del mundo", "a": [["Sahara", 75], ["Gobi", 15], ["Atacama", 10]], "fact": "la Antártida"}, {"id": "cg53", "cat": "Cultura general", "mult": 2, "q": "El país con más pirámides", "a": [["Egipto", 70], ["México", 20], ["Perú", 10]], "fact": "Sudán"}, {"id": "mito54", "cat": "Mitos", "mult": 2, "q": "País fuera de África con más población negra", "a": [["Estados Unidos", 60], ["Brasil", 25], ["Jamaica", 10], ["Francia", 5]], "fact": "Brasil"}, {"id": "mito55", "cat": "Mitos", "mult": 2, "q": "Idioma que se habla en África", "a": [["Africano", 40], ["Francés", 25], ["Árabe", 20], ["Swahili", 15]], "fact": "\"africano\" no existe; se hablan más de 2,000 idiomas"}, {"id": "mito56", "cat": "Mitos", "mult": 2, "q": "País con más hispanohablantes después de México", "a": [["España", 50], ["Colombia", 25], ["Argentina", 15], ["Estados Unidos", 10]], "fact": "Estados Unidos"}, {"id": "mito57", "cat": "Mitos", "mult": 2, "q": "País más poblado del mundo", "a": [["China", 70], ["India", 25], ["Estados Unidos", 5]], "fact": "India, desde 2023"}, {"id": "mito58", "cat": "Mitos", "mult": 2, "q": "De dónde son las galletas de la fortuna", "a": [["China", 75], ["Japón", 15], ["Estados Unidos", 10]], "fact": "se popularizaron en Estados Unidos"}, {"id": "mito59", "cat": "Mitos", "mult": 2, "q": "De dónde es el chili con carne", "a": [["México", 75], ["Texas", 20], ["España", 5]], "fact": "Texas"}, {"id": "mito60", "cat": "Mitos", "mult": 2, "q": "De dónde son las papas a la francesa", "a": [["Francia", 70], ["Bélgica", 20], ["Estados Unidos", 10]], "fact": "probablemente Bélgica"}, {"id": "mito61", "cat": "Mitos", "mult": 2, "q": "Qué llevaban los vikingos en el casco", "a": [["Cuernos", 80], ["Nada", 15], ["Plumas", 5]], "fact": "no usaban cuernos"}, {"id": "dani62", "cat": "Dani", "mult": 3, "q": "Algo que Dani siempre trae en la bolsa", "a": [["Lipsticks", 30], ["Lentes de sol", 22], ["Basura", 16], ["Tarjetas sueltas", 12], ["Dinero suelto", 12], ["Aretes sueltos", 8]], "fact": null}, {"id": "dani63", "cat": "Dani", "mult": 3, "q": "Algo que Dani dice todo el tiempo", "a": [["No mames", 32], ["Ay, no sé", 24], ["¿Quién es?", 18], ["No escuché", 14], ["Mmmhhh", 12]], "fact": null}, {"id": "dani64", "cat": "Dani", "mult": 3, "q": "Comida favorita de Dani", "a": [["Sushi", 34], ["Chilaquiles", 26], ["Comida china", 22], ["Comida coreana", 18]], "fact": null}, {"id": "dani65", "cat": "Dani", "mult": 3, "q": "Serie o película favorita de Dani", "a": [["Pride and Prejudice", 36], ["Community", 34], ["The Good Place", 30]], "fact": null}, {"id": "dani66", "cat": "Dani", "mult": 3, "q": "Desempate · Algo que Dani pide siempre en un restaurante", "a": [["Refrescos", 26], ["Agua", 20], ["Entradas", 18], ["Postre", 16], ["Café", 12], ["Todo, para inflar la cuenta", 8]], "fact": null}], "fast": [{"id": "A", "qs": [{"q": "Una fruta amarilla", "a": [["Plátano", 60], ["Piña", 20], ["Mango", 12], ["Limón", 8]]}, {"q": "Algo que haces en una fiesta", "a": [["Bailar", 55], ["Tomar", 30], ["Platicar", 15]]}, {"q": "Un color de coche", "a": [["Blanco", 40], ["Negro", 30], ["Gris", 20], ["Rojo", 10]]}, {"q": "Una app de citas", "a": [["Tinder", 55], ["Bumble", 30], ["Hinge", 15]]}, {"q": "Algo que llevas en la bolsa", "a": [["Celular", 45], ["Cartera", 30], ["Labial", 15], ["Llaves", 10]]}]}, {"id": "B", "qs": [{"q": "Una plataforma de streaming", "a": [["Netflix", 55], ["Disney+", 18], ["Max", 15], ["Prime Video", 12]]}, {"q": "Algo que se pone en una quesadilla", "a": [["Queso", 55], ["Flor de calabaza", 20], ["Champiñones", 15], ["Huitlacoche", 10]]}, {"q": "Una app que revisas al despertar", "a": [["Instagram", 40], ["WhatsApp", 35], ["TikTok", 25]]}, {"q": "Algo que se pone en un pastel", "a": [["Velas", 50], ["Fresas", 25], ["Chispas", 15], ["Betún", 10]]}, {"q": "Un café", "a": [["Starbucks", 60], ["Cielito Querido", 20], ["Punta del Cielo", 12], ["Oxxo", 8]]}]}, {"id": "C", "qs": [{"q": "Una universidad", "a": [["UNAM", 35], ["Ibero", 25], ["Tec", 20], ["Anáhuac", 12], ["ITAM", 8]]}, {"q": "Quién ganó el Mundial 2026", "a": [["España", 55], ["Argentina", 30], ["Francia", 10], ["Brasil", 5]]}, {"q": "Quién eliminó a México", "a": [["Inglaterra", 55], ["Argentina", 20], ["Francia", 15], ["Ecuador", 10]]}, {"q": "Un mes con 31 días", "a": [["Enero", 35], ["Diciembre", 30], ["Julio", 20], ["Mayo", 15]]}, {"q": "Algo que hace un bebé", "a": [["Llorar", 55], ["Dormir", 25], ["Comer", 12], ["Reír", 8]]}]}, {"id": "D", "qs": [{"q": "Equipo de F1 de Checo en 2026", "a": [["Red Bull", 45], ["Cadillac", 40], ["Ferrari", 10], ["Mercedes", 5]]}, {"q": "Goleador del Mundial 2026", "a": [["Mbappé", 40], ["Messi", 30], ["Haaland", 20], ["Kane", 10]]}, {"q": "Una bebida de fiesta", "a": [["Tequila", 40], ["Cerveza", 30], ["Mezcal", 18], ["Refresco", 12]]}, {"q": "Algo que haces en tu cumpleaños", "a": [["Comer pastel", 40], ["Abrir regalos", 30], ["Salir a cenar", 20], ["Fiesta", 10]]}, {"q": "Una mascota", "a": [["Perro", 60], ["Gato", 30], ["Pez", 6], ["Hámster", 4]]}]}], "alias": {"Celular": ["cel", "teléfono", "iphone", "móvil"], "Cartera": ["billetera", "monedero"], "Lentes": ["lentes de sol", "gafas"], "AirPods": ["audífonos", "audifonos"], "Tacos": ["taquitos", "tacos de canasta", "orinoco"], "Maruchan": ["sopa instantánea", "sopa maruchan"], "Ver el celular": ["revisar el cel", "checar el teléfono", "ver instagram"], "Ir al baño": ["hacer pipí", "orinar"], "Tomar café": ["café", "cafecito"], "Bañarte": ["ducha", "regaderazo"], "Comida familiar": ["comer con la familia", "ir con la abuela"], "Me siento mal": ["estoy enferma", "me duele la cabeza", "estoy enfermo"], "Tengo trabajo": ["chamba", "mucho trabajo"], "Estoy cansada": ["cansado", "sueño"], "No tengo dinero": ["estoy pobre", "sin lana", "no hay varo"], "Alcohol": ["chupe", "pisto", "bebidas", "tragos", "alcohol"], "Celoso": ["celos", "celosa", "posesivo"], "Que hable de su ex": ["su ex", "habla de la ex"], "Grosero con el mesero": ["mal con el mesero", "trata mal al mesero"], "Que no conteste": ["te deja en visto", "ghosting", "no responde"], "Tacaño": ["codo", "no paga", "coda"], "Caerte": ["tropezarte", "caerse"], "Que te rechacen la tarjeta": ["tarjeta rechazada", "declinada"], "Cadenas": ["cadena", "mensajes en cadena"], "Buenos días de Piolín": ["piolín", "buenos días"], "Fake news": ["noticias falsas"], "Peleas": ["discusiones", "política"], "¿Y el novio?": ["novio", "y la novia", "tienes novio"], "¿Cuándo te casas?": ["casarte", "boda"], "Chismear": ["chisme", "chismes", "echar chisme"], "Gym": ["gimnasio", "pesas", "crossfit"], "Correr": ["running", "maratón"], "Pádel": ["padel", "tenis"], "Pilates": ["reformer"], "Cenar": ["cena", "cena navideña"], "Posadas": ["posada"], "Intercambio": ["intercambio de regalos", "amigo secreto"], "Bailar": ["baile"], "La víbora de la mar": ["víbora", "la víbora"], "Aventar el ramo": ["ramo", "el ramo"], "Tomar": ["chupar", "beber", "emborracharse", "peda"], "Dormir": ["dormirte", "siesta"], "Comer chilaquiles": ["chilaquiles"], "Tomar suero": ["suero", "suerito", "electrolitos"], "Tomar Electrolit": ["electrolit"], "Prometer no volver a tomar": ["nunca más", "ya no vuelvo a tomar"], "Sobras": ["comida de ayer", "recalentado"], "Cerveza": ["chela", "chelas", "cheve", "cervezas"], "Refresco": ["coca", "coca cola", "soda"], "Papitas": ["papas", "sabritas", "chips"], "Hielos": ["hielo", "bolsa de hielo"], "Cigarros": ["cigarro", "tabaco", "vape"], "Arreglarte": ["maquillarte", "peinarte", "arreglarse"], "Precopear": ["precopeo", "pre", "tomar antes", "previa"], "Escoger el outfit": ["outfit", "ropa", "vestirte"], "Pedir el Uber": ["uber", "pedir uber"], "Avisarle a tu mamá": ["avisar a mamá", "pedir permiso"], "Comer tacos en la calle": ["tacos", "tacos de la calle"], "Ir a Teotihuacán": ["pirámides", "teotihuacan"], "Ir a la lucha libre": ["lucha libre", "arena méxico"], "Subirte a una trajinera": ["xochimilco", "trajinera"], "Ir al Museo de Frida": ["casa azul", "frida", "museo frida"], "Subir a la Torre Latino": ["torre latino", "torre latinoamericana"], "Había tráfico": ["tráfico", "trafico", "el periférico"], "Ya voy en camino": ["ya voy", "voy en camino", "ya casi llego"], "Me quedé dormida": ["me quedé dormido", "no sonó la alarma"], "No encontraba lugar": ["estacionamiento", "no había lugar"], "DtMF": ["debí tirar más fotos", "debi tirar mas fotos"], "Tití me preguntó": ["titi"], "En el Estadio Azteca": ["estadio", "en el estadio", "estadio ciudad de méxico", "banorte"], "En un bar": ["bar", "cantina", "restaurante"], "En casa": ["en mi casa", "casa de alguien"], "En el Fan Fest": ["fan fest", "zócalo", "fanfest"], "Spider-Man: Brand New Day": ["spiderman", "spider-man", "hombre araña"], "The Devil Wears Prada 2": ["el diablo viste a la moda", "devil wears prada", "prada"], "The Odyssey": ["la odisea", "odyssey", "nolan"], "The Super Mario Galaxy Movie": ["mario", "mario bros", "super mario"], "Filtros de Snapchat": ["snapchat", "filtro de perrito"], "Pokémon Go": ["pokemon", "pokémon"], "Mannequin challenge": ["mannequin", "maniquí"], "Los labiales de Kylie": ["kylie", "kylie jenner", "lip kits"], "México eliminado por Inglaterra": ["perdió méxico", "eliminaron a méxico", "inglaterra"], "La fiesta en el Ángel": ["el ángel", "festejo en el ángel"], "La inauguración en el Azteca": ["inauguración", "inauguracion"], "Boletos carísimos": ["boletos caros", "reventa"], "La Casa de los Famosos": ["casa de los famosos", "lcdlf"], "Love Is Blind": ["el amor es ciego"], "The Kardashians": ["kardashians", "kardashian"], "Ganó España": ["españa", "españa campeón"], "Perdió Messi": ["messi", "perdió argentina", "argentina"], "El gol de Ferran Torres": ["ferran", "ferran torres"], "Checo Pérez": ["checo", "sergio pérez"], "Verstappen": ["max", "max verstappen"], "Hamilton": ["lewis", "lewis hamilton"], "Alonso": ["fernando alonso"], "Peso Pluma": ["peso", "doble p"], "Natanael Cano": ["natanael"], "Corona Capital": ["corona"], "Vive Latino": ["vive"], "Tecate Pa'l Norte": ["pal norte", "pa'l norte"], "Cristiano": ["cr7", "cristiano ronaldo", "ronaldo"], "Lamine Yamal": ["lamine", "yamal"], "Mbappé": ["mbappe", "kylian"], "La Muralla China": ["muralla", "gran muralla"], "Las luces de las ciudades": ["luces", "ciudades"], "Se queda 7 años": ["siete años", "7 años"], "10%": ["diez por ciento", "10 por ciento"], "El color rojo": ["rojo", "color rojo"], "Guepardo": ["chita", "cheetah", "leopardo"], "Halcón": ["halcón peregrino"], "Lipsticks": ["labial", "labiales", "lipstick", "bálsamo"], "Lentes de sol": ["lentes", "gafas"], "Basura": ["papelitos", "tickets", "envolturas"], "Tarjetas sueltas": ["tarjetas", "tarjeta"], "Dinero suelto": ["dinero", "monedas", "cambio", "billetes"], "Aretes sueltos": ["aretes", "joyería"], "No mames": ["no manches", "no mamar", "nmms", "no inventes"], "Ay, no sé": ["no sé", "nose", "ni idea"], "¿Quién es?": ["quién", "quien es esa", "quién es ese"], "No escuché": ["¿qué?", "qué dijiste", "mande", "¿mande?", "no oí"], "Mmmhhh": ["mmm", "mmh", "ajá"], "Sushi": ["sushi", "japonesa", "comida japonesa"], "Comida china": ["china", "chino"], "Comida coreana": ["coreana", "corean bbq", "korean"], "Pride and Prejudice": ["orgullo y prejuicio", "pride & prejudice", "jane austen"], "Refrescos": ["coca", "refresco", "soda"], "Entradas": ["entrada", "botanas", "para picar"], "Postre": ["postres", "pastel"], "Café": ["cafecito", "expreso", "capuchino"], "Todo, para inflar la cuenta": ["inflar la cuenta", "pide de todo", "todo"]}};
 const Q = Object.fromEntries(DATA.qs.map(q => [q.id, q]));
-const PLAN = ["mix1", "pop25", "cg38", "dani62", "mix2", "pop26", "cg39", "dani63", "mix3", "pop27", "mito54", "dani64", "mix4", "pop28", "mito55", "dani65"];
+const PLAN = {"pool": ["mix1", "pop25", "cg38", "mix2", "mito54", "mix3", "pop26", "cg39", "mix4", "mito55", "mix5", "pop27", "cg40", "mix6", "mito56", "mix7", "pop28", "cg41", "mix8", "mito57", "mix9", "pop29", "cg42", "mix10", "mito58", "mix11", "pop30", "cg43", "mix12", "mito59", "mix13", "pop31", "cg44", "mix14", "mito60", "mix15", "pop32", "cg45", "mix16", "mito61", "mix17", "pop33", "cg46", "mix18", "mix19", "pop34", "cg47", "mix20", "mix21", "pop35", "cg48", "mix22", "mix23", "pop36", "cg49", "mix24", "pop37", "cg50", "cg51", "cg52", "cg53"], "dani": ["dani62", "dani63"]};
 const $ = id => document.getElementById(id);
 
 // ---------- estado ----------
 const GAMES = { loteria: "Lotería", w100: "100 Mexicanos Dijeron", taco: "Taco Gato", colmena: "Hive Mind", final: "¿Cuántos años tienes?" };
+// la noche: 3 juegos que reparten 10 coronas
+const GORDER = ["loteria", "final", "w100"];
+const SLOTS = [
+  { g: "loteria", l: "1er lugar", s: "1er lugar" }, { g: "loteria", l: "2º lugar", s: "2º lugar" }, { g: "loteria", l: "3er lugar", s: "3er lugar" },
+  { g: "final", l: "1er lugar", s: "1er lugar" }, { g: "final", l: "2º lugar", s: "2º lugar" },
+  { g: "w100", l: "1º del equipo ganador", s: "1º ganadores" }, { g: "w100", l: "2º del equipo ganador", s: "2º ganadores" }, { g: "w100", l: "3º del equipo ganador", s: "3º ganadores" },
+  { g: "w100", l: "1º del otro equipo", s: "1º otro equipo" }, { g: "w100", l: "2º del otro equipo", s: "2º otro equipo" }
+];
+const GSHORT = { loteria: "Lotería", final: "¿Cuántos años?", w100: "100 Mexicanos" };
+const FOTOS = [1, 2, 3, 4, 5].map(i => ({ src: `img/foto${i}.webp`, age: null, note: "" }));
+const DURS = [[6, "20 min"], [10, "30 min"], [12, "40 min"], [16, "50 min"]];
 const TEAM_GAMES = ["w100"];
 const GINFO = {
   loteria: { img: "estrella", cards: ["gallo", "bandera", "nopal", "chalupa", "barril", "soldado"], steps: ["Cada quien toma una tabla y sus frijolitos.", "Dani canta las cartas una por una.", "Si la carta está en tu tabla, ponle un frijolito.", "El primero en llenar su tabla grita <b>¡Lotería!</b> y gana."] },
   taco: { img: "gorro", steps: ["Dos mesas de 6. Repartan todas las cartas.", "Por turnos, pon una carta y di: <b>taco, gato, cabra, queso, pizza</b>.", "Si la carta es igual a la palabra, ¡todos ponen la mano!", "El último se lleva las cartas. Gana quien se quede sin ninguna."] },
   colmena: { img: "globos", steps: ["Sale una pregunta en la tele.", "Escribe en tu celular lo que crees que va a poner <b>la mayoría</b>.", "Ganas un punto por cada persona que pensó igual que tú.", "Quien junte más puntos gana."] },
-  final: { img: "pastel", steps: ["Sale una foto de Dani en la tele.", "Escribe en tu celular <b>cuántos años</b> crees que tenía.", "Quien quede más cerca gana."] }
+  final: { img: "pastel", steps: ["Sale una foto de Dani en la tele.", "Tienes <b>10 segundos</b> para escribir en tu celular cuántos años tenía.", "Exacto: <b>3 puntos</b>. A 1 año: 2. A 2 años: 1.", "Después de 5 fotos, los <b>2 con más puntos</b> ganan corona."] }
 };
 const goGame = g => commit(s => { if (g === "w100") { s.screen = "intro"; if (!w100Set().some(x => s.used.includes(x))) Object.assign(s, { scores: [0, 0], qid: null, open: [], strikes: 0, banked: false }); } else { s.game = g; s.screen = g === "colmena" && s.col.q >= 0 ? "colmena" : "game"; } });
 const isTeamGame = g => TEAM_GAMES.includes(g);
@@ -3383,8 +3494,12 @@ const frontName = t => { const tm = S.teams[t] || []; return tm.length ? tm[(S.w
 function crowns() { const c = {}; S.players.forEach(n => c[n] = 0); S.night.res.forEach(r => { if (r && !/^Equipo [12]$/.test(r.who)) c[r.who] = (c[r.who] || 0) + 1; }); return c; }
 const LOTPOS = [[20, 70, -13], [230, 10, 7], [440, 80, -5], [650, 24, 12], [110, 290, 9], [520, 300, -9]];
 const GICON = { loteria: "estrella", w100: "cien", taco: "gorro", colmena: "globos", final: "pastel" };
-// cada 100 Mexicanos de la noche tiene sus 4 preguntas: Mixta, Pop culture, Cultura general, Dani
-const w100Set = () => { const k = ROUNDS.slice(0, Math.min(S.night.cur, ROUNDS.length - 1) + 1).filter(g => g === "w100").length - 1; const i = Math.max(0, Math.min(3, k)); return PLAN.slice(i * 4, i * 4 + 4); };
+const slotsOf = g => ROUNDS.map((x, j) => x === g ? j : -1).filter(j => j >= 0);
+const wonIn = (g, n) => slotsOf(g).some(j => S.night.res[j] && S.night.res[j].who === n);
+// el gran 100 Mexicanos: Dani escoge cuántas preguntas; las 2 de Dani siempre van al final (doble y triple)
+const w100Set = () => (S.w && S.w.seq) || [];
+const buildSeq = n => PLAN.pool.slice(0, Math.max(0, n - 2)).concat(PLAN.dani);
+const multFor = id => { const k = PLAN.dani.indexOf(id); return k === 0 ? 2 : k === 1 ? 3 : 1; };
 // en qué ronda se anota un ganador de este juego
 function roundFor(g) {
   const cur = S.night.cur, res = S.night.res;
@@ -3393,12 +3508,13 @@ function roundFor(g) {
   return i < 0 ? cur : i;
 }
 const COLMENA = ["Algo que llevas a la playa", "Una fruta roja", "Un antojito mexicano", "Una app que abres todos los días", "Un lugar para una primera cita", "Algo que hay en toda fiesta de cumpleaños", "Algo que tomas para la cruda", "Un animal que te da miedo", "Una serie que todo mundo vio", "Algo que pides en un café", "Un plan de fin de semana fuera de la CDMX", "Algo que se te olvida al salir de casa", "Un postre", "Algo que haces en domingo", "Una palabra que describe a Dani"];
-const ROUNDS = ["loteria", "w100", "taco", "colmena", "loteria", "taco", "w100", "colmena", "loteria", "final"];
+const ROUNDS = SLOTS.map(x => x.g);
 const blank = () => ({
   players: [], teams: [[], []], night: { cur: 0, res: [] }, winText: "", winSub: "",
   col: { q: -1, end: 0, dur: 20000, groups: [], show: false, scored: false, pts: {} },
-  live: { joined: [], ans: {}, buzz: null, ages: {}, av: {}, call: null, fa: {} }, showQR: false, buzzT: -1, game: "loteria",
-  w: { front: [0, 0] }, fr: { team: -1, set: "A", show: false },
+  live: { joined: [], ans: {}, buzz: null, ages: {}, av: {}, call: null, fa: {}, fat: {} }, showQR: false, buzzT: -1, game: "loteria",
+  w: { front: [0, 0], seq: [] }, fr: { team: -1, set: "A", show: false },
+  age: { i: -1, end: 0, show: false, real: [null, null, null, null, null], hist: [] },
   v: 0, round: 0, screen: "home", qid: null, open: [], strikes: 0, team: 0, mult: 1, banked: false, fact: false, used: [],
   names: ["Equipo 1", "Equipo 2"], scores: [0, 0], fx: { k: "", n: 0, c: 0 }, win: 0,
   fast: { set: "A", p: [[null, null, null, null, null], [null, null, null, null, null]], show: [[false, false, false, false, false], [false, false, false, false, false]], hide0: false, player: 0, end: 0 }
@@ -3409,6 +3525,8 @@ function fix(d) {
   d.live = Object.assign(b.live, d.live || {});
   if (!Array.isArray(d.names) || d.names.some(n => /Familia/.test(n))) d.names = b.names;
   if (d.screen === "night") d.screen = "track";
+  d.w = Object.assign({ front: [0, 0], seq: [] }, d.w || {}); if (!Array.isArray(d.w.seq)) d.w.seq = [];
+  if (d.screen === "colmena") d.screen = "home";
   return d;
 }
 try { const l = JSON.parse(localStorage.getItem("dani-state")); if (l && l.fast) S = fix(l); } catch (e) {}
@@ -3448,7 +3566,7 @@ function netSend() {
 }
 function applyOp(s, op) {
   if (op === "clearAns") s.live.ans = {}; if (op === "clearBuzz") s.live.buzz = null; if (op === "clearAges") s.live.ages = {};
-  if (op === "clearCall") s.live.call = null; if (op === "clearFa") s.live.fa = {};
+  if (op === "clearCall") s.live.call = null; if (op === "clearFa") { s.live.fa = {}; s.live.fat = {}; }
   if (op === "reset" && role === "screen") setTimeout(hardReset, 300);
 }
 function hardReset() {
@@ -3494,10 +3612,11 @@ function hostMsg(d) {
   }, "join");
   else if (d.t === "ans" && name && d.q === S.col.q && !S.col.show) commit(s => s.live.ans[name] = String(d.text || "").slice(0, 40));
   else if (d.t === "buzz" && name && !S.live.buzz && S.screen === "board") commit(s => { const tm = teamOf(name); s.live.buzz = { name, team: tm }; if (tm >= 0) s.team = tm; }, "buzz");
-  else if (d.t === "call" && name && !S.live.call && CALLW[S.game]) commit(s => s.live.call = { name, g: s.game, at: Date.now() }, "buzz");
-  else if (d.t === "fa" && name && S.fr.team >= 0 && teamOf(name) === S.fr.team && Array.isArray(d.a) && (!S.fast.end || Date.now() < S.fast.end + 3000))
-    commit(s => s.live.fa[name] = d.a.slice(0, 5).map(x => String(x || "").slice(0, 30)));
-  else if (d.t === "age" && name) commit(s => s.live.ages[name] = Math.max(0, Math.min(99, parseInt(d.n) || 0)));
+  else if (d.t === "call" && name && !S.live.call && CALLW[S.game] && !wonIn(S.game, name)) commit(s => s.live.call = { name, g: s.game, at: Date.now() }, "buzz");
+  else if (d.t === "fa" && name && S.fr.team >= 0 && teamOf(name) >= 0 && Array.isArray(d.a) && S.fast.end && Date.now() < S.fast.end + 3000)
+    commit(s => { s.live.fa[name] = d.a.slice(0, 5).map(x => String(x || "").slice(0, 30)); s.live.fat = s.live.fat || {}; s.live.fat[name] = Math.max(0, Math.min(S.fast.dur || 45000, Date.now() - (S.fast.end - (S.fast.dur || 45000)))); });
+  else if (d.t === "age" && name && S.age.i >= 0 && S.age.i < FOTOS.length && !S.age.show && S.age.end && Date.now() < S.age.end + 800)
+    commit(s => s.live.ages[name] = { n: Math.max(0, Math.min(99, parseInt(d.n) || 0)), t: Math.max(0, Math.min(10000, Date.now() - (S.age.end - 10000))) });
 }
 function startClient(c) {
   if (peer) return;
@@ -3596,7 +3715,7 @@ function countTo(el, to) {
   (function step(t) { const k = Math.min(1, (t - t0) / 700); el.textContent = Math.round(from + (to - from) * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
 }
 function renderScreen() {
-  ["home", "reg", "game", "intro", "howto", "teams", "track", "night", "board", "colmena", "fast", "win", "thanks"].forEach(v => $("v-" + v).classList.toggle("on", S.screen === v));
+  ["home", "reg", "game", "intro", "howto", "teams", "track", "night", "board", "colmena", "fast", "age", "win", "thanks"].forEach(v => $("v-" + v).classList.toggle("on", S.screen === v));
   $("in0").textContent = S.names[0]; $("in1").textContent = S.names[1];
   [0, 1].forEach(t => {
     $("sn" + t).textContent = S.names[t]; $("st" + t).classList.toggle("on", S.team === t);
@@ -3606,7 +3725,7 @@ function renderScreen() {
   [0, 1].forEach(t => { const f = frontName(t), k = f + "|" + (f ? avOf(f) : ""); if ($("sf" + t).dataset.k !== k) { $("sf" + t).dataset.k = k; $("sf" + t).innerHTML = f ? `Al frente ${avHTML(f, "sm")}<b>${esc(f)}</b>` : ""; } });
   const q = Q[S.qid];
   if (q) {
-    const wi = w100Set().indexOf(S.qid); $("cat").textContent = (wi >= 0 ? `Pregunta ${wi + 1} de 4 · ` : "") + q.cat; $("q").textContent = q.q;
+    const wi = w100Set().indexOf(S.qid); $("cat").textContent = (wi >= 0 ? `Pregunta ${wi + 1} de ${w100Set().length} · ` : "") + (PLAN.dani.includes(S.qid) ? "Dani" : q.cat); $("q").textContent = q.q;
     $("mult").textContent = ["", "Sencilla", "Doble ×2", "Triple ×3"][S.mult]; $("mult").classList.toggle("hidden", S.mult === 1);
     if (boardQ !== S.qid) {
       boardQ = S.qid; const n = Math.max(q.a.length, 4) + (q.a.length > 4 && q.a.length % 2 ? 1 : 0);
@@ -3633,7 +3752,7 @@ function renderScreen() {
   if (!$("hgames").dataset.k) {
     $("hgames").dataset.k = 1;
     const ICON = { loteria: "estrella", w100: "cien", taco: "gorro", colmena: "globos", final: "pastel" };
-    $("hgames").innerHTML = ["loteria", "w100", "taco", "colmena", "final"].map(g => `<div class="hg" data-go="${g}"><img src="img/${ICON[g]}.webp" alt=""><b>${GAMES[g].replace(" Dijeron", "<br>Dijeron").replace(" años ", " años<br>")}</b><span class="tag ${isTeamGame(g) ? "t" : "i"}">${isTeamGame(g) ? "En equipo" : "Individual"}</span></div>`).join("");
+    $("hgames").innerHTML = GORDER.map(g => `<div class="hg" data-go="${g}"><img src="img/${ICON[g]}.webp" alt=""><b>${GAMES[g].replace(" Dijeron", "<br>Dijeron").replace(" años ", " años<br>")}</b><span class="tag ${isTeamGame(g) ? "t" : "i"}">${isTeamGame(g) ? "En equipo" : "Individual"}</span></div>`).join("");
   }
   // pantalla del juego: contenido a la izquierda, tablita a la derecha
   const GI = GINFO[S.game] || GINFO.loteria;
@@ -3645,7 +3764,8 @@ function renderScreen() {
       ? '<div class="lscat">' + GI.cards.map((c, i) => { const [x, y, r] = LOTPOS[i]; return `<div class="lc" style="left:${x}px;top:${y}px;--r:${r}deg;animation-delay:${.15 + i * .13}s"><img src="img/carta-${c}.webp" alt=""></div>`; }).join("") + "</div>"
       : GI.steps.map((x, i) => `<div class="rstep" style="animation-delay:${.15 + i * .12}s"><span>${i + 1}</span><p>${x}</p></div>`).join("");
   }
-  $("gtag").textContent = (isTeamGame(S.game) ? "En equipo" : "Individual") + ` · Juego ${roundFor(S.game) + 1} de ${ROUNDS.length}`;
+  { const sl = slotsOf(S.game), nx = sl.find(j => !S.night.res[j]);
+    $("gtag").textContent = S.game === "loteria" ? (nx != null ? `Individual · vamos por el ${SLOTS[nx].l}` : "Individual · ya salieron los 3 lugares") : (isTeamGame(S.game) ? "En equipo" : "Individual") + ` · ${sl.length} coronas`; }
   renderTabl($("gtab"), S.game === "colmena" ? "col" : "night");
   document.querySelectorAll(".cc").forEach(e => e.textContent = code || "");
   // registro
@@ -3720,8 +3840,9 @@ function renderScreen() {
   });
   // tablero de la noche
   renderTrack();
+  renderAge();
   // efectos
-  if (lastScreen !== null && lastScreen !== S.screen) { if (!goingBack) { hist.push(lastScreen); if (hist.length > 30) hist.shift(); } goingBack = false; wipe(); if (["home", "reg", "game", "intro", "howto", "teams", "track", "night", "colmena", "fast", "win", "thanks"].includes(S.screen)) SND.whoosh(); }
+  if (lastScreen !== null && lastScreen !== S.screen) { if (!goingBack) { hist.push(lastScreen); if (hist.length > 30) hist.shift(); } goingBack = false; wipe(); if (["home", "reg", "game", "intro", "howto", "teams", "track", "night", "colmena", "fast", "age", "win", "thanks"].includes(S.screen)) SND.whoosh(); }
   lastScreen = S.screen;
   $("tvnav").querySelector('[data-go="back"]').disabled = !hist.length;
   $("tvnav").classList.toggle("athome", S.screen === "home");
@@ -3785,6 +3906,16 @@ setInterval(() => {
   if (C.end && S.screen === "colmena" && left !== lastCLeft) { if (left <= 5 && left > 0) SND.tick(); if (left === 0 && lastCLeft > 0) SND.end(); }
   lastCLeft = left;
 }, 100);
+let lastALeft = null;
+setInterval(() => {
+  if (role !== "screen") return;
+  const A = S.age, ms = Math.max(0, A.end - Date.now()), left = Math.ceil(ms / 1000);
+  $("atimer").textContent = A.end ? left : "10";
+  $("aringc").style.strokeDashoffset = A.end ? 289 * (1 - ms / 10000) : 0;
+  $("aring").classList.toggle("low", !!A.end && left <= 3 && left > 0);
+  if (A.end && S.screen === "age" && left !== lastALeft) { if (left <= 5 && left > 0) SND.tick(); if (left === 0 && lastALeft > 0) SND.end(); }
+  lastALeft = left;
+}, 100);
 let lastLeft = null;
 setInterval(() => {
   if (role !== "screen") return;
@@ -3818,27 +3949,79 @@ function renderTabl(el, mode) {
   });
 }
 // preguntas rápidas: cada quien del equipo ganador contesta en su celular
-function frScores() {
-  const t = S.fr.team, set = DATA.fast.find(f => f.id === S.fr.set) || DATA.fast[0], fa = S.live.fa || {};
+function frScores(t = S.fr.team) {
+  const set = DATA.fast.find(f => f.id === S.fr.set) || DATA.fast[0], fa = S.live.fa || {}, fat = S.live.fat || {};
   return (S.teams[t] || []).map(n => {
     const a = fa[n] || [], det = set.qs.map((q, i) => { const m = a[i] ? bestMatch(a[i], q.a) : -1; return [a[i] || "", m >= 0 ? q.a[m][1] : 0]; });
-    return [n, det.reduce((x, d) => x + d[1], 0), a.filter(Boolean).length, det];
-  }).sort((x, y) => y[1] - x[1] || x[0].localeCompare(y[0]));
+    return [n, det.reduce((x, d) => x + d[1], 0), a.filter(Boolean).length, det, fat[n] == null ? 1e9 : fat[n]];
+  }).sort((x, y) => y[1] - x[1] || x[4] - y[4] || x[0].localeCompare(y[0]));
 }
+// quiénes se llevan corona en las rápidas: 3 del equipo ganador y 2 del otro
+const frWinners = () => { const w = S.fr.team; return [...frScores(w).slice(0, 3).map(x => x[0]), ...frScores(1 - w).slice(0, 2).map(x => x[0])]; };
 function renderFast() {
   if (S.fr.team < 0) return;
-  $("flead").textContent = `Juega ${tname(S.fr.team)} · cada quien contesta en su celular`;
-  const sc = frScores(), key = JSON.stringify([sc, S.fr.show, S.live.av]);
+  $("flead").textContent = `Juegan los dos equipos · cada quien contesta en su celular`;
+  const w = S.fr.team, cols = [w, 1 - w].map(t => [t, frScores(t)]), key = JSON.stringify([cols, S.fr.show, S.live.av, S.names]);
   if ($("fbody").dataset.k === key) return; $("fbody").dataset.k = key;
-  $("fbody").innerHTML = !S.fr.show
-    ? '<div class="fpl">' + sc.map(([n, , k], i) => `<div class="fpc" style="animation-delay:${i * .08}s">${avHTML(n)}<div><b>${esc(n)}</b><div class="dots">${[0, 1, 2, 3, 4].map(j => `<i class="${j < k ? "on" : ""}"></i>`).join("")}</div></div></div>`).join("") + "</div>"
-    : '<div class="frk">' + sc.map(([n, p, , det], i) => `<div class="frr${i === 0 && p ? " first" : ""}" style="animation-delay:${(sc.length - i) * .3}s"><span class="k">${i === 0 && p ? CROWN : i + 1}</span>${avHTML(n)}<b>${esc(n)}</b><div class="ch">${det.map(([a, pt]) => `<span class="${pt ? "" : "z"}">${esc(a || "—")}<em>${pt}</em></span>`).join("")}</div><span class="tot">${p}</span></div>`).join("") + "</div>";
+  $("fbody").innerHTML = '<div class="fcols">' + cols.map(([t, sc], ci) => {
+    const nc = ci === 0 ? 3 : 2;
+    const head = `<h4>${esc(tname(t))}<small>${ci === 0 ? "Ganó 100 Mexicanos" : "El otro equipo"} · ${nc} coronas</small></h4>`;
+    const body = !S.fr.show
+      ? '<div class="fpl">' + sc.map(([n, , k], i) => `<div class="fpc" style="animation-delay:${i * .08}s">${avHTML(n)}<div><b>${esc(n)}</b><div class="dots">${[0, 1, 2, 3, 4].map(j => `<i class="${j < k ? "on" : ""}"></i>`).join("")}</div></div></div>`).join("") + "</div>"
+      : '<div class="frk">' + sc.map(([n, p, , det], i) => `<div class="frr${i < nc ? " first" : ""}" style="animation-delay:${(sc.length - i) * .3}s"><span class="k">${i < nc ? CROWN : i + 1}</span>${avHTML(n)}<b>${esc(n)}</b><div class="ch">${det.map(([a, pt]) => `<span class="${pt ? "" : "z"}">${esc(a || "—")}<em>${pt}</em></span>`).join("")}</div><span class="tot">${p}</span></div>`).join("") + "</div>";
+    return `<div class="fcol">${head}${body}</div>`;
+  }).join("") + "</div>";
 }
-const TRP = Array.from({ length: 10 }, (_, i) => i < 5 ? [230 + i * 285, 400] : [230 + (9 - i) * 285, 715]);
+// ¿cuántos años tienes?: puntos de una foto y de toda la ronda
+function photoPts(j) {
+  const h = (S.age.hist || [])[j], real = S.age.real[j]; if (!h || real == null) return [];
+  const ds = Object.entries(h).map(([n, v]) => [n, v.n, Math.abs(v.n - real), v.t]);
+  const near = ds.some(d => d[2] <= 2), min = Math.min(...ds.map(d => d[2]));
+  return ds.map(([n, g, d, t]) => [n, g, d, t, d === 0 ? 3 : d === 1 ? 2 : d === 2 ? 1 : !near && d === min ? 1 : 0]).sort((a, b) => b[4] - a[4] || a[2] - b[2] || a[3] - b[3]);
+}
+function agePts() {
+  const R = {}; S.players.forEach(n => R[n] = { p: 0, t: 0 });
+  FOTOS.forEach((_, j) => {
+    if (!(S.age.hist || [])[j] || S.age.real[j] == null) return;
+    const got = photoPts(j); got.forEach(([n, , , t, p]) => { R[n] = R[n] || { p: 0, t: 0 }; R[n].p += p; R[n].t += t; });
+    Object.keys(R).forEach(n => { if (!got.some(x => x[0] === n)) R[n].t += 10000; });
+  });
+  return Object.entries(R).sort((a, b) => b[1].p - a[1].p || a[1].t - b[1].t || a[0].localeCompare(b[0]));
+}
+function renderAge() {
+  const A = S.age, i = A.i, res = i >= FOTOS.length, f = FOTOS[Math.max(0, Math.min(i, FOTOS.length - 1))];
+  $("v-age").classList.toggle("res", res); $("v-age").classList.toggle("shown", !!A.show && !res);
+  $("atag").textContent = res ? "Resultados" : `Foto ${Math.max(1, i + 1)} de ${FOTOS.length}`;
+  if (!res && $("aimg").dataset.k !== String(i)) { $("aimg").dataset.k = i; $("aimg").src = f.src; const ph = $("aphoto"); ph.classList.remove("in"); void ph.offsetWidth; ph.classList.add("in"); }
+  $("anote").textContent = !res && f.note ? f.note : "";
+  const key = JSON.stringify([A, S.live.ages, S.live.av, S.players]);
+  if ($("alist").dataset.k === key) return; $("alist").dataset.k = key;
+  const got = Object.keys(S.live.ages || {});
+  if (res) {
+    const rk = agePts();
+    $("alead").textContent = "Ganan corona los 2 con más puntos";
+    $("areal").innerHTML = "";
+    $("astrip").innerHTML = FOTOS.map((x, j) => `<div class="apol" style="animation-delay:${j * .08}s"><img src="${x.src}" alt=""><span>${A.real[j] != null ? A.real[j] + (A.real[j] === 1 ? " año" : " años") : "—"}</span></div>`).join("");
+    $("alist").className = "alist two"; $("alist").style.gridTemplateRows = `repeat(${Math.ceil(rk.length / 2)},auto)`;
+    $("alist").innerHTML = rk.map(([n, v], k) => `<div class="arow${k < 2 && v.p ? " top" : ""}" style="animation-delay:${(rk.length - k) * .12}s"><span class="k">${k < 2 && v.p ? CROWN : k + 1}</span>${avHTML(n)}<b>${esc(n)}</b><span class="g"></span><span class="p">${v.p}</span></div>`).join("");
+  } else if (A.show) {
+    const r = A.real[i], pp = photoPts(i);
+    $("alead").textContent = "";
+    $("areal").innerHTML = `Tenía <b>${r}</b> ${r === 1 ? "año" : "años"}`;
+    $("alist").className = "alist two"; $("alist").style.gridTemplateRows = `repeat(${Math.max(1, Math.ceil(pp.length / 2))},auto)`;
+    $("alist").innerHTML = pp.map(([n, g, , , p], k) => `<div class="arow${p === 3 ? " top" : ""}" style="animation-delay:${.6 + k * .08}s"><span class="k">${p === 3 ? CROWN : k + 1}</span>${avHTML(n)}<b>${esc(n)}</b><span class="g">${g} ${g === 1 ? "año" : "años"}</span><span class="p">${p ? "+" + p : "0"}</span></div>`).join("") || '<div class="tempty">Nadie alcanzó a contestar.</div>';
+  } else {
+    $("alead").textContent = i < 0 ? "" : "Escribe en tu celular cuántos años tenía";
+    $("areal").innerHTML = "";
+    $("alist").className = "alist"; $("alist").style.gridTemplateRows = "";
+    $("alist").innerHTML = i < 0 ? "" : `<div class="agot"><b>${got.length}</b> de ${S.players.length} ya contestaron</div><div class="aavs">${got.map(n => avHTML(n)).join("")}</div>`;
+  }
+}
+const TRP = Array.from({ length: 10 }, (_, i) => i < 5 ? [230 + i * 285, 385] : [230 + (9 - i) * 285, 680]);
 function renderTrack() {
   const cur = Math.min(S.night.cur, ROUNDS.length), res = S.night.res, left = ROUNDS.length - cur;
-  $("trtitle").textContent = cur >= ROUNDS.length ? "¡Llegamos a la meta!" : `Casilla ${cur + 1}`;
-  $("trsub").textContent = cur >= ROUNDS.length ? "Ya jugamos los 10" : `${GAMES[ROUNDS[cur]]} · ${left === 1 ? "¡la última!" : "faltan " + left}`;
+  $("trtitle").textContent = cur >= ROUNDS.length ? "¡Llegamos a la meta!" : `Corona ${cur + 1}`;
+  $("trsub").textContent = cur >= ROUNDS.length ? "Ya salieron las 10 coronas" : `${GAMES[ROUNDS[cur]]} · ${SLOTS[cur].l} · ${left === 1 ? "¡la última!" : "faltan " + left}`;
   const key = JSON.stringify([cur, res, S.live.av]);
   if ($("trboard").dataset.k !== key) {
     $("trboard").dataset.k = key;
@@ -3848,8 +4031,8 @@ function renderTrack() {
       const r = res[i], d = document.createElement("div");
       d.className = "trsp" + (i === cur ? " cur" : "") + (r ? " w" : i < cur ? " skip" : "");
       d.style.left = TRP[i][0] + "px"; d.style.top = TRP[i][1] + "px"; d.style.animationDelay = i * .06 + "s";
-      d.innerHTML = `<div class="trc"><img src="img/${GICON[g]}.webp" alt=""><span class="trn">${i + 1}</span></div><b></b><em></em>`;
-      d.querySelector("b").textContent = GAMES[g]; d.querySelector("em").innerHTML = r ? CROWN + (S.players.includes(r.who) ? avHTML(r.who, "sm") : "") + esc(r.who) : "";
+      d.innerHTML = `<div class="trc"><img src="img/${GICON[g]}.webp" alt=""><span class="trn">${i + 1}</span></div><b></b><small></small><em></em>`;
+      d.querySelector("b").textContent = GSHORT[g] || GAMES[g]; d.querySelector("small").textContent = SLOTS[i].s; d.querySelector("em").innerHTML = r ? CROWN + (S.players.includes(r.who) ? avHTML(r.who, "sm") : "") + esc(r.who) : "";
       $("trboard").appendChild(d);
     });
   }
@@ -3858,7 +4041,7 @@ function renderTrack() {
   tk.style.left = tp[0] + "px"; tk.style.top = tp[1] + "px";
 }
 function roundCard(q) {
-  const wi = w100Set().indexOf(S.qid); $("rcn").textContent = "Pregunta " + (wi >= 0 ? wi + 1 : S.round || 1);
+  const wi = w100Set().indexOf(S.qid); $("rcn").textContent = "Pregunta " + (wi >= 0 ? `${wi + 1} de ${w100Set().length}` : S.round || 1);
   $("rcm").textContent = q.cat + (S.mult > 1 ? " · " + ["", "", "Puntos dobles", "Puntos triples"][S.mult] : "");
   const r = $("rc"); r.classList.remove("show"); void r.offsetWidth; r.classList.add("show"); SND.whoosh();
 }
@@ -3877,6 +4060,7 @@ function sparkle(el) {
 // adornos: las ilustraciones de Dani
 const D = {
   home: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["globos", 50, 170, 230, -4], ["regalo", 1350, 210, 190, 4], ["star", 330, 210, 64], ["star", 1240, 170, 52]],
+  age: [["banderines", 820, -110, 800], ["star", 640, 60, 44], ["globos", 20, 640, 150, -6]],
   game: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["star", 1040, 140, 50], ["star", 30, 760, 56]],
   reg: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["cupcake", 30, 720, 130, -6], ["star", 1480, 230, 50]],
   intro: [["banderines", -30, -115, 840], ["banderines", 790, -115, 840], ["disco", 70, -60, 150, 150], ["disco", 1390, -60, 130, 230], ["globos", 30, 230, 300, -4], ["copa", 150, 610, 190, -6], ["pastel", 1210, 470, 360, 3], ["star", 1170, 330, 90], ["star", 330, 250, 60], ["star", 1320, 300, 50]],
@@ -3938,8 +4122,13 @@ function toggleAns(i) {
   commit(s => { s.open = opening ? [...s.open, i] : s.open.filter(x => x !== i); s.screen = "board"; }, opening ? "ding" : "");
 }
 const act = {
-  pick(id) { const wi = w100Set().indexOf(id); commit(s => { s.buzzT = -1; s.round = (s.round || 0) + 1; s.w.front = wi <= 0 ? [0, 0] : [(s.w.front[0] || 0) + 1, (s.w.front[1] || 0) + 1]; Object.assign(s, { qid: id, open: [], strikes: 0, banked: false, fact: false, mult: Q[id].mult, screen: "board" }); if (!s.used.includes(id)) s.used.push(id); }); $("said").value = ""; },
-  next() { const id = w100Set().find(x => !S.used.includes(x)); if (id) act.pick(id); else toast("Ya fueron las 4 preguntas: toca qué equipo ganó"); },
+  pick(id) { const wi = w100Set().indexOf(id); commit(s => { s.buzzT = -1; s.round = (s.round || 0) + 1; s.w.front = wi <= 0 ? [0, 0] : [(s.w.front[0] || 0) + 1, (s.w.front[1] || 0) + 1]; Object.assign(s, { qid: id, open: [], strikes: 0, banked: false, fact: false, mult: multFor(id), screen: "board" }); if (!s.used.includes(id)) s.used.push(id); }); $("said").value = ""; },
+  setDur(n) { commit(s => { s.w.seq = buildSeq(n); }); },
+  more() { commit(s => { const reg = s.w.seq.filter(x => !PLAN.dani.includes(x)), extra = PLAN.pool.filter(x => !reg.includes(x) && !s.used.includes(x)).slice(0, 4); s.w.seq = reg.concat(extra, PLAN.dani); }); toast("Listo: 4 preguntas más antes de las de Dani"); },
+  next() {
+    if (!w100Set().length) { if (role === "screen") act.setDur(12); else return toast("Primero escoge cuánto dura"); }
+    const id = w100Set().find(x => !S.used.includes(x)); if (id) act.pick(id); else toast(`Ya fueron las ${w100Set().length} preguntas: toca qué equipo ganó`);
+  },
   strike() { commit(s => s.strikes = Math.min(3, s.strikes + 1), "strike"); },
   award(t) {
     const p = pot(S); if (!S.qid || S.banked) return toast("No hay puntos en juego");
@@ -3976,7 +4165,7 @@ function buildQsel() {
 let qselUsed = "", tab = "ahora", picked = new Set(), selGroup = -1;
 function teamOf(name) { return S.teams[0].includes(name) ? 0 : S.teams[1].includes(name) ? 1 : -1; }
 function renderControl() {
-  const curG = ROUNDS[S.night.cur], sub = tab !== "ahora" ? "" : curG === "w100" ? (S.fr.team >= 0 ? "fr" : "w100") : curG === "colmena" ? "colmena" : "";
+  const curG = ROUNDS[S.night.cur], sub = tab !== "ahora" ? "" : curG === "w100" ? (S.fr.team >= 0 ? "fr" : "w100") : curG === "final" ? "age" : "";
   document.querySelectorAll(".tab").forEach(x => x.classList.toggle("hidden", x.id !== "tab-" + tab && x.id !== "tab-" + sub));
   $("winsec").classList.toggle("hidden", !!sub || !curG);
   document.querySelectorAll("[data-tab]").forEach(x => x.classList.toggle("on", x.dataset.tab === tab));
@@ -3984,7 +4173,7 @@ function renderControl() {
   $("ct0").innerHTML = lead && lead[1] ? `<b>${lead[1]}</b>${esc(lead[0])}` : "<b>0</b>Nadie aún";
   $("ct1").innerHTML = `${S.players.length === 1 ? "jugador" : "jugadores"}<b>${S.players.length}</b>`;
   const cur = S.night.cur, done = cur >= ROUNDS.length;
-  $("cround").innerHTML = done ? "Noche<b>terminada</b>" : `Juego<b>${cur + 1} de ${ROUNDS.length}</b>`;
+  $("cround").innerHTML = done ? "Noche<b>terminada</b>" : `Corona<b>${cur + 1} de ${ROUNDS.length}</b>`;
   document.querySelectorAll("[data-screen]").forEach(b => b.classList.toggle("on", S.screen === b.dataset.screen));
   // mente colmena
   const C = S.col;
@@ -4031,9 +4220,9 @@ function renderControl() {
   $("teamlists").querySelectorAll("[data-mv]").forEach(b => b.onclick = () => { const n = b.dataset.n, f = +b.dataset.mv; commit(s => { s.teams[f] = s.teams[f].filter(x => x !== n); s.teams[1 - f].push(n); }); toast(`${n} ahora está en ${tname(1 - f)}`); });
   [0, 1].forEach(t => { if (document.activeElement !== $("tname" + t)) $("tname" + t).value = S.names[t] === "Equipo " + (t + 1) ? "" : S.names[t]; });
   // noche
-  $("nowlbl").textContent = done ? "Se acabó" : `Juego ${cur + 1} de ${ROUNDS.length}`;
-  $("nowgame").textContent = done ? "¡Ya se jugaron los 10!" : GAMES[curG];
-  $("nowtype").textContent = done ? "" : isTeamGame(curG) ? "En equipo · al final, preguntas rápidas" : "Individual · gana una corona";
+  $("nowlbl").textContent = done ? "Se acabó" : `Juego ${GORDER.indexOf(curG) + 1} de ${GORDER.length}`;
+  $("nowgame").textContent = done ? "¡Ya salieron las 10 coronas!" : GAMES[curG];
+  $("nowtype").textContent = done ? "" : curG === "loteria" ? `Vamos por el ${SLOTS[cur].l}` : curG === "final" ? "5 fotos · ganan los 2 mejores" : "En equipo · al final, preguntas rápidas";
   const call = S.live.call; $("callsec").classList.toggle("hidden", !call);
   if (call) $("callt").innerHTML = `${avHTML(call.name)}<span>${esc(call.name)} dijo ${CALLW[call.g] || "¡Listo!"}</span>`;
   $("rprev").disabled = cur <= 0; $("rnext").disabled = done;
@@ -4051,7 +4240,7 @@ function renderControl() {
   ROUNDS.forEach((g, i) => {
     const r = S.night.res[i], d = document.createElement("div"); d.className = "rl" + (i === cur ? " cur" : "");
     d.innerHTML = `<span class="n">${i + 1}</span><img src="img/${GICON[g]}.webp" alt=""><span class="g"></span><span class="w"></span>`;
-    d.querySelector(".g").textContent = GAMES[g]; d.querySelector(".w").textContent = r ? `${r.who} · E${r.team + 1}` : i === cur ? "ahora" : "";
+    d.querySelector(".g").textContent = `${GAMES[g]} · ${SLOTS[i].l}`; d.querySelector(".w").textContent = r ? r.who : i === cur ? "ahora" : "";
     d.onclick = () => { tab = "ahora"; commit(s => { s.night.cur = i; s.screen = "track"; }); scrollTo(0, 0); };
     $("roundlist").appendChild(d);
   });
@@ -4060,9 +4249,11 @@ function renderControl() {
   $("wscore").textContent = `${tname(0)} ${S.scores[0]} · ${tname(1)} ${S.scores[1]}`;
   [0, 1].forEach(t => { const f = frontName(t); $("bz" + t).textContent = f ? `${f} · ${tname(t)}` : tname(t); $("aw" + t).textContent = tname(t); $("win" + t).textContent = "Ganó " + tname(t); $("tm" + t).textContent = "Turno " + tname(t); });
   $("wfront").innerHTML = frontName(0) && frontName(1) ? `Al frente: ${avHTML(frontName(0), "sm")}<b>${esc(frontName(0))}</b> vs ${avHTML(frontName(1), "sm")}<b>${esc(frontName(1))}</b>` : "Primero sortea los equipos.";
-  const WS = w100Set(), wi = WS.indexOf(S.qid), nx = WS.find(x => !S.used.includes(x));
-  $("wstep").textContent = wi >= 0 ? `Pregunta ${wi + 1} de 4 · ${Q[S.qid].cat}` + (S.mult > 1 ? ` · ×${S.mult}` : "") : "100 Mexicanos Dijeron";
-  $("next").textContent = nx ? `${wi >= 0 ? "Siguiente: pregunta" : "Empezar pregunta"} ${WS.indexOf(nx) + 1} · ${Q[nx].cat}` : "Ya fueron las 4 preguntas";
+  const WS = w100Set(), wi = WS.indexOf(S.qid), nx = WS.find(x => !S.used.includes(x)), catOf = id => PLAN.dani.includes(id) ? `Dani ×${multFor(id)}` : Q[id].cat;
+  $("wdur").classList.toggle("hidden", !!WS.length); $("wmain").classList.toggle("hidden", !WS.length);
+  $("wdurinfo").textContent = WS.length ? `${WS.length} preguntas · van ${WS.filter(x => S.used.includes(x)).length} · las 2 de Dani al final` : "";
+  $("wstep").textContent = wi >= 0 ? `Pregunta ${wi + 1} de ${WS.length} · ${catOf(S.qid)}` + (S.mult > 1 && !PLAN.dani.includes(S.qid) ? ` · ×${S.mult}` : "") : "100 Mexicanos Dijeron";
+  $("next").textContent = nx ? `${wi >= 0 ? "Siguiente: pregunta" : "Empezar pregunta"} ${WS.indexOf(nx) + 1} · ${catOf(nx)}` : `Ya fueron las ${WS.length} preguntas`;
   $("next").disabled = !nx; $("next").classList.toggle("pri", !S.qid || S.banked || !nx);
   $("wplay").classList.toggle("hidden", !S.qid);
   $("w100lead").textContent = S.scores[0] === S.scores[1] ? (S.scores[0] ? "Van empatados." : "") : `Va ganando ${tname(S.scores[0] > S.scores[1] ? 0 : 1)} con ${Math.max(...S.scores)} puntos.`;
@@ -4085,18 +4276,30 @@ function renderControl() {
     $("cans").appendChild(b);
   });
   $("cfact").classList.toggle("hidden", !(q && q.fact));
+  // ¿cuántos años tienes?
+  { const A = S.age, i = A.i, res = i >= FOTOS.length, inPh = i >= 0 && !res, running = A.end && Date.now() < A.end;
+    $("astep").textContent = res ? "Resultados" : i < 0 ? "¿Cuántos años tienes?" : `Foto ${i + 1} de ${FOTOS.length}`;
+    $("aprevimg").classList.toggle("hidden", !inPh); if (inPh && $("aprevimg").dataset.k !== String(i)) { $("aprevimg").dataset.k = i; $("aprevimg").src = FOTOS[i].src; $("arealin").value = A.real[i] ?? FOTOS[i].age ?? ""; }
+    $("anext").textContent = i < 0 ? "Poner la foto 1" : i < FOTOS.length - 1 ? `Siguiente: foto ${i + 2}` : res ? "Ya pasaron las 5 fotos" : "Ver resultados";
+    $("anext").disabled = res; $("anext").classList.toggle("pri", i < 0 || !!A.show);
+    $("ago").disabled = !inPh || !!A.show; $("ago").textContent = running ? "El reloj está corriendo" : A.end ? "Volver a arrancar 10 s" : "Arrancar reloj 10 s";
+    $("ashow").disabled = !inPh || !!A.show; $("aback").disabled = i <= 0;
+    $("areals").classList.toggle("hidden", !inPh);
+    const got = Object.keys(S.live.ages || {});
+    $("agot").textContent = inPh ? (A.show ? `Tenía ${A.real[i]} años.` : `${got.length} de ${S.players.length} ya contestaron`) : "";
+    const rk = agePts();
+    $("arank").innerHTML = rk.slice(0, 14).map(([n, v], k) => `<div class="grp${k < 2 && v.p ? " sel" : ""}"><span>${avHTML(n, "sm")}${esc(n)}</span><b>${v.p}</b></div>`).join("");
+    $("awin").disabled = !rk.some(([, v]) => v.p > 0); $("awin").textContent = `Dar coronas: ${rk.filter(([, v]) => v.p > 0).slice(0, 2).map(x => x[0]).join(" y ") || "los 2 primeros"}`; }
   if (q && q.fact) { $("cfact").innerHTML = "Dato real: <b></b>"; $("cfact").querySelector("b").textContent = q.fact; }
   $("factb").classList.toggle("on", S.fact); $("factb").disabled = !(q && q.fact);
   $("x").textContent = `✕ Tache (${S.strikes} de 3)`;
   // preguntas rápidas
   if (S.fr.team >= 0) {
     const t = S.fr.team, running = S.fast.end && Date.now() < S.fast.end;
-    $("frteam").textContent = `Juega ${tname(t)}: ${(S.teams[t] || []).join(", ")}`;
+    $("frteam").textContent = `Ganó ${tname(t)}. Juegan los dos equipos en su celular.`;
     $("frgo").textContent = running ? "El reloj está corriendo" : S.fast.end ? "Volver a arrancar 45 s" : "Arrancar reloj 45 s";
-    const sc = frScores();
-    $("frlist").innerHTML = sc.map(([n, p, k]) => `<div class="grp" data-n="${esc(n)}"><span>${avHTML(n, "sm")}${esc(n)} · ${k} de 5</span><b>${p}</b></div>`).join("");
-    $("frlist").querySelectorAll("[data-n]").forEach(r => r.onclick = () => { const n = r.dataset.n; if (confirm(`¿Ganó ${n}?`)) act.winRound(n, teamOf(n), false, roundFor("w100")); });
-    $("frwin").textContent = sc.length && sc[0][1] ? `Ganó ${sc[0][0]} con ${sc[0][1]} puntos` : "Ganó…"; $("frwin").disabled = !(sc.length && sc[0][1]);
+    $("frlist").innerHTML = [t, 1 - t].map((tm, ci) => `<div class="frh">${esc(tname(tm))} · ${ci === 0 ? 3 : 2} coronas</div>` + frScores(tm).map(([n, p, k], i) => `<div class="grp${i < (ci === 0 ? 3 : 2) ? " sel" : ""}"><span>${avHTML(n, "sm")}${esc(n)} · ${k} de 5</span><b>${p}</b></div>`).join("")).join("");
+    $("frwin").textContent = `Dar coronas: ${frWinners().join(", ")}`; $("frwin").disabled = !S.fr.show;
     $("frshow").textContent = S.fr.show ? "Tapar resultados" : "Mostrar resultados en la tele";
   }
 }
@@ -4116,14 +4319,15 @@ function renderGuest() {
   const tm = teamOf(myName);
   $("gteam").textContent = tm >= 0 ? tname(tm) : "Esperando el sorteo de equipos";
   const sc = S.screen, g = S.game;
-  const mode = sc === "fast" && S.fr.team >= 0 ? "fast" : ["intro", "board"].includes(sc) ? "100" : sc === "colmena" || (sc === "game" && g === "colmena") ? "col" : sc === "game" && CALLW[g] ? "call" : sc === "game" && g === "final" ? "age" : "wait";
+  const mode = sc === "fast" && S.fr.team >= 0 ? "fast" : ["intro", "board"].includes(sc) ? "100" : sc === "colmena" || (sc === "game" && g === "colmena") ? "col" : sc === "game" && CALLW[g] ? "call" : sc === "age" ? "age" : "wait";
   ["wait", "call", "col", "100", "fast", "age"].forEach(k => $("g-" + k).classList.toggle("hidden", k !== mode));
   if (mode === "wait") $("gwaitp").textContent = ["home", "reg", "teams", "track"].includes(sc) ? "¡Ya estás dentro! Espera a que empiece el juego." : "Mira la tele 👀";
   if (mode === "call") {
     const c = S.live.call;
-    $("gcallk").textContent = GAMES[g]; $("gcall").textContent = CALLW[g]; $("gcall").disabled = !!c;
-    $("gcalled").classList.toggle("hidden", !c);
-    $("gcalled").textContent = c ? (c.name === myName ? "¡Le avisamos a Dani! ✓" : `${c.name} dijo ${CALLW[g]}`) : "";
+    const yaGano = wonIn(g, myName);
+    $("gcallk").textContent = GAMES[g]; $("gcall").textContent = CALLW[g]; $("gcall").disabled = !!c || yaGano; $("gcall").classList.toggle("hidden", yaGano);
+    $("gcalled").classList.toggle("hidden", !c && !yaGano);
+    $("gcalled").textContent = yaGano ? "¡Ya ganaste tu corona! Sigue jugando por diversión." : c ? (c.name === myName ? "¡Le avisamos a Dani! ✓" : `${c.name} dijo ${CALLW[g]}`) : "";
   }
   if (mode === "col") {
     const C = S.col, open = C.q >= 0 && !C.show;
@@ -4140,7 +4344,7 @@ function renderGuest() {
     $("g100s").textContent = tm < 0 ? "" : f === myName ? "Ponte en el buzzer y aprieta primero." : `${tname(tm)} lleva ${S.scores[tm]} puntos`;
   }
   if (mode === "fast") {
-    const mine = teamOf(myName) === S.fr.team, set = DATA.fast.find(x => x.id === S.fr.set) || DATA.fast[0];
+    const mine = teamOf(myName) >= 0, set = DATA.fast.find(x => x.id === S.fr.set) || DATA.fast[0];
     const k = [mine, S.fr.set, S.fast.end].join("|");
     if ($("gfqs").dataset.k !== k) {
       $("gfqs").dataset.k = k;
@@ -4155,7 +4359,19 @@ function renderGuest() {
       }
     }
   }
-  if (mode === "age") { const a = S.live.ages[myName]; $("gagesent").classList.toggle("hidden", a == null); $("gagesent").textContent = a != null ? `Enviaste: ${a} años ✓` : ""; }
+  if (mode === "age") {
+    const A = S.age, i = A.i, res = i >= FOTOS.length, a = S.live.ages[myName], running = A.end && Date.now() < A.end;
+    if ($("g-age").dataset.i !== String(i)) { $("g-age").dataset.i = i; $("gage").value = ""; }
+    $("gagek").textContent = res ? "Resultados" : i >= 0 ? `Foto ${i + 1} de ${FOTOS.length}` : "¿Cuántos años tienes?";
+    $("gagein").classList.toggle("hidden", !running);
+    let p = "", ok = "";
+    if (res) { const rk = agePts(), k = rk.findIndex(x => x[0] === myName); p = k >= 0 ? `Quedaste en el lugar ${k + 1}` : "Mira la tele 👀"; ok = k >= 0 ? `${rk[k][1].p} puntos` : ""; }
+    else if (A.show) { const mine = photoPts(i).find(x => x[0] === myName); p = `Tenía ${A.real[i]} años`; ok = mine ? `Pusiste ${mine[1]} · ${mine[4] ? "+" + mine[4] + (mine[4] === 1 ? " punto" : " puntos") : "0 puntos"}` : "No alcanzaste a contestar"; }
+    else if (running) { p = "¿Cuántos años tenía Dani en la foto?"; ok = a ? `Enviaste: ${a.n} años ✓ (puedes cambiarla)` : ""; }
+    else if (A.end) { p = "¡Tiempo!"; ok = a ? `Enviaste: ${a.n} años ✓` : "No alcanzaste a contestar"; }
+    else p = i < 0 ? "Mira la tele 👀" : "Mira la foto en la tele. Cuando Dani arranque el reloj, escribe la edad.";
+    $("gagep").textContent = p; $("gagesent").classList.toggle("hidden", !ok); $("gagesent").textContent = ok;
+  }
 }
 function render() { if (role === "screen") renderScreen(); if (role === "control") renderControl(); if (role === "guest") renderGuest(); }
 $("gjoin").onclick = () => {
@@ -4170,26 +4386,44 @@ $("gcall").onclick = () => { if (!hostConn || !hostConn.open) return; hostConn.s
 setInterval(() => {
   if (role !== "guest" || $("g-fast").classList.contains("hidden")) return;
   if (!S.fast.end) return $("gftimer").textContent = "";
+  // por si el celular se perdió un cambio: que siempre salgan sus 5 preguntas
+  if (teamOf(myName) >= 0 && Date.now() < S.fast.end && !document.querySelector("#gfqs input")) { $("gfqs").dataset.k = ""; renderGuest(); }
   const left = Math.max(0, Math.ceil((S.fast.end - Date.now()) / 1000));
   $("gftimer").textContent = left ? left + " s" : "¡Tiempo!";
   if (!left) document.querySelectorAll("#gfqs input").forEach(i => { if (!i.disabled) { i.disabled = true; if (hostConn && hostConn.open) hostConn.send({ t: "fa", name: myName, a: myFa }); } });
 }, 250);
 $("gsend").onclick = () => { const v = $("gans").value.trim(); if (!v || !hostConn || !hostConn.open) return; hostConn.send({ t: "ans", name: myName, text: v, q: S.col.q }); navigator.vibrate?.(30); };
-$("gagesend").onclick = () => { const v = $("gage").value; if (v === "" || !hostConn || !hostConn.open) return; hostConn.send({ t: "age", name: myName, n: +v }); };
+$("gagesend").onclick = () => { const v = $("gage").value; if (v === "" || !hostConn || !hostConn.open) return; hostConn.send({ t: "age", name: myName, n: +v }); navigator.vibrate?.(30); };
+$("gage").onkeydown = e => { if (e.key === "Enter") $("gagesend").click(); };
+setInterval(() => {
+  if (role === "guest" && !$("g-age").classList.contains("hidden")) {
+    const A = S.age; $("gatimer").textContent = A.end && !A.show ? Math.max(0, Math.ceil((A.end - Date.now()) / 1000)) + " s" : "";
+    const running = !!(A.end && Date.now() < A.end); if (running !== !$("gagein").classList.contains("hidden")) renderGuest();
+  }
+  if (role === "control" && tab === "ahora" && S.age.end && !$("tab-age").classList.contains("hidden")) renderControl();
+}, 250);
 let tt; function toast(m) { if (role === "screen") return; const t = $("toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 2200); }
 
 act.winRound = (who, team, isTeam, idx) => {
   if (idx == null) idx = S.night.cur;
   commit(s => {
     s.night.res[idx] = { who, team }; if (idx >= s.night.cur) s.night.cur = idx + 1;
-    s.winText = who; s.winSub = "Se lleva una corona"; s.screen = "win";
+    s.winText = who; s.winSub = SLOTS[idx] ? `${GAMES[SLOTS[idx].g]} · ${SLOTS[idx].l}` : "Se lleva una corona"; s.screen = "win";
     if (ROUNDS[idx] === "w100") { s.fr.team = -1; s.fast.end = 0; }
   }, "win");
   netOp("clearCall");
 };
+// varias coronas de un jalón (las 2 de la edad, las 5 de las rápidas): van al tablero
+act.winMany = (names, g) => {
+  commit(s => {
+    const sl = slotsOf(g); names.forEach((n, k) => { if (n && sl[k] != null) s.night.res[sl[k]] = { who: n, team: teamOf(n) }; });
+    let c = 0; while (c < ROUNDS.length && s.night.res[c]) c++; s.night.cur = c;
+    if (g === "w100") { s.fr.team = -1; s.fast.end = 0; }
+    s.screen = "track";
+  }, "win");
+};
 act.startFast = t => {
-  const k = Math.max(0, ROUNDS.slice(0, Math.min(S.night.cur, ROUNDS.length - 1) + 1).filter(g => g === "w100").length - 1);
-  const set = (DATA.fast[k] || DATA.fast[0]).id;
+  const set = DATA.fast[0].id;
   commit(s => { s.fr = { team: t, set, show: false }; s.fast.end = 0; s.fast.dur = 45000; s.screen = "fast"; }, "whoosh");
   netOp("clearFa");
 };
@@ -4219,10 +4453,17 @@ $("callno").onclick = () => netOp("clearCall");
 $("frscreen").onclick = () => commit(s => s.screen = "fast");
 $("frgo").onclick = () => commit(s => { s.fast.end = Date.now() + 45000; s.fast.dur = 45000; s.screen = "fast"; });
 $("frshow").onclick = () => commit(s => { s.fr.show = !s.fr.show; s.screen = "fast"; }, S.fr.show ? "" : "bank");
-$("frwin").onclick = () => { const top = frScores()[0]; if (top && top[1]) act.winRound(top[0], teamOf(top[0]), false, roundFor("w100")); };
+$("frwin").onclick = () => { const w = frWinners(); if (!w.length) return toast("Todavía no hay resultados"); if (confirm(`¿Dar coronas a ${w.join(", ")}?`)) act.winMany(w, "w100"); };
 $("frback").onclick = () => commit(s => { s.fr.team = -1; s.fast.end = 0; s.screen = "board"; });
 $("showgame").onclick = () => { const g = ROUNDS[S.night.cur]; if (g) goGame(g); else commit(s => s.screen = "thanks"); };
-const moveRound = d => commit(s => { s.night.cur = Math.max(0, Math.min(ROUNDS.length, s.night.cur + d)); s.screen = "track"; });
+// las flechas brincan de juego en juego
+const moveRound = d => commit(s => {
+  const cur = s.night.cur, gi = cur >= ROUNDS.length ? GORDER.length : GORDER.indexOf(ROUNDS[cur]);
+  const ng = Math.max(0, Math.min(GORDER.length, gi + d));
+  if (ng >= GORDER.length) s.night.cur = ROUNDS.length;
+  else { const sl = slotsOf(GORDER[ng]); s.night.cur = sl.find(j => !s.night.res[j]) ?? sl[0]; }
+  s.screen = "track";
+});
 $("rprev").onclick = () => moveRound(-1);
 $("rnext").onclick = () => moveRound(1);
 $("qsel").onchange = e => { if (e.target.value) act.pick(e.target.value); };
@@ -4282,6 +4523,23 @@ $("cwin").onclick = () => {
   act.winRound(top[0], teamOf(top[0]), false, roundFor("colmena"));
 };
 $("w100go").onclick = () => act.next();
+document.querySelectorAll("[data-dur]").forEach(b => b.onclick = () => act.setDur(+b.dataset.dur));
+$("wmore").onclick = act.more;
+// ¿cuántos años tienes? desde el control
+$("anext").onclick = () => {
+  const i = S.age.i; if (i >= FOTOS.length) return;
+  if (i >= 0 && i < FOTOS.length && S.age.end && !S.age.show && !confirm("Todavía no revelas esta foto. ¿Pasar a la siguiente?")) return;
+  netOp("clearAges"); commit(s => { s.age.i = i + 1; s.age.end = 0; s.age.show = false; s.screen = "age"; });
+};
+$("aback").onclick = () => { netOp("clearAges"); commit(s => { s.age.i = Math.max(0, Math.min(FOTOS.length - 1, s.age.i - 1)); s.age.end = 0; s.age.show = false; s.screen = "age"; }); };
+$("ago").onclick = () => commit(s => { s.age.end = Date.now() + 10000; s.age.show = false; s.screen = "age"; });
+$("ashow").onclick = () => {
+  const i = S.age.i, v = $("arealin").value.trim(), r = v === "" ? FOTOS[i] && FOTOS[i].age : parseInt(v);
+  if (r == null || isNaN(r)) return toast("Escribe la edad real");
+  const h = structuredClone(S.live.ages || {});
+  commit(s => { s.age.hist[i] = h; s.age.real[i] = r; s.age.show = true; s.age.end = 0; s.screen = "age"; }, "bank");
+};
+$("awin").onclick = () => { const top = agePts().filter(([, v]) => v.p > 0).slice(0, 2).map(x => x[0]); if (!top.length) return toast("Todavía nadie tiene puntos"); if (confirm(`¿Dar coronas a ${top.join(" y ")}?`)) act.winMany(top, "final"); };
 $("fs").onclick = () => { audio(); document.documentElement.requestFullscreen?.(); };
 $("sound").onclick = () => SND.hello();
 
