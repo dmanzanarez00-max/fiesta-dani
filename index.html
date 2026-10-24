@@ -803,7 +803,7 @@ body:not(.p2p) .hbtn.p2ponly{display:none}
       <div id="g-col" class="gcard hidden"><small>Hive Mind</small><p id="gcq"></p><div id="gcolin"><input id="gans" maxlength="40" placeholder="Tu respuesta" autocomplete="off"><button class="b pri big" id="gsend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gsent" class="gok hidden"></div></div>
       <div id="g-100" class="gcard hidden"><small>100 Mexicanos Dijeron</small><p id="g100p"></p><div id="g100s" class="gsub"></div></div>
       <div id="g-fast" class="gcard hidden"><small>Preguntas rápidas</small><div class="gtimer" id="gftimer"></div><div id="gfqs"></div></div>
-      <div id="g-age" class="gcard hidden"><small id="gagek">¿Cuántos años tienes?</small><div class="gtimer" id="gatimer"></div><p id="gagep"></p><div id="gagein" class="hidden"><input id="gage" type="number" inputmode="numeric" min="0" max="40" placeholder="Años" autocomplete="off"><button class="b pri big" id="gagesend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gagesent" class="gok hidden"></div></div>
+      <div id="g-age" class="gcard hidden"><small id="gagek">¿Cuántos años tienes?</small><div class="gtimer" id="gatimer"></div><p id="gagep"></p><div id="gagein" class="hidden"><input id="gage" type="number" inputmode="numeric" min="0" max="40" placeholder="Años (bebé = 0)" autocomplete="off"><button class="b pri big" id="gagesend" style="width:100%;margin-top:10px">Enviar</button></div><div id="gagesent" class="gok hidden"></div></div>
     </div>
     <span class="conn" id="conng"><i></i>Conectando…</span>
   </div>
@@ -3469,7 +3469,9 @@ const SLOTS = [
   { g: "w100", l: "1º del otro equipo", s: "1º otro equipo" }, { g: "w100", l: "2º del otro equipo", s: "2º otro equipo" }
 ];
 const GSHORT = { loteria: "Lotería", final: "¿Cuántos años?", w100: "100 Mexicanos" };
-const FOTOS = [1, 2, 3, 4, 5].map(i => ({ src: `img/foto${i}.webp`, age: null, note: "" }));
+// edades que dio Dani; la bebé de 6 meses cuenta como 0 años
+const FOTOS = [3, 7, 5, 0, 2].map((age, k) => ({ src: `img/foto${k + 1}.webp`, age, note: "", lbl: age === 0 ? [6, "meses"] : null }));
+const ageLbl = j => { const r = S.age.real[j], f = FOTOS[j]; return f && f.lbl && r === f.age ? f.lbl : [r, r === 1 ? "año" : "años"]; };
 const DURS = [[6, "20 min"], [10, "30 min"], [12, "40 min"], [16, "50 min"]];
 const TEAM_GAMES = ["w100"];
 const GINFO = {
@@ -4001,13 +4003,13 @@ function renderAge() {
     const rk = agePts();
     $("alead").textContent = "Ganan corona los 2 con más puntos";
     $("areal").innerHTML = "";
-    $("astrip").innerHTML = FOTOS.map((x, j) => `<div class="apol" style="animation-delay:${j * .08}s"><img src="${x.src}" alt=""><span>${A.real[j] != null ? A.real[j] + (A.real[j] === 1 ? " año" : " años") : "—"}</span></div>`).join("");
+    $("astrip").innerHTML = FOTOS.map((x, j) => `<div class="apol" style="animation-delay:${j * .08}s"><img src="${x.src}" alt=""><span>${A.real[j] != null ? ageLbl(j).join(" ") : "—"}</span></div>`).join("");
     $("alist").className = "alist two"; $("alist").style.gridTemplateRows = `repeat(${Math.ceil(rk.length / 2)},auto)`;
     $("alist").innerHTML = rk.map(([n, v], k) => `<div class="arow${k < 2 && v.p ? " top" : ""}" style="animation-delay:${(rk.length - k) * .12}s"><span class="k">${k < 2 && v.p ? CROWN : k + 1}</span>${avHTML(n)}<b>${esc(n)}</b><span class="g"></span><span class="p">${v.p}</span></div>`).join("");
   } else if (A.show) {
     const r = A.real[i], pp = photoPts(i);
     $("alead").textContent = "";
-    $("areal").innerHTML = `Tenía <b>${r}</b> ${r === 1 ? "año" : "años"}`;
+    $("areal").innerHTML = `Tenía <b>${ageLbl(i)[0]}</b> ${ageLbl(i)[1]}`;
     $("alist").className = "alist two"; $("alist").style.gridTemplateRows = `repeat(${Math.max(1, Math.ceil(pp.length / 2))},auto)`;
     $("alist").innerHTML = pp.map(([n, g, , , p], k) => `<div class="arow${p === 3 ? " top" : ""}" style="animation-delay:${.6 + k * .08}s"><span class="k">${p === 3 ? CROWN : k + 1}</span>${avHTML(n)}<b>${esc(n)}</b><span class="g">${g} ${g === 1 ? "año" : "años"}</span><span class="p">${p ? "+" + p : "0"}</span></div>`).join("") || '<div class="tempty">Nadie alcanzó a contestar.</div>';
   } else {
@@ -4286,7 +4288,7 @@ function renderControl() {
     $("ashow").disabled = !inPh || !!A.show; $("aback").disabled = i <= 0;
     $("areals").classList.toggle("hidden", !inPh);
     const got = Object.keys(S.live.ages || {});
-    $("agot").textContent = inPh ? (A.show ? `Tenía ${A.real[i]} años.` : `${got.length} de ${S.players.length} ya contestaron`) : "";
+    $("agot").textContent = inPh ? (A.show ? `Tenía ${ageLbl(i).join(" ")}.` : `${got.length} de ${S.players.length} ya contestaron`) : "";
     const rk = agePts();
     $("arank").innerHTML = rk.slice(0, 14).map(([n, v], k) => `<div class="grp${k < 2 && v.p ? " sel" : ""}"><span>${avHTML(n, "sm")}${esc(n)}</span><b>${v.p}</b></div>`).join("");
     $("awin").disabled = !rk.some(([, v]) => v.p > 0); $("awin").textContent = `Dar coronas: ${rk.filter(([, v]) => v.p > 0).slice(0, 2).map(x => x[0]).join(" y ") || "los 2 primeros"}`; }
@@ -4366,7 +4368,7 @@ function renderGuest() {
     $("gagein").classList.toggle("hidden", !running);
     let p = "", ok = "";
     if (res) { const rk = agePts(), k = rk.findIndex(x => x[0] === myName); p = k >= 0 ? `Quedaste en el lugar ${k + 1}` : "Mira la tele 👀"; ok = k >= 0 ? `${rk[k][1].p} puntos` : ""; }
-    else if (A.show) { const mine = photoPts(i).find(x => x[0] === myName); p = `Tenía ${A.real[i]} años`; ok = mine ? `Pusiste ${mine[1]} · ${mine[4] ? "+" + mine[4] + (mine[4] === 1 ? " punto" : " puntos") : "0 puntos"}` : "No alcanzaste a contestar"; }
+    else if (A.show) { const mine = photoPts(i).find(x => x[0] === myName); p = `Tenía ${ageLbl(i).join(" ")}`; ok = mine ? `Pusiste ${mine[1]} · ${mine[4] ? "+" + mine[4] + (mine[4] === 1 ? " punto" : " puntos") : "0 puntos"}` : "No alcanzaste a contestar"; }
     else if (running) { p = "¿Cuántos años tenía Dani en la foto?"; ok = a ? `Enviaste: ${a.n} años ✓ (puedes cambiarla)` : ""; }
     else if (A.end) { p = "¡Tiempo!"; ok = a ? `Enviaste: ${a.n} años ✓` : "No alcanzaste a contestar"; }
     else p = i < 0 ? "Mira la tele 👀" : "Mira la foto en la tele. Cuando Dani arranque el reloj, escribe la edad.";
